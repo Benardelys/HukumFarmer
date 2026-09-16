@@ -1,0 +1,45 @@
+# ==============================================================================
+#                      HukumFarmer - NPC Configuration
+# ==============================================================================
+
+npc:
+  enabled: true
+
+  # Restrict farmer NPC interaction to the farmer's owner and server admins
+  owner-only: true
+
+  # Default entity type for the NPC (VILLAGER, ARMOR_STAND)
+  entity-type: "VILLAGER"
+
+  # Profession for villager NPC: FARMER, LIBRARIAN, CLERIC, etc.
+  villager-profession: "FARMER"
+
+  # Default display name
+  display-name: "<gold><bold>HukumFarmer Çiftçi</bold></gold>"
+
+  # Hologram configuration (floating text above NPC)
+  hologram:
+    enabled: true
+    height-offset: 2.1
+    lines:
+      - "<gold><bold>%farmer_name%</bold></gold>"
+      - "<yellow>Sahip: <gold>%owner%</gold></yellow>"
+      - "<gray>[Sağ Tık] Çiftçi Menüsünü Aç</gray>"
+
+  # Maximum distance (in blocks) for player interaction
+  interaction-distance: 4.5
+
+  # Sound played when player interacts with the NPC
+  interaction-sound:
+    enabled: true
+    sound: "ENTITY_VILLAGER_YES"
+    volume: 1.0
+    pitch: 1.0
+
+  # Optional chat message when interacting
+  interaction-message:
+    enabled: false
+    message: "%prefix%<green>Çiftçi menüsü açılıyor...</green>"
+
+# Saved NPCs (Persistent across restarts)
+npcs: {}

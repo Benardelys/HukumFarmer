@@ -1,0 +1,386 @@
+# ==============================================================================
+#                      HukumFarmer - Archivo de Idioma Español (es.yml)
+# ==============================================================================
+
+prefix: "<gold><bold>HukumFarmer</bold></gold> <dark_gray>»</dark_gray> "
+
+# Mensajes Generales & Sistema
+no-permission: "%prefix%<red>¡No tienes permiso para realizar esta acción!</red>"
+player-only: "%prefix%<red>¡Solo los jugadores pueden ejecutar este comando!</red>"
+player-not-found: "%prefix%<red>El jugador especificado no fue encontrado o está desconectado.</red>"
+invalid-amount: "%prefix%<red>¡Has especificado una cantidad inválida!</red>"
+invalid-level: "%prefix%<red>¡Has especificado un nivel inválido!</red>"
+reloaded: "%prefix%<green>Todas las configuraciones y archivos de idioma se han recargado con éxito.</green>"
+
+# Compra & Estado del Granjero
+farmer-already-exists: "%prefix%<red>¡Ya has alcanzado el límite máximo de granjeros! Escribe <yellow>/farmer</yellow> para abrir el menú.</red>"
+farmer-not-found: "%prefix%<red>¡Aún no tienes un granjero! Escribe <yellow>/farmer</yellow> para comprar uno.</red>"
+farmer-purchase-success: "%prefix%<green>¡Felicidades! Tu granjero ha sido comprado y creado con éxito por <gold>%price%$</gold>.</green>"
+purchase-success-egg: "%prefix%<green>✔ ¡Huevo de granjero comprado con éxito por <gold>%price%$</gold>! Añadido a tu inventario.</green>"
+farmer-placed: "%prefix%<green>✔ ¡Granjero colocado y creado con éxito!</green>"
+farmer-creation-failed: "%prefix%<red>✖ Ocurrió un error al crear tu granjero. Tu huevo no fue consumido.</red>"
+inventory-full: "%prefix%<red>✖ ¡Tu inventario está lleno! No se pudo completar la transacción.</red>"
+farmer-item-cannot-place-region: "%prefix%<red>✖ ¡No tienes permiso para colocar un granjero en esta región!</red>"
+farmer-purchase-failed-money: "%prefix%<red>¡No tienes suficiente dinero para comprar un granjero! Requerido: <yellow>%price%$</yellow>, Saldo: <gold>%balance%$</gold></red>"
+farmer-purchase-in-progress: "%prefix%<yellow>Tu transacción de compra ya está en proceso, por favor espera...</yellow>"
+farmer-purchase-error: "%prefix%<red>Ocurrió un error al crear tu granjero. No se descontó dinero o se reembolsó.</red>"
+farmer-purchase-disabled: "%prefix%<red>La compra de granjeros está deshabilitada actualmente.</red>"
+farmer-limit-reached: "%prefix%<red>¡Has alcanzado el límite máximo de granjeros permitidos (<yellow>%max%</yellow>)!</red>"
+farmer-location-invalid: "%prefix%<red>¡No se puede crear un granjero en esta posición! Por favor párate en un bloque sólido.</red>"
+farmer-invalid-location: "%prefix%<red>¡Ubicación inválida! Por favor elige un suelo sólido y seguro.</red>"
+farmer-renamed: "%prefix%<green>Tu granjero ha sido renombrado a <yellow>%name%</yellow>.</green>"
+farmer-name-too-long: "%prefix%<red>¡El nombre del granjero no puede exceder %max% caracteres!</red>"
+rename-prompt: "%prefix%<yellow>Por favor escribe el nuevo nombre de tu granjero en el chat. (Escribe <red>cancel</red> para cancelar)</yellow>"
+rename-cancelled: "%prefix%<yellow>El cambio de nombre del granjero ha sido cancelado.</yellow>"
+
+# Mejoras & Nivel
+farmer-upgraded: "%prefix%<green>¡Tu granjero ha sido mejorado al <yellow>Nivel %level%</yellow>!</green>"
+farmer-max-level: "%prefix%<yellow>¡Tu granjero ya está en el nivel máximo!</yellow>"
+not-enough-money-upgrade: "%prefix%<red>¡No hay suficiente dinero para la mejora! Requerido: <yellow>%cost%$</yellow></red>"
+not-enough-xp-upgrade: "%prefix%<red>¡No hay suficiente experiencia para la mejora! Requerido: <yellow>%xp% XP</yellow></red>"
+
+# Almacenamiento & Cosecha
+storage-full: "%prefix%<red>¡El almacén de tu granjero está lleno! Vende cultivos o mejora la capacidad.</red>"
+crops-harvested: "%prefix%<green>¡Tu granjero cosechó <yellow>%amount% cultivos</yellow>!</green>"
+
+# Venta & Economía
+not-enough-crops: "%prefix%<red>¡No hay cultivos disponibles para vender en el almacén!</red>"
+crop-sold: "%prefix%<green>¡Vendido <yellow>%amount%x %crop%</yellow>! Ganado: <gold>%money%$</gold></green>"
+all-crops-sold: "%prefix%<green>¡Todos los cultivos (<yellow>%amount% en total</yellow>) vendidos! Ganado: <gold>%money%$</gold></green>"
+money-collected: "%prefix%<green>¡Has recolectado <gold>%amount%$</gold> acumulados por tu granjero a tu balance!</green>"
+no-money-to-collect: "%prefix%<yellow>No hay dinero acumulado para recolectar.</yellow>"
+vault-disabled-warning: "%prefix%<red>El plugin de economía (Vault) no está activo en este servidor.</red>"
+
+# Ajustes & Alternadores
+toggle-auto-harvest-on: "%prefix%<green>La cosecha automática ahora está <bold>ACTIVADA</bold>.</green>"
+toggle-auto-harvest-off: "%prefix%<yellow>La cosecha automática ahora está <bold>DESACTIVADA</bold>.</yellow>"
+toggle-auto-sell-on: "%prefix%<green>La venta automática ahora está <bold>ACTIVADA</bold>.</green>"
+toggle-auto-sell-off: "%prefix%<yellow>La venta automática ahora está <bold>DESACTIVADA</bold>.</yellow>"
+status-enabled: "<green>ACTIVADA</green>"
+status-disabled: "<red>DESACTIVADA</red>"
+
+# Sistema de Idiomas
+language-changed: "%prefix%<green>¡Tu idioma preferido ha sido actualizado a <yellow>%language%</yellow>!</green>"
+language-invalid: "%prefix%<red>¡Código de idioma inválido! Idiomas disponibles: <yellow>tr, en, de, fr, es, ru</yellow></red>"
+admin-language-set: "%prefix%<green>El idioma de <yellow>%player%</yellow> se ha establecido en <yellow>%language%</yellow>.</green>"
+
+# Estadísticas
+stats-header: "<gold>========== <yellow>Estadísticas de %name%</yellow> =========="
+stats-level: "<gray>Nivel: <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+stats-multiplier: "<gray>Multiplicador de Cosecha: <gold>x%multiplier%</gold></gray>"
+stats-storage: "<gray>Estado del Almacén: <yellow>%stored% / %max%</yellow></gray>"
+stats-harvested: "<gray>Total Cosechado: <yellow>%harvested% cultivos</yellow></gray>"
+stats-earnings: "<gray>Total Ganado: <green>%earnings%$</green></gray>"
+stats-footer: "<gold>=================================================="
+
+# Mensajes de Administrador & Usos
+admin-given: "%prefix%<green>Se ha asignado un granjero y NPC al jugador <yellow>%player%</yellow>.</green>"
+admin-egg-given: "%prefix%<green>✔ Se ha(n) entregado <yellow>%amount%</yellow> huevo(s) de granjero a <yellow>%player%</yellow>.</green>"
+admin-egg-received: "%prefix%<gold>★ ¡Un administrador te ha entregado <yellow>%amount%</yellow> huevo(s) de granjero!</gold>"
+admin-reset: "%prefix%<green>El granjero del jugador <yellow>%player%</yellow> ha sido restablecido.</green>"
+admin-setlevel: "%prefix%<green>Nivel del granjero de <yellow>%player%</yellow> establecido a <yellow>%level%</yellow>.</green>"
+admin-addxp: "%prefix%<green>Se añadieron <yellow>%amount% XP</yellow> al granjero de <yellow>%player%</yellow>.</green>"
+admin-removed: "%prefix%<green>Granjero y NPC de <yellow>%player%</yellow> eliminados con éxito.</green>"
+admin-farmer-already-has: "%prefix%<red>¡Este jugador ya posee un granjero!</red>"
+
+admin-usage-give: "%prefix%<yellow>Uso: /farmer admin give <jugador></yellow>"
+admin-usage-give-egg: "%prefix%<yellow>Uso: /farmer admin give <jugador> [cantidad]</yellow>"
+admin-usage-language: "%prefix%<yellow>Uso: /farmer admin language <jugador> <tr|en|de|fr|es|ru></yellow>"
+admin-usage-reset: "%prefix%<yellow>Uso: /farmer admin reset <jugador></yellow>"
+admin-usage-setlevel: "%prefix%<yellow>Uso: /farmer admin setlevel <jugador> <nivel></yellow>"
+admin-usage-addxp: "%prefix%<yellow>Uso: /farmer admin addxp <jugador> <cantidad></yellow>"
+admin-usage-remove: "%prefix%<yellow>Uso: /farmer admin remove <jugador></yellow>"
+admin-usage-info: "%prefix%<yellow>Uso: /farmer admin info <jugador></yellow>"
+
+admin-help-header: "<gold>========== Comandos de Admin HukumFarmer =========="
+admin-help-give: "<yellow>/farmer admin give <jugador> [cantidad]</yellow> <gray>- Entrega huevo(s) de granjero</gray>"
+admin-help-language: "<yellow>/farmer admin language <jugador> <idioma></yellow> <gray>- Establece idioma</gray>"
+admin-help-reset: "<yellow>/farmer admin reset <jugador></yellow> <gray>- Restablece al granjero</gray>"
+admin-help-setlevel: "<yellow>/farmer admin setlevel <jugador> <nivel></yellow> <gray>- Establece el nivel</gray>"
+admin-help-addxp: "<yellow>/farmer admin addxp <jugador> <cantidad></yellow> <gray>- Añade experiencia XP</gray>"
+admin-help-remove: "<yellow>/farmer admin remove <jugador></yellow> <gray>- Elimina completamente</gray>"
+admin-help-info: "<yellow>/farmer admin info <jugador></yellow> <gray>- Muestra detalles del granjero</gray>"
+admin-help-footer: "<gold>=================================================="
+
+admin-info-header: "<gold>========== Info Granjero: <yellow>%player%</yellow> =========="
+admin-info-name: "<gray>Nombre: <yellow>%name%</yellow></gray>"
+admin-info-level: "<gray>Nivel: <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+admin-info-storage: "<gray>Total Almacenado: <yellow>%stored%</yellow></gray>"
+admin-info-earnings: "<gray>Ganancias Acumuladas: <green>%earnings%$</green></gray>"
+admin-info-autoharvest: "<gray>Cosecha Auto: %status%</gray>"
+admin-info-autosell: "<gray>Venta Auto: %status%</gray>"
+admin-info-harvested: "<gray>Total Cosechado: <yellow>%harvested%</yellow></gray>"
+admin-info-totalearnings: "<gray>Ganancias Totales: <green>%earnings%$</green></gray>"
+admin-info-footer: "<gold>=========================================="
+
+# Mensajes NPC & Usos
+npc-created: "%prefix%<green>¡NPC HukumFarmer creado con éxito! (ID: <yellow>%id%</yellow>)</green>"
+npc-removed: "%prefix%<green>NPC HukumFarmer (<yellow>%id%</yellow>) eliminado con éxito.</green>"
+npc-not-found: "%prefix%<red>¡No se encontró ningún NPC con ese ID o cerca!</red>"
+npc-teleported: "%prefix%<green>Teletransportado al NPC <yellow>%id%</yellow>.</green>"
+npc-not-owner: "%prefix%<red>¡Este granjero pertenece a <yellow>%owner%</yellow>! Solo puedes interactuar con tu propio granjero.</red>"
+npc-list-header: "<gold>========== <yellow>Lista de NPCs HukumFarmer</yellow> =========="
+npc-list-item: "<gray>● ID: <yellow>%id%</yellow> | Ubicación: <aqua>%world%, %x%, %y%, %z%</aqua></gray>"
+npc-list-empty: "%prefix%<yellow>No se encontraron NPCs registrados.</yellow>"
+npc-already-exists: "%prefix%<red>Ya existe un NPC con este ID: <yellow>%id%</yellow></red>"
+npc-invalid-world: "%prefix%<red>¡Error: Mundo inválido o no cargado!</red>"
+npc-create-error: "%prefix%<red>Ocurrió un error al crear el NPC: <yellow>%error%</yellow></red>"
+npc-usage-remove: "%prefix%<yellow>Uso: /farmer npc remove <id></yellow>"
+npc-usage-teleport: "%prefix%<yellow>Uso: /farmer npc teleport <id></yellow>"
+
+npc-help-header: "<gold>========== Comandos NPC HukumFarmer =========="
+npc-help-create: "<yellow>/farmer npc create [id]</yellow> <gray>- Crea un NPC en tu posición</gray>"
+npc-help-remove: "<yellow>/farmer npc remove [id]</yellow> <gray>- Elimina el NPC especificado/cercano</gray>"
+npc-help-list: "<yellow>/farmer npc list</yellow> <gray>- Lista todos los NPCs registrados</gray>"
+npc-help-teleport: "<yellow>/farmer npc teleport <id></yellow> <gray>- Teletransporta al NPC</gray>"
+npc-help-footer: "<gold>==============================================="
+
+# Copias de Seguridad
+backup-success: "%prefix%<green>Copia de seguridad creada con éxito: <yellow>%file%</yellow></green>"
+backup-failed: "%prefix%<red>¡Ocurrió un error al crear la copia de seguridad!</red>"
+
+# Ayuda & Descripciones
+help-header: "<dark_gray>============= <gold><bold>Ayuda de HukumFarmer</bold></gold> <dark_gray>============="
+help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
+help-footer: "<dark_gray>=========================================="
+
+help-desc-main: "Abre el menú principal / compra del granjero."
+help-desc-create: "Abre el menú de compra de granjero."
+help-desc-language: "Abre el menú de selección de idioma."
+help-desc-storage: "Abre el almacén de cultivos."
+help-desc-upgrade: "Abre el menú de mejoras del granjero."
+help-desc-sell: "Vende todos los cultivos del almacén."
+help-desc-stats: "Muestra las estadísticas del granjero."
+help-desc-settings: "Configura los ajustes del granjero."
+help-desc-npc: "Comandos de gestión de NPCs."
+help-desc-reload: "Recarga todos los archivos de configuración."
+help-desc-admin: "Lista todos los comandos de administrador."
+
+# Cultivos & Traducciones de ítems
+crops:
+  wheat: "<green>Trigo</green>"
+  carrot: "<gold>Zanahoria</gold>"
+  potato: "<yellow>Patata</yellow>"
+  beetroot: "<red>Remolacha</red>"
+  sugarcane: "<green>Caña de Azúcar</green>"
+  cactus: "<green>Cactus</green>"
+  melon: "<green>Sandía</green>"
+  pumpkin: "<gold>Calabaza</gold>"
+  nether_wart: "<dark_red>Verruga del Nether</dark_red>"
+  cocoa_beans: "<gold>Granos de Cacao</gold>"
+  sweet_berries: "<red>Bayas Dulces</red>"
+  glow_berries: "<yellow>Bayas Resplandecientes</yellow>"
+  bamboo: "<green>Bambú</green>"
+  kelp: "<dark_green>Kelp</dark_green>"
+
+# Traducciones de GUI
+gui:
+  main-menu:
+    title: "<gold><bold>Panel de Gestión del Granjero</bold></gold>"
+    farmer-info:
+      name: "<yellow><bold>%farmer_name%</bold></yellow>"
+      lore:
+        - "<gray>Propietario: <gold>%owner%</gold></gray>"
+        - "<gray>Nivel: <aqua>%level%</aqua></gray>"
+        - "<gray>Experiencia: <green>%xp% / %required_xp% XP</green></gray>"
+        - "<gray>Almacén: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Multiplicador: <gold>x%multiplier%</gold></gray>"
+        - ""
+        - "<dark_gray>●</dark_gray> <gray>Ganancias Acumuladas: <green>%earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Usa los botones para gestionar tu granjero.</yellow>"
+    storage-button:
+      name: "<gold><bold>Almacén de Cultivos</bold></gold>"
+      lore:
+        - "<gray>Revisa y vende los cultivos"
+        - "<gray>recolectados por tu granjero."
+        - ""
+        - "<gray>Espacio Ocupado: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Valor del Almacén: <green>%storage_value%$</green></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para abrir el almacén!</yellow>"
+    upgrade-button:
+      name: "<aqua><bold>Mejoras del Granjero</bold></aqua>"
+      lore:
+        - "<gray>Mejora el nivel de tu granjero para"
+        - "<gray>aumentar su capacidad y velocidad."
+        - ""
+        - "<gray>Nivel Actual: <yellow>%level%</yellow></gray>"
+        - "<gray>Siguiente Nivel: <green>%next_level%</green></gray>"
+        - "<gray>Dinero Requerido: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>XP Requerida: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para abrir mejoras!</yellow>"
+    collect-money:
+      name: "<green><bold>Cobrar Ganancias</bold></green>"
+      lore:
+        - "<gray>Transfiere el dinero de ventas"
+        - "<gray>automáticas a tu balance."
+        - ""
+        - "<gray>Acumulado: <gold>%earnings%$</gold></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para cobrar dinero!</yellow>"
+    auto-harvest-toggle:
+      name: "<yellow><bold>Cosecha Automática</bold></yellow>"
+      lore:
+        - "<gray>Cosecha automáticamente los"
+        - "<gray>cultivos maduros cercanos."
+        - ""
+        - "<gray>Estado: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ ¡Haz clic para alternar!</yellow>"
+    auto-sell-toggle:
+      name: "<light_purple><bold>Venta Automática</bold></light_purple>"
+      lore:
+        - "<gray>Vende automáticamente los cultivos"
+        - "<gray>recolectados a cambio de dinero."
+        - ""
+        - "<gray>Estado: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ ¡Haz clic para alternar!</yellow>"
+    stats-button:
+      name: "<blue><bold>Estadísticas del Granjero</bold></blue>"
+      lore:
+        - "<gray>Consulta el historial de cosecha"
+        - "<gray>y ganancias totales obtenidas."
+        - ""
+        - "<gray>Total Cosechado: <yellow>%total_harvested% unidades</yellow></gray>"
+        - "<gray>Ganancias Totales: <green>%total_earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para ver detalles!</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Ajustes de Idioma</bold></aqua>"
+      lore:
+        - "<gray>Cambia tu idioma preferido."
+        - ""
+        - "<yellow>▶ ¡Haz clic para abrir idiomas!</yellow>"
+    close-button:
+      name: "<red><bold>Cerrar Menú</bold></red>"
+      lore:
+        - "<gray>Haz clic para cerrar la ventana.</gray>"
+
+  purchase-menu:
+    title: "<gold><bold>HukumFarmer - Comprar Granjero</bold></gold>"
+    info-item:
+      name: "<yellow><bold>🌾 Granjero HukumFarmer</bold></yellow>"
+      lore:
+        - "<gray>Un asistente agrícola profesional con"
+        - "<gray>habilidades de cosecha y venta automática."
+        - ""
+        - "<gray>Precio de Compra: <gold>%price%$</gold></gray>"
+        - "<gray>Tu Saldo: <green>%balance%$</green></gray>"
+        - ""
+        - "<yellow>▶ Confirma abajo para recibir tu Huevo de Granjero.</yellow>"
+    confirm-button:
+      name: "<green><bold>✔ COMPRAR HUEVO DE GRANJERO</bold></green>"
+      lore:
+        - "<gray>Precio: <gold>%price%$</gold></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para confirmar compra!</yellow>"
+    cancel-button:
+      name: "<red><bold>✖ CANCELAR</bold></red>"
+      lore:
+        - "<gray>Haz clic para cerrar.</gray>"
+    language-button:
+      name: "<aqua><bold>🌐 Cambiar Idioma</bold></aqua>"
+      lore:
+        - "<gray>Idioma Actual: <yellow>%language%</yellow></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para elegir otro idioma!</yellow>"
+
+  language-menu:
+    title: "<aqua><bold>🌐 Selección de Idioma / Language Selection</bold></aqua>"
+    back-button:
+      name: "<red><bold>Volver</bold></red>"
+      lore:
+        - "<gray>Regresa al menú anterior.</gray>"
+
+  storage-menu:
+    title: "<gold><bold>Almacén de Cultivos</bold></gold>"
+    sell-all-button:
+      name: "<green><bold>Vender Todos los Cultivos</bold></green>"
+      lore:
+        - "<gray>Vende todos los cultivos del almacén"
+        - "<gray>con tu multiplicador al precio de mercado."
+        - ""
+        - "<gray>Total Cultivos: <yellow>%total_stored_items%</yellow></gray>"
+        - "<gray>Valor Estimado: <gold>%total_sell_value%$</gold></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para vender todo!</yellow>"
+    back-button:
+      name: "<red><bold>Volver</bold></red>"
+      lore:
+        - "<gray>Haz clic para volver al menú principal.</gray>"
+    info-item:
+      name: "<yellow><bold>Info de Almacén</bold></yellow>"
+      lore:
+        - "<gray>Capacidad: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Multiplicador: <gold>x%multiplier%</gold></gray>"
+    crop-lore:
+      - "<gray>Cantidad Almacenada: <yellow>%amount%</yellow></gray>"
+      - "<gray>Precio Unitario: <gold>%price%$</gold></gray>"
+      - "<gray>Valor Total: <green>%total_value%$</green></gray>"
+      - ""
+      - "<yellow>▶ [Clic Izquierdo] Vender 64 unidades</yellow>"
+      - "<gold>▶ [Clic Derecho] Vender TODO</gold>"
+      - "<aqua>▶ [Shift+Clic Izq] Retirar 64 al inventario</aqua>"
+
+  upgrade-menu:
+    title: "<aqua><bold>Mejora de Nivel del Granjero</bold></aqua>"
+    current-level-item:
+      name: "<yellow><bold>Estado Actual (Nivel %level%)</bold></yellow>"
+      lore:
+        - "<gray>Capacidad de Almacén: <yellow>%max_storage%</yellow></gray>"
+        - "<gray>Multiplicador: <gold>x%multiplier%</gold></gray>"
+        - "<gray>Velocidad de Cosecha: <aqua>%harvest_speed%s</aqua></gray>"
+        - "<gray>Radio de Cosecha: <green>%harvest_radius% bloques</green></gray>"
+    upgrade-action-button:
+      name: "<green><bold>Mejorar al Nivel %next_level%</bold></green>"
+      lore:
+        - "<gray>Nueva Capacidad: <yellow>%next_max_storage%</yellow></gray>"
+        - "<gray>Nuevo Multiplicador: <gold>x%next_multiplier%</gold></gray>"
+        - "<gray>Nueva Velocidad: <aqua>%next_harvest_speed%s</aqua></gray>"
+        - "<gray>Nuevo Radio: <green>%next_harvest_radius% bloques</green></gray>"
+        - ""
+        - "<gray>Dinero Requerido: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>XP Requerida: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para mejorar!</yellow>"
+    back-button:
+      name: "<red><bold>Volver</bold></red>"
+      lore:
+        - "<gray>Regresa al menú principal.</gray>"
+
+  settings-menu:
+    title: "<dark_purple><bold>Ajustes del Granjero</bold></dark_purple>"
+    rename-button:
+      name: "<yellow><bold>Renombrar Granjero</bold></yellow>"
+      lore:
+        - "<gray>Asigna un nombre personalizado a tu granjero.</gray>"
+        - ""
+        - "<gray>Nombre Actual: <white>%farmer_name%</white></gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para escribir el nuevo nombre!</yellow>"
+    toggle-harvest:
+      name: "<green><bold>Cosecha Automática</bold></green>"
+      lore:
+        - "<gray>Estado: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ ¡Haz clic para alternar!</yellow>"
+    toggle-sell:
+      name: "<light_purple><bold>Venta Automática</bold></light_purple>"
+      lore:
+        - "<gray>Estado: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ ¡Haz clic para alternar!</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Cambiar Idioma</bold></aqua>"
+      lore:
+        - "<gray>Actualiza tu preferencia de idioma.</gray>"
+        - ""
+        - "<yellow>▶ ¡Haz clic para seleccionar!</yellow>"
+    back-button:
+      name: "<red><bold>Volver</bold></red>"
+      lore:
+        - "<gray>Regresa al menú principal.</gray>"
+

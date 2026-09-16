@@ -1,0 +1,182 @@
+# ==============================================================================
+#                      HukumFarmer - Configuration File
+#                     Compatible with 1.21 - 1.21.11 / 26.x
+# ==============================================================================
+
+# Database Configuration
+# Supported Types: SQLITE, MYSQL
+database:
+  type: SQLITE
+
+mysql:
+  host: "localhost"
+  port: 3306
+  database: "hukumfarmer"
+  username: "root"
+  password: "password"
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 5
+    max-lifetime: 1800000
+    connection-timeout: 10000
+    leak-detection-threshold: 60000
+
+# Language Configuration
+language:
+  default: "en"
+  available:
+    - "en"
+    - "tr"
+    - "de"
+    - "fr"
+    - "es"
+    - "ru"
+
+# Farmer Core Settings & Purchase System
+farmer:
+  # Purchase Settings
+  purchase:
+    enabled: true
+    price: 50000.0
+  # Maximum farmers a player can own (Default: 1)
+  max-per-player: 1
+  # Default name when a farmer is created
+  default-name: "%player%'s Farmer"
+  # Max characters allowed for farmer custom name
+  max-name-length: 24
+  # Radius around farmer where crops are detected/harvested (in blocks)
+  default-radius: 8
+  # Maximum allowed radius via upgrades
+  max-radius: 20
+
+# Farmer Egg Item Settings
+farmer-item:
+  # Optional ItemsAdder custom item integration
+  itemsadder:
+    enabled: false
+    item-id: "hukumfarmer:farmer_egg"
+
+  # Material for the Farmer Egg (e.g. VILLAGER_SPAWN_EGG, ALLAY_SPAWN_EGG, PLAYER_HEAD, EMERALD, etc.)
+  material: "VILLAGER_SPAWN_EGG"
+
+  # If material is set to PLAYER_HEAD, configure a Base64 skin texture or skull owner name.
+  # If left empty, a high-definition Straw Hat Farmer skull texture is applied automatically (no Steve head!).
+  head:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDY0YzcxMTc5MWFjZWM2ZWVmOGNmMTA0MzM3ZjRlNzVkMGJlNDY1OTVkZWJjNzY4MWRiY2U4YjRhMzQifX19"
+    owner: ""
+
+  name: "<green><bold>🌾 Çiftçi Yumurtası</bold></green>"
+  lore:
+    - "<gray>Yere sağ tıklayarak kendi çiftçinizi</gray>"
+    - "<gray>bulunduğunuz konuma yerleştirin.</gray>"
+    - ""
+    - "<yellow>⚡ Otomatik Hasat ve Depolama</yellow>"
+    - "<yellow>⚡ Seviye ve Geliştirmeler</yellow>"
+    - ""
+    - "<green>Sağ tıklayarak yerleştirin!</green>"
+  glow: true
+  custom-model-data: 0
+  stackable: false
+  prevent-creative-duplication: true
+  drop-on-death: true
+  flags:
+    - "HIDE_ATTRIBUTES"
+    - "HIDE_ENCHANTS"
+
+# Auto Harvest System
+auto-harvest:
+  enabled: true
+  # Check interval in server ticks (20 ticks = 1 second)
+  interval: 40
+  # Maximum crops to harvest per farmer per interval to maintain maximum TPS
+  max-crops-per-cycle: 16
+  # Automatically replant harvested crops
+  replant: true
+  # Play small particle effect on crop harvest
+  particles: true
+  particle-type: "VILLAGER_HAPPY"
+  # Play sound when crops are harvested
+  sound: true
+  sound-type: "BLOCK_CROP_BREAK"
+  sound-volume: 0.5
+  sound-pitch: 1.2
+
+# Auto Sell System
+auto-sell:
+  enabled: true
+  # Auto-sell interval in server ticks (600 ticks = 30 seconds)
+  interval: 600
+  # Tax percentage applied on auto-selling (0.0 = no tax, 0.05 = 5% tax)
+  tax-rate: 0.0
+  # Direct vault deposit or store in farmer's pending earnings buffer
+  direct-deposit: false
+  # Play sound when auto-sell occurs
+  sound: true
+  sound-type: "ENTITY_EXPERIENCE_ORB_PICKUP"
+
+# Data Autosave System
+data-saving:
+  # Autosave interval in server ticks (6000 ticks = 5 minutes)
+  autosave-interval: 6000
+  # Asynchronous thread pool size for batch database flushes
+  async-save-threads: 2
+
+# Automatic Backup System (Non-blocking async zip backups)
+backup:
+  enabled: true
+  # Interval in seconds (3600 = 1 hour)
+  interval: 3600
+  # Number of historical backup zip files to retain
+  keep-files: 5
+
+# Security Settings & Diagnostic Logging
+security:
+  enabled: true
+  log-suspicious-actions: true
+  logging:
+    enabled: true
+
+# Optional Plugin Integrations
+integrations:
+  axminions:
+    enabled: true
+    # Route crops harvested by player's AxMinions into their HukumFarmer storage
+    affect-farmer-storage: true
+    # Apply farmer level crop multipliers to AxMinions harvests
+    apply-level-multiplier: true
+
+# Sound Effects & Particles Configuration
+effects:
+  farmer-created:
+    sound: "UI_TOAST_CHALLENGE_COMPLETE"
+    volume: 1.0
+    pitch: 1.0
+    particle: "TOTEM_OF_UNDYING"
+  farmer-upgraded:
+    sound: "ENTITY_PLAYER_LEVELUP"
+    volume: 1.0
+    pitch: 1.2
+    particle: "FIREWORK_ROCKET"
+  crop-sold:
+    sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+    volume: 0.8
+    pitch: 1.5
+    particle: "VILLAGER_HAPPY"
+  money-collected:
+    sound: "ENTITY_PLAYER_LEVELUP"
+    volume: 1.0
+    pitch: 1.8
+    particle: "VILLAGER_HAPPY"
+  gui-click:
+    sound: "UI_BUTTON_CLICK"
+    volume: 0.6
+    pitch: 1.0
+  error:
+    sound: "ENTITY_VILLAGER_NO"
+    volume: 1.0
+    pitch: 1.0
+
+# Logging & Debug Mode
+logging:
+  enabled: true
+  debug: false

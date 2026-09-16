@@ -1,0 +1,367 @@
+# ==============================================================================
+#                      HukumFarmer - GUI Configuration
+#   Customizable items with Material, slot, amount, name, lore, and custom-model-data
+# ==============================================================================
+
+# Global GUI filler background item
+filler-item:
+  material: "BLACK_STAINED_GLASS_PANE"
+  name: " "
+  lore: []
+  custom-model-data: 0
+
+# ------------------------------------------------------------------------------
+# Farmer Purchase Menu (/farmer)
+# ------------------------------------------------------------------------------
+purchase-menu:
+  title: "<gold><bold>HukumFarmer - Çiftçi Satın Al</bold></gold>"
+  size: 36
+  info-item:
+    slot: 13
+    material: "PLAYER_HEAD"
+    name: "<yellow><bold>🌾 HukumFarmer Çiftçisi</bold></yellow>"
+    lore:
+      - "<gray>Otomatik hasat ve satış yeteneğine"
+      - "<gray>sahip profesyonel bir çiftçi yardımcısı."
+      - ""
+      - "<gray>Satın Alma Ücreti: <gold>%price%$</gold></gray>"
+      - "<gray>Mevcut Bakiyeniz: <green>%balance%$</green></gray>"
+      - ""
+      - "<yellow>▶ Çiftçinizi oluşturmak için onaylayın.</yellow>"
+    custom-model-data: 0
+
+  confirm-button:
+    slot: 20
+    material: "EMERALD_BLOCK"
+    name: "<green><bold>✔ SATIN AL VE OLUŞTUR</bold></green>"
+    lore:
+      - "<gray>Ücret: <gold>%price%$</gold></gray>"
+      - ""
+      - "<yellow>▶ Satın almayı onaylamak için tıkla!</yellow>"
+    custom-model-data: 0
+
+  cancel-button:
+    slot: 24
+    material: "REDSTONE_BLOCK"
+    name: "<red><bold>✖ İPTAL ET</bold></red>"
+    lore:
+      - "<gray>Pencereyi kapatmak için tıkla.</gray>"
+    custom-model-data: 0
+
+  language-button:
+    slot: 31
+    material: "BOOK"
+    name: "<aqua><bold>🌐 Dil Değiştir / Change Language</bold></aqua>"
+    lore:
+      - "<gray>Mevcut Dil: <yellow>%language%</yellow></gray>"
+      - ""
+      - "<yellow>▶ Dil seçim menüsünü açmak için tıkla!</yellow>"
+    custom-model-data: 0
+
+# ------------------------------------------------------------------------------
+# Language Selection Menu (/farmer language)
+# ------------------------------------------------------------------------------
+language-menu:
+  title: "<aqua><bold>🌐 Dil Seçimi / Language Selection</bold></aqua>"
+  size: 27
+  languages:
+    tr:
+      slot: 10
+      material: "RED_TERRACOTTA"
+      name: "<yellow><bold>Türkçe (TR)</bold></yellow>"
+      lore:
+        - "<gray>Dili Türkçe olarak ayarlar."
+        - ""
+        - "<yellow>▶ Seçmek için tıkla!</yellow>"
+      custom-model-data: 0
+    en:
+      slot: 11
+      material: "BLUE_TERRACOTTA"
+      name: "<yellow><bold>English (EN)</bold></yellow>"
+      lore:
+        - "<gray>Sets language to English."
+        - ""
+        - "<yellow>▶ Click to select!</yellow>"
+      custom-model-data: 0
+    de:
+      slot: 12
+      material: "YELLOW_TERRACOTTA"
+      name: "<yellow><bold>Deutsch (DE)</bold></yellow>"
+      lore:
+        - "<gray>Stellt die Sprache auf Deutsch um."
+        - ""
+        - "<yellow>▶ Klicke zum Auswählen!</yellow>"
+      custom-model-data: 0
+    fr:
+      slot: 14
+      material: "WHITE_TERRACOTTA"
+      name: "<yellow><bold>Français (FR)</bold></yellow>"
+      lore:
+        - "<gray>Change la langue en Français."
+        - ""
+        - "<yellow>▶ Cliquez pour choisir !</yellow>"
+      custom-model-data: 0
+    es:
+      slot: 15
+      material: "ORANGE_TERRACOTTA"
+      name: "<yellow><bold>Español (ES)</bold></yellow>"
+      lore:
+        - "<gray>Cambia el idioma a Español."
+        - ""
+        - "<yellow>▶ ¡Haz clic para seleccionar!</yellow>"
+      custom-model-data: 0
+    ru:
+      slot: 16
+      material: "LIGHT_BLUE_TERRACOTTA"
+      name: "<yellow><bold>Русский (RU)</bold></yellow>"
+      lore:
+        - "<gray>Устанавливает русский язык."
+        - ""
+        - "<yellow>▶ Нажмите для выбора!</yellow>"
+      custom-model-data: 0
+
+  back-button:
+    slot: 22
+    material: "ARROW"
+    name: "<red><bold>Geri Dön / Back</bold></red>"
+    lore:
+      - "<gray>Önceki menüye geri döner.</gray>"
+    custom-model-data: 0
+
+# ------------------------------------------------------------------------------
+# Main Farmer Menu (/farmer)
+# ------------------------------------------------------------------------------
+main-menu:
+  title: "<gold><bold>Çiftçi Yönetim Paneli</bold></gold>"
+  size: 45
+  items:
+    farmer-info:
+      slot: 13
+      material: "PLAYER_HEAD"
+      name: "<yellow><bold>%farmer_name%</bold></yellow>"
+      lore:
+        - "<gray>Sahip: <gold>%owner%</gold></gray>"
+        - "<gray>Seviye: <aqua>%level%</aqua></gray>"
+        - "<gray>Deneyim: <green>%xp% / %required_xp% XP</green></gray>"
+        - "<gray>Depo Durumu: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Hasat Çarpanı: <gold>x%multiplier%</gold></gray>"
+        - ""
+        - "<dark_gray>●</dark_gray> <gray>Birikmiş Kazanç: <green>%earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Menü butonlarını kullanarak çiftçinizi yönetin.</yellow>"
+
+    storage-button:
+      slot: 20
+      material: "CHEST"
+      name: "<gold><bold>Ürün Deposu</bold></gold>"
+      lore:
+        - "<gray>Çiftçinizin topladığı ürünleri"
+        - "<gray>görüntüleyin ve satın."
+        - ""
+        - "<gray>Dolu Alan: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Depo Değeri: <green>%storage_value%$</green></gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve depoyu aç!</yellow>"
+
+    upgrade-button:
+      slot: 22
+      material: "NETHER_STAR"
+      name: "<aqua><bold>Çiftçi Yükseltmeleri</bold></aqua>"
+      lore:
+        - "<gray>Çiftçinizin seviyesini yükselterek"
+        - "<gray>kapasite ve hızını artırın."
+        - ""
+        - "<gray>Mevcut Seviye: <yellow>%level%</yellow></gray>"
+        - "<gray>Sonraki Seviye: <green>%next_level%</green></gray>"
+        - "<gray>Gerekli Para: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>Gerekli XP: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve yükseltme menüsünü aç!</yellow>"
+
+    collect-money:
+      slot: 24
+      material: "GOLD_INGOT"
+      name: "<green><bold>Kazancı Topla</bold></green>"
+      lore:
+        - "<gray>Otomatik satıştan biriken parayı"
+        - "<gray>cüzdanınıza aktarın."
+        - ""
+        - "<gray>Biriken Tutar: <gold>%earnings%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve parayı topla!</yellow>"
+
+    auto-harvest-toggle:
+      slot: 29
+      material: "DIAMOND_HOE"
+      name: "<yellow><bold>Otomatik Hasat</bold></yellow>"
+      lore:
+        - "<gray>Çiftçinin etraftaki olgunlaşmış"
+        - "<gray>ürünleri otomatik hasat etmesini sağlar."
+        - ""
+        - "<gray>Durum: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Durumu değiştirmek için tıkla!</yellow>"
+
+    auto-sell-toggle:
+      slot: 31
+      material: "EMERALD"
+      name: "<light_purple><bold>Otomatik Satış</bold></light_purple>"
+      lore:
+        - "<gray>Hasat edilen ürünlerin otomatik"
+        - "<gray>olarak paraya çevrilmesini sağlar."
+        - ""
+        - "<gray>Durum: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Durumu değiştirmek için tıkla!</yellow>"
+
+    stats-button:
+      slot: 33
+      material: "BOOK"
+      name: "<blue><bold>Çiftçi İstatistikleri</bold></blue>"
+      lore:
+        - "<gray>Çiftçinizin geçmiş performansını"
+        - "<gray>ve toplam hasat verilerini inceleyin."
+        - ""
+        - "<gray>Toplam Hasat: <yellow>%total_harvested% adet</yellow></gray>"
+        - "<gray>Toplam Kazanç: <green>%total_earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve detayları gör!</yellow>"
+
+    language-button:
+      slot: 36
+      material: "WRITABLE_BOOK"
+      name: "<aqua><bold>🌐 Dil Ayarları</bold></aqua>"
+      lore:
+        - "<gray>Dil tercihinizi değiştirin."
+        - ""
+        - "<yellow>▶ Dil menüsünü açmak için tıkla!</yellow>"
+
+    close-button:
+      slot: 40
+      material: "BARRIER"
+      name: "<red><bold>Menüyü Kapat</bold></red>"
+      lore:
+        - "<gray>Pencereyi kapatmak için tıklayın.</gray>"
+
+# ------------------------------------------------------------------------------
+# Storage Menu (/farmer storage)
+# ------------------------------------------------------------------------------
+storage-menu:
+  title: "<gold><bold>Çiftçi Ürün Deposu</bold></gold>"
+  size: 54
+  sell-all-button:
+    slot: 49
+    material: "SUNFLOWER"
+    name: "<green><bold>Tüm Ürünleri Sat</bold></green>"
+    lore:
+      - "<gray>Depoda bulunan tüm ürünleri tek"
+      - "<gray>tıkla pazar fiyatından satın."
+      - ""
+      - "<gray>Toplam Ürün: <yellow>%total_stored_items%</yellow></gray>"
+      - "<gray>Tahmini Kazanç: <gold>%total_sell_value%$</gold></gray>"
+      - ""
+      - "<yellow>▶ Hepsini satmak için tıkla!</yellow>"
+
+  back-button:
+    slot: 45
+    material: "ARROW"
+    name: "<red><bold>Geri Dön</bold></red>"
+    lore:
+      - "<gray>Ana menüye geri dönmek için tıklayın.</gray>"
+
+  info-item:
+    slot: 53
+    material: "CHEST"
+    name: "<yellow><bold>Depo Bilgisi</bold></yellow>"
+    lore:
+      - "<gray>Kapasite: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+      - "<gray>Hasat Çarpanı: <gold>x%multiplier%</gold></gray>"
+
+# ------------------------------------------------------------------------------
+# Upgrade Menu (/farmer upgrade)
+# ------------------------------------------------------------------------------
+upgrade-menu:
+  title: "<aqua><bold>Çiftçi Seviye Yükseltme</bold></aqua>"
+  size: 36
+  current-level-item:
+    slot: 11
+    material: "EXPERIENCE_BOTTLE"
+    name: "<yellow><bold>Mevcut Durum (Seviye %level%)</bold></yellow>"
+    lore:
+      - "<gray>Depo Kapasitesi: <yellow>%max_storage%</yellow></gray>"
+      - "<gray>Hasat Çarpanı: <gold>x%multiplier%</gold></gray>"
+      - "<gray>Hasat Hızı: <aqua>%harvest_speed% sn</aqua></gray>"
+      - "<gray>Hasat Alanı: <green>%harvest_radius% blok</green></gray>"
+
+  upgrade-action-button:
+    slot: 15
+    material: "ANVIL"
+    name: "<green><bold>Seviye %next_level% Yükselt</bold></green>"
+    lore:
+      - "<gray>Yeni Kapasite: <yellow>%next_max_storage%</yellow></gray>"
+      - "<gray>Yeni Çarpan: <gold>x%next_multiplier%</gold></gray>"
+      - "<gray>Yeni Hız: <aqua>%next_harvest_speed% sn</aqua></gray>"
+      - "<gray>Yeni Alan: <green>%next_harvest_radius% blok</green></gray>"
+      - ""
+      - "<gray>Gerekli Para: <gold>%upgrade_cost%$</gold></gray>"
+      - "<gray>Gerekli XP: <aqua>%upgrade_xp% XP</aqua></gray>"
+      - ""
+      - "<yellow>▶ Yükseltmek için tıkla!</yellow>"
+
+  back-button:
+    slot: 31
+    material: "ARROW"
+    name: "<red><bold>Geri Dön</bold></red>"
+    lore:
+      - "<gray>Ana menüye dönmek için tıklayın.</gray>"
+
+# ------------------------------------------------------------------------------
+# Settings Menu (/farmer settings)
+# ------------------------------------------------------------------------------
+settings-menu:
+  title: "<dark_purple><bold>Çiftçi Ayarları</bold></dark_purple>"
+  size: 27
+  rename-button:
+    slot: 10
+    material: "NAME_TAG"
+    name: "<yellow><bold>Çiftçiyi Yeniden Adlandır</bold></yellow>"
+    lore:
+      - "<gray>Çiftçinize özel bir isim verin.</gray>"
+      - ""
+      - "<gray>Mevcut İsim: <white>%farmer_name%</white></gray>"
+      - ""
+      - "<yellow>▶ Sohbete yeni ismi yazmak için tıkla!</yellow>"
+
+  toggle-harvest:
+    slot: 12
+    material: "DIAMOND_HOE"
+    name: "<green><bold>Otomatik Hasat</bold></green>"
+    lore:
+      - "<gray>Durum: %auto_harvest_status%"
+      - ""
+      - "<yellow>▶ Değiştirmek için tıkla!</yellow>"
+
+  toggle-sell:
+    slot: 14
+    material: "EMERALD"
+    name: "<light_purple><bold>Otomatik Satış</bold></light_purple>"
+    lore:
+      - "<gray>Durum: %auto_sell_status%"
+      - ""
+      - "<yellow>▶ Değiştirmek için tıkla!</yellow>"
+
+  language-button:
+    slot: 16
+    material: "BOOK"
+    name: "<aqua><bold>🌐 Dil Değiştir</bold></aqua>"
+    lore:
+      - "<gray>Dil tercihinizi güncelleyin.</gray>"
+      - ""
+      - "<yellow>▶ Tıkla ve dili seç!</yellow>"
+
+  back-button:
+    slot: 22
+    material: "ARROW"
+    name: "<red><bold>Geri Dön</bold></red>"
+    lore:
+      - "<gray>Ana menüye dönmek için tıklayın.</gray>"

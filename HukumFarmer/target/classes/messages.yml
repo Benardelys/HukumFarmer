@@ -1,0 +1,79 @@
+# ==============================================================================
+#                      HukumFarmer - Messages File
+#       Supports & legacy color codes, hex (#RRGGBB), and MiniMessage formatting
+# ==============================================================================
+
+prefix: "<gold><bold>HukumFarmer</bold></gold> <dark_gray>»</dark_gray> "
+
+# General & System Messages
+no-permission: "%prefix%<red>Bu işlemi yapmak için yetkiniz bulunmuyor!</red>"
+player-only: "%prefix%<red>Bu komutu sadece oyuncular kullanabilir!</red>"
+player-not-found: "%prefix%<red>Belirtilen oyuncu bulunamadı veya çevrimdışı.</red>"
+invalid-amount: "%prefix%<red>Geçersiz bir miktar belirttiniz!</red>"
+invalid-level: "%prefix%<red>Geçersiz bir seviye belirttiniz!</red>"
+reloaded: "%prefix%<green>Tüm yapılandırma ve dil dosyaları başarıyla yenilendi.</green>"
+
+# Farmer Creation & Status
+farmer-already-exists: "%prefix%<red>Zaten bir çiftçin bulunuyor! <yellow>/farmer</yellow> yazarak menüyü açabilirsin.</red>"
+farmer-not-found: "%prefix%<red>Henüz bir çiftçiniz bulunmuyor! <yellow>/farmer</yellow> yazarak satın alabilirsiniz.</red>"
+farmer-created: "%prefix%<green>Tebrikler! Çiftçiniz ve NPC'niz başarıyla oluşturuldu.</green>"
+purchase-success-egg: "%prefix%<green>✔ Çiftçi Yumurtası başarıyla satın alındı! (<gold>%price%$</gold>) Envanterinize eklendi.</green>"
+farmer-placed: "%prefix%<green>✔ Çiftçi başarıyla yerleştirildi ve oluşturuldu!</green>"
+farmer-creation-failed: "%prefix%<red>✖ Çiftçi oluşturulurken bir hata meydana geldi. Yumurtanız harcanmadı.</red>"
+inventory-full: "%prefix%<red>✖ Envanteriniz dolu olduğu için işlem gerçekleştirilemedi!</red>"
+farmer-item-cannot-place-region: "%prefix%<red>✖ Bu bölgeye çiftçi yerleştirme yetkiniz bulunmuyor!</red>"
+farmer-creation-failed-money: "%prefix%<red>Çiftçi oluşturmak için yeterli paranız yok! Gerekli: <yellow>%cost%$</yellow></red>"
+farmer-renamed: "%prefix%<green>Çiftçinizin adı başarıyla <yellow>%name%</yellow> olarak değiştirildi.</green>"
+farmer-name-too-long: "%prefix%<red>Çiftçi adı en fazla %max% karakter olabilir!</red>"
+
+# Upgrades & Level
+farmer-upgraded: "%prefix%<green>Çiftçiniz <yellow>Seviye %level%</yellow> seviyesine yükseltildi!</green>"
+farmer-max-level: "%prefix%<yellow>Çiftçiniz zaten maksimum seviyede!</yellow>"
+not-enough-money-upgrade: "%prefix%<red>Yükseltme için yeterli paranız yok! Gerekli: <yellow>%cost%$</yellow></red>"
+not-enough-xp-upgrade: "%prefix%<red>Yükseltme için yeterli deneyiminiz yok! Gerekli: <yellow>%xp% XP</yellow></red>"
+
+# Storage & Harvest
+storage-full: "%prefix%<red>Çiftçinizin deposu tamamen dolu! Ürünleri satmalı veya depolama kapasitesini yükseltmelisiniz.</red>"
+crops-harvested: "%prefix%<green>Çiftçiniz <yellow>%amount% adet</yellow> ürün hasat etti!</green>"
+
+# Selling & Economy
+not-enough-crops: "%prefix%<red>Deponuzda satılacak ürün bulunmuyor!</red>"
+crop-sold: "%prefix%<green>Depodaki <yellow>%amount% adet %crop%</yellow> satıldı! Kazanılan: <gold>%money%$</gold></green>"
+all-crops-sold: "%prefix%<green>Depodaki tüm ürünler (<yellow>%amount% adet</yellow>) satıldı! Kazanılan: <gold>%money%$</gold></green>"
+money-collected: "%prefix%<green>Çiftçinizdeki birikmiş <gold>%amount%$</gold> bakiyenize aktarıldı!</green>"
+no-money-to-collect: "%prefix%<yellow>Çiftçinizde toplanacak birikmiş para yok.</yellow>"
+vault-disabled-warning: "%prefix%<red>Sunucuda ekonomi eklentisi (Vault) aktif olmadığı için bu işlem yapılamaz.</red>"
+
+# Toggles
+toggle-auto-harvest-on: "%prefix%<green>Otomatik Hasat sistemi <bold>AÇIK</bold> konumuna getirildi.</green>"
+toggle-auto-harvest-off: "%prefix%<yellow>Otomatik Hasat sistemi <bold>KAPALI</bold> konumuna getirildi.</yellow>"
+toggle-auto-sell-on: "%prefix%<green>Otomatik Satış sistemi <bold>AÇIK</bold> konumuna getirildi.</green>"
+toggle-auto-sell-off: "%prefix%<yellow>Otomatik Satış sistemi <bold>KAPALI</bold> konumuna getirildi.</yellow>"
+
+# Admin Messages
+admin-given: "%prefix%<green><yellow>%player%</yellow> adlı oyuncuya bir çiftçi ve NPC tanımlandı.</green>"
+admin-egg-given: "%prefix%<green>✔ <yellow>%player%</yellow> adlı oyuncuya <yellow>%amount%</yellow> adet Çiftçi Yumurtası verildi.</green>"
+admin-egg-received: "%prefix%<gold>★ Bir yetkili size <yellow>%amount%</yellow> adet Çiftçi Yumurtası verdi!</gold>"
+admin-reset: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun çiftçisi başarıyla sıfırlandı.</green>"
+admin-setlevel: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun çiftçi seviyesi <yellow>%level%</yellow> olarak ayarlandı.</green>"
+admin-addxp: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun çiftçisine <yellow>%amount% XP</yellow> eklendi.</green>"
+admin-removed: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun çiftçisi ve NPC'si tamamen silindi.</green>"
+
+# NPC Messages
+npc-created: "%prefix%<green>HukumFarmer NPC başarıyla oluşturuldu! (ID: <yellow>%id%</yellow>)</green>"
+npc-removed: "%prefix%<green>HukumFarmer NPC (<yellow>%id%</yellow>) başarıyla kaldırıldı.</green>"
+npc-not-found: "%prefix%<red>Belirtilen ID ile veya yakında bir NPC bulunamadı!</red>"
+npc-teleported: "%prefix%<green>NPC <yellow>%id%</yellow> konumuna ışınlandınız.</green>"
+npc-not-owner: "%prefix%<red>Bu çiftçi <yellow>%owner%</yellow> adlı oyuncuya ait! Sadece kendi çiftçinizi yönetebilirsiniz.</red>"
+npc-list-header: "<gold>========== <yellow>HukumFarmer NPC Listesi</yellow> =========="
+npc-list-item: "<gray>● ID: <yellow>%id%</yellow> | Konum: <aqua>%world%, %x%, %y%, %z%</aqua></gray>"
+npc-list-empty: "%prefix%<yellow>Kayıtlı herhangi bir NPC bulunamadı.</yellow>"
+
+# Backup Messages
+backup-success: "%prefix%<green>Veritabanı yedeği başarıyla oluşturuldu: <yellow>%file%</yellow></green>"
+backup-failed: "%prefix%<red>Veritabanı yedeği oluşturulurken bir hata oluştu!</red>"
+
+# Help Command
+help-header: "<dark_gray>============= <gold><bold>HukumFarmer Yardım</bold></gold> <dark_gray>============="
+help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
+help-footer: "<dark_gray>=========================================="

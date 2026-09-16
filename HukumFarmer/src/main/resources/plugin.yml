@@ -1,0 +1,79 @@
+name: HukumFarmer
+version: '${project.version}'
+main: me.hukumcraft.hukumfarmer.HukumFarmer
+api-version: '1.21'
+author: Ardelys
+description: Advanced Farmer Plugin
+softdepend:
+  - Vault
+  - WorldGuard
+  - AxMinions
+  - ItemsAdder
+
+commands:
+  farmer:
+    description: Main command for HukumFarmer
+    aliases:
+      - çiftçi
+      - ciftci
+    permission: hukumfarmer.use
+    usage: /<command> [help|create|menu|language|storage|upgrade|sell|stats|settings|reload|admin|npc]
+
+permissions:
+  hukumfarmer.use:
+    description: Allows opening the farmer menu and general usage
+    default: true
+  hukumfarmer.create:
+    description: Allows creating a new farmer
+    default: true
+  hukumfarmer.storage:
+    description: Allows accessing farmer storage
+    default: true
+  hukumfarmer.upgrade:
+    description: Allows upgrading farmer levels and perks
+    default: true
+  hukumfarmer.sell:
+    description: Allows selling crops from farmer storage
+    default: true
+  hukumfarmer.autoharvest:
+    description: Allows using the auto-harvest feature
+    default: true
+  hukumfarmer.autosell:
+    description: Allows using the auto-sell feature
+    default: true
+  hukumfarmer.stats:
+    description: Allows viewing farmer statistics
+    default: true
+  hukumfarmer.settings:
+    description: Allows modifying farmer settings
+    default: true
+  hukumfarmer.rename:
+    description: Allows renaming the farmer
+    default: true
+  hukumfarmer.reload:
+    description: Allows reloading plugin configurations
+    default: op
+  hukumfarmer.admin:
+    description: Full administrative access to manage all player farmers
+    default: op
+  hukumfarmer.admin.give:
+    description: Allows giving farmer eggs to players
+    default: op
+  hukumfarmer.admin.language:
+    description: Allows admins to change players languages
+    default: op
+  hukumfarmer.npc:
+    description: Allows managing farmer NPCs
+    default: op
+  hukumfarmer.npc.create:
+    description: Allows creating an NPC
+    default: op
+  hukumfarmer.npc.remove:
+    description: Allows removing an NPC
+    default: op
+  hukumfarmer.npc.list:
+    description: Allows listing all NPCs
+    default: op
+  hukumfarmer.npc.teleport:
+    description: Allows teleporting to an NPC
+    default: op

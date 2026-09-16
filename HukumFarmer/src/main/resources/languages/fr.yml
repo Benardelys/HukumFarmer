@@ -1,0 +1,386 @@
+# ==============================================================================
+#                      HukumFarmer - Fichier de Langue Français (fr.yml)
+# ==============================================================================
+
+prefix: "<gold><bold>HukumFarmer</bold></gold> <dark_gray>»</dark_gray> "
+
+# Messages Généraux & Système
+no-permission: "%prefix%<red>Vous n'avez pas la permission d'effectuer cette action !</red>"
+player-only: "%prefix%<red>Seuls les joueurs peuvent exécuter cette commande !</red>"
+player-not-found: "%prefix%<red>Le joueur spécifié est introuvable ou hors ligne.</red>"
+invalid-amount: "%prefix%<red>Vous avez spécifié un montant invalide !</red>"
+invalid-level: "%prefix%<red>Vous avez spécifié un niveau invalide !</red>"
+reloaded: "%prefix%<green>Toutes les configurations et fichiers de langue ont été rechargés avec succès.</green>"
+
+# Achat & Statut du Fermier
+farmer-already-exists: "%prefix%<red>Vous avez atteint la limite maximale de fermiers ! Tapez <yellow>/farmer</yellow> pour ouvrir le menu.</red>"
+farmer-not-found: "%prefix%<red>Vous ne possédez pas encore de fermier ! Tapez <yellow>/farmer</yellow> pour en acheter un.</red>"
+farmer-purchase-success: "%prefix%<green>Félicitations ! Votre fermier a été acheté et créé avec succès pour <gold>%price%$</gold>.</green>"
+purchase-success-egg: "%prefix%<green>✔ Œuf de fermier acheté avec succès pour <gold>%price%$</gold> ! Ajouté à votre inventaire.</green>"
+farmer-placed: "%prefix%<green>✔ Fermier placé et créé avec succès !</green>"
+farmer-creation-failed: "%prefix%<red>✖ Une erreur est survenue lors de la création du fermier. Votre œuf n'a pas été consommé.</red>"
+inventory-full: "%prefix%<red>✖ Votre inventaire est plein ! Transaction impossible.</red>"
+farmer-item-cannot-place-region: "%prefix%<red>✖ Vous n'avez pas la permission de placer un fermier dans cette région !</red>"
+farmer-purchase-failed-money: "%prefix%<red>Solde insuffisant pour acheter un fermier ! Requis : <yellow>%price%$</yellow>, Solde : <gold>%balance%$</gold></red>"
+farmer-purchase-in-progress: "%prefix%<yellow>Votre transaction d'achat est déjà en cours, veuillez patienter...</yellow>"
+farmer-purchase-error: "%prefix%<red>Une erreur est survenue lors de la création du fermier. Aucun débit effectué ou remboursement effectué.</red>"
+farmer-purchase-disabled: "%prefix%<red>L'achat de fermiers est actuellement désactivé.</red>"
+farmer-limit-reached: "%prefix%<red>Vous avez atteint la limite maximale autorisée de fermiers (<yellow>%max%</yellow>) !</red>"
+farmer-location-invalid: "%prefix%<red>Impossible de créer un fermier à cet endroit ! Veuillez vous tenir sur un bloc solide.</red>"
+farmer-invalid-location: "%prefix%<red>Emplacement invalide ! Veuillez choisir un sol solide et sécurisé.</red>"
+farmer-renamed: "%prefix%<green>Votre fermier a été renommé en <yellow>%name%</yellow>.</green>"
+farmer-name-too-long: "%prefix%<red>Le nom du fermier ne peut pas dépasser %max% caractères !</red>"
+rename-prompt: "%prefix%<yellow>Veuillez entrer le nouveau nom de votre fermier dans le tchat. (Tapez <red>cancel</red> pour annuler)</yellow>"
+rename-cancelled: "%prefix%<yellow>Le renommage du fermier a été annulé.</yellow>"
+
+# Améliorations & Niveau
+farmer-upgraded: "%prefix%<green>Votre fermier est passé au <yellow>Niveau %level%</yellow> !</green>"
+farmer-max-level: "%prefix%<yellow>Votre fermier est déjà au niveau maximum !</yellow>"
+not-enough-money-upgrade: "%prefix%<red>Pas assez d'argent pour l'amélioration ! Requis : <yellow>%cost%$</yellow></red>"
+not-enough-xp-upgrade: "%prefix%<red>Pas assez d'expérience pour l'amélioration ! Requis : <yellow>%xp% XP</yellow></red>"
+
+# Stockage & Récolte
+storage-full: "%prefix%<red>Le stockage de votre fermier est plein ! Vendez vos récoltes ou augmentez sa capacité.</red>"
+crops-harvested: "%prefix%<green>Votre fermier a récolté <yellow>%amount% cultures</yellow> !</green>"
+
+# Vente & Économie
+not-enough-crops: "%prefix%<red>Aucune récolte disponible à la vente dans votre stockage !</red>"
+crop-sold: "%prefix%<green>Vendu <yellow>%amount%x %crop%</yellow> ! Gain : <gold>%money%$</gold></green>"
+all-crops-sold: "%prefix%<green>Toutes les récoltes (<yellow>%amount% au total</yellow>) ont été vendues ! Gain : <gold>%money%$</gold></green>"
+money-collected: "%prefix%<green>Vous avez récupéré les <gold>%amount%$</gold> accumulés par votre fermier !</green>"
+no-money-to-collect: "%prefix%<yellow>Il n'y a pas d'argent accumulé à récupérer.</yellow>"
+vault-disabled-warning: "%prefix%<red>Le plugin d'économie (Vault) n'est pas actif sur ce serveur.</red>"
+
+# Paramètres & Bascules
+toggle-auto-harvest-on: "%prefix%<green>La récolte automatique est désormais <bold>ACTIVÉE</bold>.</green>"
+toggle-auto-harvest-off: "%prefix%<yellow>La récolte automatique est désormais <bold>DÉSACTIVÉE</bold>.</yellow>"
+toggle-auto-sell-on: "%prefix%<green>La vente automatique est désormais <bold>ACTIVÉE</bold>.</green>"
+toggle-auto-sell-off: "%prefix%<yellow>La vente automatique est désormais <bold>DÉSACTIVÉE</bold>.</yellow>"
+status-enabled: "<green>ACTIVÉ</green>"
+status-disabled: "<red>DÉSACTIVÉ</red>"
+
+# Système de Langue
+language-changed: "%prefix%<green>Votre langue a été mise à jour en <yellow>%language%</yellow> !</green>"
+language-invalid: "%prefix%<red>Code de langue invalide ! Langues disponibles : <yellow>tr, en, de, fr, es, ru</yellow></red>"
+admin-language-set: "%prefix%<green>La langue de <yellow>%player%</yellow> a été définie sur <yellow>%language%</yellow>.</green>"
+
+# Statistiques
+stats-header: "<gold>========== <yellow>Statistiques de %name%</yellow> =========="
+stats-level: "<gray>Niveau : <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+stats-multiplier: "<gray>Multiplicateur de Récolte : <gold>x%multiplier%</gold></gray>"
+stats-storage: "<gray>État du Stockage : <yellow>%stored% / %max%</yellow></gray>"
+stats-harvested: "<gray>Total Récolté : <yellow>%harvested% cultures</yellow></gray>"
+stats-earnings: "<gray>Total des Gains : <green>%earnings%$</green></gray>"
+stats-footer: "<gold>=================================================="
+
+# Messages Administrateur & Utilisations
+admin-given: "%prefix%<green>Un fermier et son PNJ ont été attribués à <yellow>%player%</yellow>.</green>"
+admin-egg-given: "%prefix%<green>✔ <yellow>%amount%</yellow> œuf(s) de fermier donné(s) à <yellow>%player%</yellow>.</green>"
+admin-egg-received: "%prefix%<gold>★ Un administrateur vous a donné <yellow>%amount%</yellow> œuf(s) de fermier !</gold>"
+admin-reset: "%prefix%<green>Le fermier du joueur <yellow>%player%</yellow> a été réinitialisé.</green>"
+admin-setlevel: "%prefix%<green>Niveau du fermier de <yellow>%player%</yellow> défini sur <yellow>%level%</yellow>.</green>"
+admin-addxp: "%prefix%<green>Ajout de <yellow>%amount% XP</yellow> au fermier de <yellow>%player%</yellow>.</green>"
+admin-removed: "%prefix%<green>Le fermier et le PNJ de <yellow>%player%</yellow> ont été supprimés avec succès.</green>"
+admin-farmer-already-has: "%prefix%<red>Ce joueur possède déjà un fermier !</red>"
+
+admin-usage-give: "%prefix%<yellow>Utilisation: /farmer admin give <joueur></yellow>"
+admin-usage-give-egg: "%prefix%<yellow>Utilisation: /farmer admin give <joueur> [quantité]</yellow>"
+admin-usage-language: "%prefix%<yellow>Utilisation: /farmer admin language <joueur> <tr|en|de|fr|es|ru></yellow>"
+admin-usage-reset: "%prefix%<yellow>Utilisation: /farmer admin reset <joueur></yellow>"
+admin-usage-setlevel: "%prefix%<yellow>Utilisation: /farmer admin setlevel <joueur> <niveau></yellow>"
+admin-usage-addxp: "%prefix%<yellow>Utilisation: /farmer admin addxp <joueur> <montant></yellow>"
+admin-usage-remove: "%prefix%<yellow>Utilisation: /farmer admin remove <joueur></yellow>"
+admin-usage-info: "%prefix%<yellow>Utilisation: /farmer admin info <joueur></yellow>"
+
+admin-help-header: "<gold>========== Commandes Admin HukumFarmer =========="
+admin-help-give: "<yellow>/farmer admin give <joueur> [quantité]</yellow> <gray>- Donne des œufs de fermier</gray>"
+admin-help-language: "<yellow>/farmer admin language <joueur> <langue></yellow> <gray>- Définit la langue</gray>"
+admin-help-reset: "<yellow>/farmer admin reset <joueur></yellow> <gray>- Réinitialise le fermier</gray>"
+admin-help-setlevel: "<yellow>/farmer admin setlevel <joueur> <niveau></yellow> <gray>- Définit le niveau</gray>"
+admin-help-addxp: "<yellow>/farmer admin addxp <joueur> <montant></yellow> <gray>- Ajoute de l'XP</gray>"
+admin-help-remove: "<yellow>/farmer admin remove <joueur></yellow> <gray>- Supprime complètement</gray>"
+admin-help-info: "<yellow>/farmer admin info <joueur></yellow> <gray>- Affiche les détails</gray>"
+admin-help-footer: "<gold>=================================================="
+
+admin-info-header: "<gold>========== Info Fermier : <yellow>%player%</yellow> =========="
+admin-info-name: "<gray>Nom : <yellow>%name%</yellow></gray>"
+admin-info-level: "<gray>Niveau : <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+admin-info-storage: "<gray>Total Stocké : <yellow>%stored%</yellow></gray>"
+admin-info-earnings: "<gray>Gains Accumulés : <green>%earnings%$</green></gray>"
+admin-info-autoharvest: "<gray>Récolte Auto : %status%</gray>"
+admin-info-autosell: "<gray>Vente Auto : %status%</gray>"
+admin-info-harvested: "<gray>Total Récolté : <yellow>%harvested%</yellow></gray>"
+admin-info-totalearnings: "<gray>Total des Gains : <green>%earnings%$</green></gray>"
+admin-info-footer: "<gold>=========================================="
+
+# Messages PNJ & Utilisations
+npc-created: "%prefix%<green>PNJ HukumFarmer créé avec succès ! (ID : <yellow>%id%</yellow>)</green>"
+npc-removed: "%prefix%<green>PNJ HukumFarmer (<yellow>%id%</yellow>) supprimé avec succès.</green>"
+npc-not-found: "%prefix%<red>Aucun PNJ trouvé avec cet identifiant ou à proximité !</red>"
+npc-teleported: "%prefix%<green>Téléporté au PNJ <yellow>%id%</yellow>.</green>"
+npc-not-owner: "%prefix%<red>Ce fermier appartient à <yellow>%owner%</yellow> ! Vous ne pouvez gérer que votre propre fermier.</red>"
+npc-list-header: "<gold>========== <yellow>Liste des PNJ HukumFarmer</yellow> =========="
+npc-list-item: "<gray>● ID : <yellow>%id%</yellow> | Emplacement : <aqua>%world%, %x%, %y%, %z%</aqua></gray>"
+npc-list-empty: "%prefix%<yellow>Aucun PNJ enregistré n'a été trouvé.</yellow>"
+npc-already-exists: "%prefix%<red>Un PNJ avec cet ID existe déjà : <yellow>%id%</yellow></red>"
+npc-invalid-world: "%prefix%<red>Erreur : Monde invalide ou non chargé !</red>"
+npc-create-error: "%prefix%<red>Une erreur est survenue lors de la création du PNJ : <yellow>%error%</yellow></red>"
+npc-usage-remove: "%prefix%<yellow>Utilisation : /farmer npc remove <id></yellow>"
+npc-usage-teleport: "%prefix%<yellow>Utilisation : /farmer npc teleport <id></yellow>"
+
+npc-help-header: "<gold>========== Commandes PNJ HukumFarmer =========="
+npc-help-create: "<yellow>/farmer npc create [id]</yellow> <gray>- Crée un PNJ à votre position</gray>"
+npc-help-remove: "<yellow>/farmer npc remove [id]</yellow> <gray>- Supprime le PNJ spécifié/proche</gray>"
+npc-help-list: "<yellow>/farmer npc list</yellow> <gray>- Liste tous les PNJ enregistrés</gray>"
+npc-help-teleport: "<yellow>/farmer npc teleport <id></yellow> <gray>- Téléporte au PNJ spécifié</gray>"
+npc-help-footer: "<gold>==============================================="
+
+# Sauvegardes
+backup-success: "%prefix%<green>Sauvegarde de la base de données créée : <yellow>%file%</yellow></green>"
+backup-failed: "%prefix%<red>Une erreur est survenue lors de la sauvegarde de la base de données !</red>"
+
+# Aide & Descriptions
+help-header: "<dark_gray>============= <gold><bold>Aide HukumFarmer</bold></gold> <dark_gray>============="
+help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
+help-footer: "<dark_gray>=========================================="
+
+help-desc-main: "Ouvre le menu principal / menu d'achat."
+help-desc-create: "Ouvre le menu d'achat du fermier."
+help-desc-language: "Ouvre le menu de sélection de langue."
+help-desc-storage: "Ouvre le stockage des récoltes."
+help-desc-upgrade: "Ouvre le menu d'améliorations."
+help-desc-sell: "Vend toutes les récoltes stockées."
+help-desc-stats: "Affiche les statistiques du fermier."
+help-desc-settings: "Configure les paramètres du fermier."
+help-desc-npc: "Commandes de gestion des PNJ."
+help-desc-reload: "Recharge tous les fichiers de configuration."
+help-desc-admin: "Liste les commandes administrateur."
+
+# Récoltes & Traductions d'objets
+crops:
+  wheat: "<green>Blé</green>"
+  carrot: "<gold>Carotte</gold>"
+  potato: "<yellow>Pomme de Terre</yellow>"
+  beetroot: "<red>Betterave</red>"
+  sugarcane: "<green>Canne à Sucre</green>"
+  cactus: "<green>Cactus</green>"
+  melon: "<green>Pastèque</green>"
+  pumpkin: "<gold>Citrouille</gold>"
+  nether_wart: "<dark_red>Verrue du Nether</dark_red>"
+  cocoa_beans: "<gold>Fèves de Cacao</gold>"
+  sweet_berries: "<red>Baies Sucrées</red>"
+  glow_berries: "<yellow>Baies Lumineuses</yellow>"
+  bamboo: "<green>Bambou</green>"
+  kelp: "<dark_green>Varech</dark_green>"
+
+# Traductions de GUI
+gui:
+  main-menu:
+    title: "<gold><bold>Panneau de Gestion du Fermier</bold></gold>"
+    farmer-info:
+      name: "<yellow><bold>%farmer_name%</bold></yellow>"
+      lore:
+        - "<gray>Propriétaire: <gold>%owner%</gold></gray>"
+        - "<gray>Niveau: <aqua>%level%</aqua></gray>"
+        - "<gray>Expérience: <green>%xp% / %required_xp% XP</green></gray>"
+        - "<gray>Stockage: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Multiplicateur: <gold>x%multiplier%</gold></gray>"
+        - ""
+        - "<dark_gray>●</dark_gray> <gray>Gains Accumulés: <green>%earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Utilisez les boutons du menu pour gérer votre fermier.</yellow>"
+    storage-button:
+      name: "<gold><bold>Stockage des Récoltes</bold></gold>"
+      lore:
+        - "<gray>Visualisez et vendez les récoltes"
+        - "<gray>amassées par votre fermier."
+        - ""
+        - "<gray>Espace Rempli: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Valeur du Stock: <green>%storage_value%$</green></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour ouvrir le stockage !</yellow>"
+    upgrade-button:
+      name: "<aqua><bold>Améliorations du Fermier</bold></aqua>"
+      lore:
+        - "<gray>Améliorez votre fermier pour augmenter"
+        - "<gray>sa capacité et sa vitesse de récolte."
+        - ""
+        - "<gray>Niveau Actuel: <yellow>%level%</yellow></gray>"
+        - "<gray>Niveau Suivant: <green>%next_level%</green></gray>"
+        - "<gray>Prix Requis: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>XP Requise: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour ouvrir le menu d'amélioration !</yellow>"
+    collect-money:
+      name: "<green><bold>Récupérer les Gains</bold></green>"
+      lore:
+        - "<gray>Transférez l'argent des ventes"
+        - "<gray>automatiques directement sur votre compte."
+        - ""
+        - "<gray>Accumulé: <gold>%earnings%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour récupérer l'argent !</yellow>"
+    auto-harvest-toggle:
+      name: "<yellow><bold>Récolte Automatique</bold></yellow>"
+      lore:
+        - "<gray>Permet au fermier de récolter"
+        - "<gray>automatiquement les cultures mûres."
+        - ""
+        - "<gray>Statut: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Cliquez pour basculer !</yellow>"
+    auto-sell-toggle:
+      name: "<light_purple><bold>Vente Automatique</bold></light_purple>"
+      lore:
+        - "<gray>Vend automatiquement les récoltes"
+        - "<gray>du stockage contre de l'argent."
+        - ""
+        - "<gray>Statut: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Cliquez pour basculer !</yellow>"
+    stats-button:
+      name: "<blue><bold>Statistiques du Fermier</bold></blue>"
+      lore:
+        - "<gray>Consultez l'historique de récolte"
+        - "<gray>et les gains totaux de votre fermier."
+        - ""
+        - "<gray>Total Récolté: <yellow>%total_harvested% unités</yellow></gray>"
+        - "<gray>Total des Gains: <green>%total_earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour voir les statistiques !</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Paramètres de Langue</bold></aqua>"
+      lore:
+        - "<gray>Changez votre langue préférée."
+        - ""
+        - "<yellow>▶ Cliquez pour choisir la langue !</yellow>"
+    close-button:
+      name: "<red><bold>Fermer le Menu</bold></red>"
+      lore:
+        - "<gray>Cliquez pour fermer la fenêtre.</gray>"
+
+  purchase-menu:
+    title: "<gold><bold>HukumFarmer - Acheter un Fermier</bold></gold>"
+    info-item:
+      name: "<yellow><bold>🌾 Fermier HukumFarmer</bold></yellow>"
+      lore:
+        - "<gray>Un assistant agricole professionnel avec"
+        - "<gray>des fonctionnalités de récolte et vente."
+        - ""
+        - "<gray>Prix d'Achat: <gold>%price%$</gold></gray>"
+        - "<gray>Votre Solde: <green>%balance%$</green></gray>"
+        - ""
+        - "<yellow>▶ Confirmez pour recevoir l'Œuf de Fermier.</yellow>"
+    confirm-button:
+      name: "<green><bold>✔ ACHETER L'ŒUF DE FERMIER</bold></green>"
+      lore:
+        - "<gray>Prix: <gold>%price%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour confirmer l'achat !</yellow>"
+    cancel-button:
+      name: "<red><bold>✖ ANNULER</bold></red>"
+      lore:
+        - "<gray>Cliquez pour fermer.</gray>"
+    language-button:
+      name: "<aqua><bold>🌐 Changer de Langue</bold></aqua>"
+      lore:
+        - "<gray>Langue Actuelle: <yellow>%language%</yellow></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour changer de langue !</yellow>"
+
+  language-menu:
+    title: "<aqua><bold>🌐 Sélection de Langue / Language Selection</bold></aqua>"
+    back-button:
+      name: "<red><bold>Retour</bold></red>"
+      lore:
+        - "<gray>Retourner au menu précédent.</gray>"
+
+  storage-menu:
+    title: "<gold><bold>Stockage des Récoltes</bold></gold>"
+    sell-all-button:
+      name: "<green><bold>Tout Vendre</bold></green>"
+      lore:
+        - "<gray>Vendez toutes les récoltes stockées"
+        - "<gray>en un clic au prix du marché."
+        - ""
+        - "<gray>Total Récoltes: <yellow>%total_stored_items%</yellow></gray>"
+        - "<gray>Valeur Estimée: <gold>%total_sell_value%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour tout vendre !</yellow>"
+    back-button:
+      name: "<red><bold>Retour</bold></red>"
+      lore:
+        - "<gray>Retourner au menu principal.</gray>"
+    info-item:
+      name: "<yellow><bold>Infos Stockage</bold></yellow>"
+      lore:
+        - "<gray>Capacité: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Multiplicateur: <gold>x%multiplier%</gold></gray>"
+    crop-lore:
+      - "<gray>Quantité Stockée: <yellow>%amount%</yellow></gray>"
+      - "<gray>Prix Unitaire: <gold>%price%$</gold></gray>"
+      - "<gray>Valeur Totale: <green>%total_value%$</green></gray>"
+      - ""
+      - "<yellow>▶ [Clic Gauche] Vendre 64 unités</yellow>"
+      - "<gold>▶ [Clic Droit] TOUT vendre</gold>"
+      - "<aqua>▶ [Shift+Clic Gauche] Retirer 64 dans l'inventaire</aqua>"
+
+  upgrade-menu:
+    title: "<aqua><bold>Amélioration du Fermier</bold></aqua>"
+    current-level-item:
+      name: "<yellow><bold>Statut Actuel (Niveau %level%)</bold></yellow>"
+      lore:
+        - "<gray>Capacité de Stockage: <yellow>%max_storage%</yellow></gray>"
+        - "<gray>Multiplicateur: <gold>x%multiplier%</gold></gray>"
+        - "<gray>Vitesse de Récolte: <aqua>%harvest_speed%s</aqua></gray>"
+        - "<gray>Rayon de Récolte: <green>%harvest_radius% blocs</green></gray>"
+    upgrade-action-button:
+      name: "<green><bold>Améliorer au Niveau %next_level%</bold></green>"
+      lore:
+        - "<gray>Nouvelle Capacité: <yellow>%next_max_storage%</yellow></gray>"
+        - "<gray>Nouveau Multiplicateur: <gold>x%next_multiplier%</gold></gray>"
+        - "<gray>Nouvelle Vitesse: <aqua>%next_harvest_speed%s</aqua></gray>"
+        - "<gray>Nouveau Rayon: <green>%next_harvest_radius% blocs</green></gray>"
+        - ""
+        - "<gray>Prix Requis: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>XP Requise: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour améliorer !</yellow>"
+    back-button:
+      name: "<red><bold>Retour</bold></red>"
+      lore:
+        - "<gray>Retourner au menu principal.</gray>"
+
+  settings-menu:
+    title: "<dark_purple><bold>Paramètres du Fermier</bold></dark_purple>"
+    rename-button:
+      name: "<yellow><bold>Renommer le Fermier</bold></yellow>"
+      lore:
+        - "<gray>Donnez un nom personnalisé à votre fermier.</gray>"
+        - ""
+        - "<gray>Nom Actuel: <white>%farmer_name%</white></gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour entrer le nom dans le tchat !</yellow>"
+    toggle-harvest:
+      name: "<green><bold>Récolte Automatique</bold></green>"
+      lore:
+        - "<gray>Statut: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Cliquez pour basculer !</yellow>"
+    toggle-sell:
+      name: "<light_purple><bold>Vente Automatique</bold></light_purple>"
+      lore:
+        - "<gray>Statut: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Cliquez pour basculer !</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Changer de Langue</bold></aqua>"
+      lore:
+        - "<gray>Mettre à jour votre préférence de langue.</gray>"
+        - ""
+        - "<yellow>▶ Cliquez pour sélectionner !</yellow>"
+    back-button:
+      name: "<red><bold>Retour</bold></red>"
+      lore:
+        - "<gray>Retourner au menu principal.</gray>"
+

@@ -1,0 +1,385 @@
+# ==============================================================================
+#                      HukumFarmer - Русский языковой файл (ru.yml)
+# ==============================================================================
+
+prefix: "<gold><bold>HukumFarmer</bold></gold> <dark_gray>»</dark_gray> "
+
+# Общие и системные сообщения
+no-permission: "%prefix%<red>У вас нет прав для выполнения этого действия!</red>"
+player-only: "%prefix%<red>Только игроки могут использовать эту команду!</red>"
+player-not-found: "%prefix%<red>Указанный игрок не найден или не в сети.</red>"
+invalid-amount: "%prefix%<red>Вы указали неверное количество!</red>"
+invalid-level: "%prefix%<red>Вы указали неверный уровень!</red>"
+reloaded: "%prefix%<green>Все файлы конфигурации и языков успешно перезагружены.</green>"
+
+# Покупка и статус фермера
+farmer-already-exists: "%prefix%<red>Вы уже достигли максимального лимита фермеров! Введите <yellow>/farmer</yellow>, чтобы открыть меню.</red>"
+farmer-not-found: "%prefix%<red>У вас еще нет фермера! Введите <yellow>/farmer</yellow>, чтобы приобрести его.</red>"
+farmer-purchase-success: "%prefix%<green>Поздравляем! Ваш фермер успешно куплен и создан за <gold>%price%$</gold>.</green>"
+purchase-success-egg: "%prefix%<green>✔ Яйцо фермера успешно куплено за <gold>%price%$</gold>! Добавлено в ваш инвентарь.</green>"
+farmer-placed: "%prefix%<green>✔ Фермер успешно установлен и создан!</green>"
+farmer-creation-failed: "%prefix%<red>✖ Произошла ошибка при создании фермера. Яйцо не было потрачено.</red>"
+inventory-full: "%prefix%<red>✖ Ваш инвентарь заполнен! Транзакция не может быть завершена.</red>"
+farmer-item-cannot-place-region: "%prefix%<red>✖ У вас нет прав на установку фермера в этом регионе!</red>"
+farmer-purchase-failed-money: "%prefix%<red>Недостаточно средств для покупки фермера! Требуется: <yellow>%price%$</yellow>, Баланс: <gold>%balance%$</gold></red>"
+farmer-purchase-in-progress: "%prefix%<yellow>Транзакция покупки уже выполняется, пожалуйста, подождите...</yellow>"
+farmer-purchase-error: "%prefix%<red>Произошла ошибка при создании фермера. Деньги не сняты или возвращены.</red>"
+farmer-purchase-disabled: "%prefix%<red>Покупка фермеров в данный момент отключена.</red>"
+farmer-limit-reached: "%prefix%<red>Вы достигли максимального лимита фермеров (<yellow>%max%</yellow>)!</red>"
+farmer-location-invalid: "%prefix%<red>Невозможно создать фермера на этой позиции! Пожалуйста, встаньте на твердый блок.</red>"
+farmer-invalid-location: "%prefix%<red>Недопустимое место для размещения! Выберите безопасный блок пола.</red>"
+farmer-renamed: "%prefix%<green>Имя вашего фермера изменено на <yellow>%name%</yellow>.</green>"
+farmer-name-too-long: "%prefix%<red>Имя фермера не может превышать %max% символов!</red>"
+rename-prompt: "%prefix%<yellow>Пожалуйста, напишите новое имя фермера в чат. (Напишите <red>cancel</red> для отмены)</yellow>"
+rename-cancelled: "%prefix%<yellow>Переименование фермера отменено.</yellow>"
+
+# Улучшения и уровень
+farmer-upgraded: "%prefix%<green>Ваш фермер улучшен до <yellow>Уровня %level%</yellow>!</green>"
+farmer-max-level: "%prefix%<yellow>Ваш фермер уже достиг максимального уровня!</yellow>"
+not-enough-money-upgrade: "%prefix%<red>Недостаточно денег для улучшения! Требуется: <yellow>%cost%$</yellow></red>"
+not-enough-xp-upgrade: "%prefix%<red>Недостаточно опыта для улучшения! Требуется: <yellow>%xp% XP</yellow></red>"
+
+# Хранилище и урожай
+storage-full: "%prefix%<red>Хранилище вашего фермера заполнено! Продайте урожай или увеличьте вместимость.</red>"
+crops-harvested: "%prefix%<green>Ваш фермер собрал <yellow>%amount% урожая</yellow>!</green>"
+
+# Продажа и экономика
+not-enough-crops: "%prefix%<red>В хранилище нет доступного урожая для продажи!</red>"
+crop-sold: "%prefix%<green>Продано <yellow>%amount%x %crop%</yellow>! Получено: <gold>%money%$</gold></green>"
+all-crops-sold: "%prefix%<green>Весь урожай (<yellow>%amount% всего</yellow>) продан! Получено: <gold>%money%$</gold></green>"
+money-collected: "%prefix%<green>Вы забрали накопленные <gold>%amount%$</gold> от фермера на свой баланс!</green>"
+no-money-to-collect: "%prefix%<yellow>Нет накопленных средств для получения.</yellow>"
+vault-disabled-warning: "%prefix%<red>Плагин экономики (Vault) не активен на этом сервере.</red>"
+
+# Настройки и переключатели
+toggle-auto-harvest-on: "%prefix%<green>Автосбор урожая теперь <bold>ВКЛЮЧЕН</bold>.</green>"
+toggle-auto-harvest-off: "%prefix%<yellow>Автосбор урожая теперь <bold>ВЫКЛЮЧЕН</bold>.</yellow>"
+toggle-auto-sell-on: "%prefix%<green>Автопродажа теперь <bold>ВКЛЮЧЕНА</bold>.</green>"
+toggle-auto-sell-off: "%prefix%<yellow>Автопродажа теперь <bold>ВЫКЛЮЧЕНА</bold>.</yellow>"
+status-enabled: "<green>ВКЛЮЧЕНО</green>"
+status-disabled: "<red>ВЫКЛЮЧЕНО</red>"
+
+# Языковая система
+language-changed: "%prefix%<green>Ваш язык изменен на <yellow>%language%</yellow>!</green>"
+language-invalid: "%prefix%<red>Неверный код языка! Доступные языки: <yellow>tr, en, de, fr, es, ru</yellow></red>"
+admin-language-set: "%prefix%<green>Язык игрока <yellow>%player%</yellow> установлен на <yellow>%language%</yellow>.</green>"
+
+# Статистика
+stats-header: "<gold>========== <yellow>Статистика %name%</yellow> =========="
+stats-level: "<gray>Уровень: <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+stats-multiplier: "<gray>Множитель урожая: <gold>x%multiplier%</gold></gray>"
+stats-storage: "<gray>Состояние хранилища: <yellow>%stored% / %max%</yellow></gray>"
+stats-harvested: "<gray>Всего собрано: <yellow>%harvested% урожая</yellow></gray>"
+stats-earnings: "<gray>Всего заработано: <green>%earnings%$</green></gray>"
+stats-footer: "<gold>=================================================="
+
+# Сообщения администратора и команды
+admin-given: "%prefix%<green>Фермер и NPC успешно выданы игроку <yellow>%player%</yellow>.</green>"
+admin-egg-given: "%prefix%<green>✔ Игроку <yellow>%player%</yellow> выдано <yellow>%amount%</yellow> яиц фермера.</green>"
+admin-egg-received: "%prefix%<gold>★ Администратор выдал вам <yellow>%amount%</yellow> яиц фермера!</gold>"
+admin-reset: "%prefix%<green>Фермер игрока <yellow>%player%</yellow> был сброшен.</green>"
+admin-setlevel: "%prefix%<green>Уровень фермера игрока <yellow>%player%</yellow> установлен на <yellow>%level%</yellow>.</green>"
+admin-addxp: "%prefix%<green>Добавлено <yellow>%amount% XP</yellow> фермеру игрока <yellow>%player%</yellow>.</green>"
+admin-removed: "%prefix%<green>Фермер и NPC игрока <yellow>%player%</yellow> успешно удалены.</green>"
+admin-farmer-already-has: "%prefix%<red>У этого игрока уже есть фермер!</red>"
+
+admin-usage-give: "%prefix%<yellow>Использование: /farmer admin give <игрок></yellow>"
+admin-usage-give-egg: "%prefix%<yellow>Использование: /farmer admin give <игрок> [количество]</yellow>"
+admin-usage-language: "%prefix%<yellow>Использование: /farmer admin language <игрок> <tr|en|de|fr|es|ru></yellow>"
+admin-usage-reset: "%prefix%<yellow>Использование: /farmer admin reset <игрок></yellow>"
+admin-usage-setlevel: "%prefix%<yellow>Использование: /farmer admin setlevel <игрок> <уровень></yellow>"
+admin-usage-addxp: "%prefix%<yellow>Использование: /farmer admin addxp <игрок> <количество></yellow>"
+admin-usage-remove: "%prefix%<yellow>Использование: /farmer admin remove <игрок></yellow>"
+admin-usage-info: "%prefix%<yellow>Использование: /farmer admin info <игрок></yellow>"
+
+admin-help-header: "<gold>========== Админ-команды HukumFarmer =========="
+admin-help-give: "<yellow>/farmer admin give <игрок> [количество]</yellow> <gray>- Выдает яйца фермера игроку</gray>"
+admin-help-language: "<yellow>/farmer admin language <игрок> <язык></yellow> <gray>- Устанавливает язык игрока</gray>"
+admin-help-reset: "<yellow>/farmer admin reset <игрок></yellow> <gray>- Сбрасывает фермера</gray>"
+admin-help-setlevel: "<yellow>/farmer admin setlevel <игрок> <уровень></yellow> <gray>- Устанавливает уровень</gray>"
+admin-help-addxp: "<yellow>/farmer admin addxp <игрок> <количество></yellow> <gray>- Добавляет XP фермеру</gray>"
+admin-help-remove: "<yellow>/farmer admin remove <игрок></yellow> <gray>- Полностью удаляет фермера</gray>"
+admin-help-info: "<yellow>/farmer admin info <игрок></yellow> <gray>- Показывает данные фермера</gray>"
+admin-help-footer: "<gold>=================================================="
+
+admin-info-header: "<gold>========== Данные фермера: <yellow>%player%</yellow> =========="
+admin-info-name: "<gray>Имя: <yellow>%name%</yellow></gray>"
+admin-info-level: "<gray>Уровень: <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+admin-info-storage: "<gray>Всего в хранилище: <yellow>%stored%</yellow></gray>"
+admin-info-earnings: "<gray>Накопленный доход: <green>%earnings%$</green></gray>"
+admin-info-autoharvest: "<gray>Автосбор: %status%</gray>"
+admin-info-autosell: "<gray>Автопродажа: %status%</gray>"
+admin-info-harvested: "<gray>Всего собрано: <yellow>%harvested%</yellow></gray>"
+admin-info-totalearnings: "<gray>Общий доход: <green>%earnings%$</green></gray>"
+admin-info-footer: "<gold>=========================================="
+
+# Сообщения NPC и команды
+npc-created: "%prefix%<green>NPC HukumFarmer успешно создан! (ID: <yellow>%id%</yellow>)</green>"
+npc-removed: "%prefix%<green>NPC HukumFarmer (<yellow>%id%</yellow>) успешно удален.</green>"
+npc-not-found: "%prefix%<red>NPC с таким ID или поблизости не найден!</red>"
+npc-teleported: "%prefix%<green>Телепортация к NPC <yellow>%id%</yellow>.</green>"
+npc-not-owner: "%prefix%<red>Этот фермер принадлежит игроку <yellow>%owner%</yellow>! Вы можете управлять только своим фермером.</red>"
+npc-list-header: "<gold>========== <yellow>Список NPC HukumFarmer</yellow> =========="
+npc-list-item: "<gray>● ID: <yellow>%id%</yellow> | Локация: <aqua>%world%, %x%, %y%, %z%</aqua></gray>"
+npc-list-empty: "%prefix%<yellow>Зарегистрированных NPC не найдено.</yellow>"
+npc-already-exists: "%prefix%<red>NPC с таким ID уже существует: <yellow>%id%</yellow></red>"
+npc-invalid-world: "%prefix%<red>Ошибка: Недопустимый или незагруженный мир!</red>"
+npc-create-error: "%prefix%<red>Произошла ошибка при создании NPC: <yellow>%error%</yellow></red>"
+npc-usage-remove: "%prefix%<yellow>Использование: /farmer npc remove <id></yellow>"
+npc-usage-teleport: "%prefix%<yellow>Использование: /farmer npc teleport <id></yellow>"
+
+npc-help-header: "<gold>========== NPC-команды HukumFarmer =========="
+npc-help-create: "<yellow>/farmer npc create [id]</yellow> <gray>- Создает NPC на вашей позиции</gray>"
+npc-help-remove: "<yellow>/farmer npc remove [id]</yellow> <gray>- Удаляет указанного или ближайшего NPC</gray>"
+npc-help-list: "<yellow>/farmer npc list</yellow> <gray>- Список всех зарегистрированных NPC</gray>"
+npc-help-teleport: "<yellow>/farmer npc teleport <id></yellow> <gray>- Телепортация к NPC</gray>"
+npc-help-footer: "<gold>==============================================="
+
+# Резервные копии
+backup-success: "%prefix%<green>Резервная копия базы данных успешно создана: <yellow>%file%</yellow></green>"
+backup-failed: "%prefix%<red>Произошла ошибка при создании резервной копии базы данных!</red>"
+
+# Помощь и описания
+help-header: "<dark_gray>============= <gold><bold>Помощь HukumFarmer</bold></gold> <dark_gray>============="
+help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
+help-footer: "<dark_gray>=========================================="
+
+help-desc-main: "Открывает главное меню / меню покупки."
+help-desc-create: "Открывает меню покупки фермера."
+help-desc-language: "Открывает меню выбора языка."
+help-desc-storage: "Открывает хранилище урожая."
+help-desc-upgrade: "Открывает меню улучшений фермера."
+help-desc-sell: "Продает весь урожай из хранилища."
+help-desc-stats: "Показывает статистику фермера."
+help-desc-settings: "Настройка параметров фермера."
+help-desc-npc: "Команды управления NPC."
+help-desc-reload: "Перезагружает конфигурационные файлы."
+help-desc-admin: "Список команд администратора."
+
+# Урожай и перевод предметов
+crops:
+  wheat: "<green>Пшеница</green>"
+  carrot: "<gold>Морковь</gold>"
+  potato: "<yellow>Картофель</yellow>"
+  beetroot: "<red>Свекла</red>"
+  sugarcane: "<green>Сахарный Тростник</green>"
+  cactus: "<green>Кактус</green>"
+  melon: "<green>Арбуз</green>"
+  pumpkin: "<gold>Тыква</gold>"
+  nether_wart: "<dark_red>Нарост Незера</dark_red>"
+  cocoa_beans: "<gold>Какао-бобы</gold>"
+  sweet_berries: "<red>Сладкие Ягоды</red>"
+  glow_berries: "<yellow>Светящиеся Ягоды</yellow>"
+  bamboo: "<green>Бамбук</green>"
+  kelp: "<dark_green>Ламинария</dark_green>"
+
+# Перевод меню и GUI
+gui:
+  main-menu:
+    title: "<gold><bold>Панель Управления Фермером</bold></gold>"
+    farmer-info:
+      name: "<yellow><bold>%farmer_name%</bold></yellow>"
+      lore:
+        - "<gray>Владелец: <gold>%owner%</gold></gray>"
+        - "<gray>Уровень: <aqua>%level%</aqua></gray>"
+        - "<gray>Опыт: <green>%xp% / %required_xp% XP</green></gray>"
+        - "<gray>Хранилище: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Множитель: <gold>x%multiplier%</gold></gray>"
+        - ""
+        - "<dark_gray>●</dark_gray> <gray>Накопленный доход: <green>%earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Используйте кнопки меню для управления фермером.</yellow>"
+    storage-button:
+      name: "<gold><bold>Хранилище Урожая</bold></gold>"
+      lore:
+        - "<gray>Просматривайте и продавайте урожай,"
+        - "<gray>собранный вашим фермером."
+        - ""
+        - "<gray>Заполнено: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Стоимость урожая: <green>%storage_value%$</green></gray>"
+        - ""
+        - "<yellow>▶ Нажмите, чтобы открыть хранилище!</yellow>"
+    upgrade-button:
+      name: "<aqua><bold>Улучшения Фермера</bold></aqua>"
+      lore:
+        - "<gray>Повышайте уровень фермера для"
+        - "<gray>увеличения вместимости и скорости."
+        - ""
+        - "<gray>Текущий уровень: <yellow>%level%</yellow></gray>"
+        - "<gray>Следующий уровень: <green>%next_level%</green></gray>"
+        - "<gray>Требуется денег: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>Требуется XP: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Нажмите, чтобы открыть меню улучшений!</yellow>"
+    collect-money:
+      name: "<green><bold>Собрать Доход</bold></green>"
+      lore:
+        - "<gray>Переведите накопленные деньги"
+        - "<gray>от авто-продажи на ваш баланс."
+        - ""
+        - "<gray>Накоплено: <gold>%earnings%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Нажмите, чтобы забрать деньги!</yellow>"
+    auto-harvest-toggle:
+      name: "<yellow><bold>Авто-Сбор</bold></yellow>"
+      lore:
+        - "<gray>Автоматически собирает созревший"
+        - "<gray>урожай вокруг фермера."
+        - ""
+        - "<gray>Статус: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Нажмите для переключения!</yellow>"
+    auto-sell-toggle:
+      name: "<light_purple><bold>Авто-Продажа</bold></light_purple>"
+      lore:
+        - "<gray>Автоматически продает собранный"
+        - "<gray>урожай за игровую валюту."
+        - ""
+        - "<gray>Статус: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Нажмите для переключения!</yellow>"
+    stats-button:
+      name: "<blue><bold>Статистика Фермера</bold></blue>"
+      lore:
+        - "<gray>Посмотреть общие объемы сбора"
+        - "<gray>и суммарный заработанный доход."
+        - ""
+        - "<gray>Всего собрано: <yellow>%total_harvested% шт.</yellow></gray>"
+        - "<gray>Общий доход: <green>%total_earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Нажмите для просмотра подробностей!</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Настройки Языка</bold></aqua>"
+      lore:
+        - "<gray>Измените предпочитаемый язык."
+        - ""
+        - "<yellow>▶ Нажмите для выбора языка!</yellow>"
+    close-button:
+      name: "<red><bold>Закрыть Меню</bold></red>"
+      lore:
+        - "<gray>Нажмите, чтобы закрыть окно.</gray>"
+
+  purchase-menu:
+    title: "<gold><bold>HukumFarmer - Купить Фермера</bold></gold>"
+    info-item:
+      name: "<yellow><bold>🌾 Фермер HukumFarmer</bold></yellow>"
+      lore:
+        - "<gray>Профессиональный автоматический помощник"
+        - "<gray>с функциями сбора и продажи урожая."
+        - ""
+        - "<gray>Стоимость покупки: <gold>%price%$</gold></gray>"
+        - "<gray>Ваш баланс: <green>%balance%$</green></gray>"
+        - ""
+        - "<yellow>▶ Подтвердите ниже для получения Яйца Фермера.</yellow>"
+    confirm-button:
+      name: "<green><bold>✔ КУПИТЬ ЯЙЦО ФЕРМЕРА</bold></green>"
+      lore:
+        - "<gray>Цена: <gold>%price%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Нажмите для подтверждения покупки!</yellow>"
+    cancel-button:
+      name: "<red><bold>✖ ОТМЕНА</bold></red>"
+      lore:
+        - "<gray>Нажмите, чтобы закрыть окно.</gray>"
+    language-button:
+      name: "<aqua><bold>🌐 Изменить Язык</bold></aqua>"
+      lore:
+        - "<gray>Текущий язык: <yellow>%language%</yellow></gray>"
+        - ""
+        - "<yellow>▶ Нажмите для выбора языка!</yellow>"
+
+  language-menu:
+    title: "<aqua><bold>🌐 Выбор Языка / Language Selection</bold></aqua>"
+    back-button:
+      name: "<red><bold>Назад</bold></red>"
+      lore:
+        - "<gray>Вернуться в предыдущее меню.</gray>"
+
+  storage-menu:
+    title: "<gold><bold>Хранилище Урожая Фермера</bold></gold>"
+    sell-all-button:
+      name: "<green><bold>Продать Весь Урожай</bold></green>"
+      lore:
+        - "<gray>Продать весь урожай из хранилища"
+        - "<gray>в один клик по рыночной цене с множителем."
+        - ""
+        - "<gray>Всего урожая: <yellow>%total_stored_items%</yellow></gray>"
+        - "<gray>Ожидаемый доход: <gold>%total_sell_value%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Нажмите, чтобы продать всё!</yellow>"
+    back-button:
+      name: "<red><bold>Назад</bold></red>"
+      lore:
+        - "<gray>Нажмите, чтобы вернуться в главное меню.</gray>"
+    info-item:
+      name: "<yellow><bold>Информация о Хранилище</bold></yellow>"
+      lore:
+        - "<gray>Вместимость: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Множитель сбора: <gold>x%multiplier%</gold></gray>"
+    crop-lore:
+      - "<gray>Количество в хранилище: <yellow>%amount%</yellow></gray>"
+      - "<gray>Цена за шт.: <gold>%price%$</gold></gray>"
+      - "<gray>Общая стоимость: <green>%total_value%$</green></gray>"
+      - ""
+      - "<yellow>▶ [Левый клик] Продать 64 шт.</yellow>"
+      - "<gold>▶ [Правый клик] Продать ВСЁ</gold>"
+      - "<aqua>▶ [Shift+Левый клик] Забрать 64 шт. в инвентарь</aqua>"
+
+  upgrade-menu:
+    title: "<aqua><bold>Повышение Уровня Фермера</bold></aqua>"
+    current-level-item:
+      name: "<yellow><bold>Текущее Состояние (Уровень %level%)</bold></yellow>"
+      lore:
+        - "<gray>Вместимость хранилища: <yellow>%max_storage%</yellow></gray>"
+        - "<gray>Множитель сбора: <gold>x%multiplier%</gold></gray>"
+        - "<gray>Скорость сбора: <aqua>%harvest_speed% сек.</aqua></gray>"
+        - "<gray>Радиус сбора: <green>%harvest_radius% блоков</green></gray>"
+    upgrade-action-button:
+      name: "<green><bold>Улучшить до Уровня %next_level%</bold></green>"
+      lore:
+        - "<gray>Новая вместимость: <yellow>%next_max_storage%</yellow></gray>"
+        - "<gray>Новый множитель: <gold>x%next_multiplier%</gold></gray>"
+        - "<gray>Новая скорость: <aqua>%next_harvest_speed% сек.</aqua></gray>"
+        - "<gray>Новый радиус: <green>%next_harvest_radius% блоков</green></gray>"
+        - ""
+        - "<gray>Требуется денег: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>Требуется XP: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Нажмите для улучшения!</yellow>"
+    back-button:
+      name: "<red><bold>Назад</bold></red>"
+      lore:
+        - "<gray>Вернуться в главное меню.</gray>"
+
+  settings-menu:
+    title: "<dark_purple><bold>Настройки Фермера</bold></dark_purple>"
+    rename-button:
+      name: "<yellow><bold>Переименовать Фермера</bold></yellow>"
+      lore:
+        - "<gray>Задайте уникальное имя вашему фермеру.</gray>"
+        - ""
+        - "<gray>Текущее имя: <white>%farmer_name%</white></gray>"
+        - ""
+        - "<yellow>▶ Нажмите, чтобы ввести имя в чат!</yellow>"
+    toggle-harvest:
+      name: "<green><bold>Авто-Сбор</bold></green>"
+      lore:
+        - "<gray>Статус: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Нажмите для переключения!</yellow>"
+    toggle-sell:
+      name: "<light_purple><bold>Авто-Продажа</bold></light_purple>"
+      lore:
+        - "<gray>Статус: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Нажмите для переключения!</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Изменить Язык</bold></aqua>"
+      lore:
+        - "<gray>Обновите настройки языка.</gray>"
+        - ""
+        - "<yellow>▶ Нажмите для выбора!</yellow>"
+    back-button:
+      name: "<red><bold>Назад</bold></red>"
+      lore:
+        - "<gray>Вернуться в главное меню.</gray>"

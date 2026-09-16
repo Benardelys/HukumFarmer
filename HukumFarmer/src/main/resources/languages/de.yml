@@ -1,0 +1,386 @@
+# ==============================================================================
+#                      HukumFarmer - Deutsche Sprachdatei (de.yml)
+# ==============================================================================
+
+prefix: "<gold><bold>HukumFarmer</bold></gold> <dark_gray>»</dark_gray> "
+
+# Allgemeine & Systemnachrichten
+no-permission: "%prefix%<red>Du hast keine Berechtigung für diese Aktion!</red>"
+player-only: "%prefix%<red>Nur Spieler können diesen Befehl ausführen!</red>"
+player-not-found: "%prefix%<red>Der angegebene Spieler wurde nicht gefunden oder ist offline.</red>"
+invalid-amount: "%prefix%<red>Ungültige Menge angegeben!</red>"
+invalid-level: "%prefix%<red>Ungültiges Level angegeben!</red>"
+reloaded: "%prefix%<green>Alle Konfigurationen und Sprachdateien wurden erfolgreich neu geladen.</green>"
+
+# Kauf & Farmer-Status
+farmer-already-exists: "%prefix%<red>Du hast bereits das maximale Farmer-Limit erreicht! Gib <yellow>/farmer</yellow> ein, um das Menü zu öffnen.</red>"
+farmer-not-found: "%prefix%<red>Du besitzt noch keinen Farmer! Gib <yellow>/farmer</yellow> ein, um einen zu kaufen.</red>"
+farmer-purchase-success: "%prefix%<green>Glückwunsch! Dein Farmer wurde für <gold>%price%$</gold> erfolgreich gekauft und erstellt.</green>"
+purchase-success-egg: "%prefix%<green>✔ Farmer-Ei erfolgreich für <gold>%price%$</gold> gekauft! Zu deinem Inventar hinzugefügt.</green>"
+farmer-placed: "%prefix%<green>✔ Farmer erfolgreich platziert und erstellt!</green>"
+farmer-creation-failed: "%prefix%<red>✖ Fehler beim Erstellen des Farmers. Dein Ei wurde nicht verbraucht.</red>"
+inventory-full: "%prefix%<red>✖ Dein Inventar ist voll! Vorgang abgebrochen.</red>"
+farmer-item-cannot-place-region: "%prefix%<red>✖ Du hast keine Berechtigung, hier einen Farmer zu platzieren!</red>"
+farmer-purchase-failed-money: "%prefix%<red>Nicht genug Guthaben! Erforderlich: <yellow>%price%$</yellow>, Guthaben: <gold>%balance%$</gold></red>"
+farmer-purchase-in-progress: "%prefix%<yellow>Dein Kaufvorgang wird bereits bearbeitet, bitte warten...</yellow>"
+farmer-purchase-error: "%prefix%<red>Beim Erstellen des Farmers ist ein Fehler aufgetreten. Dein Geld wurde nicht abgebucht oder erstattet.</red>"
+farmer-purchase-disabled: "%prefix%<red>Der Farmer-Kauf ist derzeit deaktiviert.</red>"
+farmer-limit-reached: "%prefix%<red>Du hast das maximale Limit an Farmern (<yellow>%max%</yellow>) erreicht!</red>"
+farmer-location-invalid: "%prefix%<red>Farmer kann an dieser Position nicht erstellt werden! Bitte stelle dich auf einen festen Block.</red>"
+farmer-invalid-location: "%prefix%<red>Ungültiger Standort! Bitte wähle einen sicheren Bodenblock.</red>"
+farmer-renamed: "%prefix%<green>Dein Farmer wurde in <yellow>%name%</yellow> umbenannt.</green>"
+farmer-name-too-long: "%prefix%<red>Der Farmer-Name darf maximal %max% Zeichen lang sein!</red>"
+rename-prompt: "%prefix%<yellow>Bitte gib den neuen Namen deines Farmers in den Chat ein. (Tippe <red>cancel</red> zum Abbrechen)</yellow>"
+rename-cancelled: "%prefix%<yellow>Das Umbenennen des Farmers wurde abgebrochen.</yellow>"
+
+# Upgrades & Level
+farmer-upgraded: "%prefix%<green>Dein Farmer wurde auf <yellow>Level %level%</yellow> aufgewertet!</green>"
+farmer-max-level: "%prefix%<yellow>Dein Farmer hat bereits das maximale Level erreicht!</yellow>"
+not-enough-money-upgrade: "%prefix%<red>Nicht genug Geld für das Upgrade! Benötigt: <yellow>%cost%$</yellow></red>"
+not-enough-xp-upgrade: "%prefix%<red>Nicht genug Erfahrungspunkte! Benötigt: <yellow>%xp% XP</yellow></red>"
+
+# Lager & Ernte
+storage-full: "%prefix%<red>Das Lager deines Farmers ist voll! Verkaufe Pflanzen oder erweitere die Kapazität.</red>"
+crops-harvested: "%prefix%<green>Dein Farmer hat <yellow>%amount% Pflanzen</yellow> geerntet!</green>"
+
+# Verkauf & Wirtschaft
+not-enough-crops: "%prefix%<red>Es befinden sich keine Pflanzen zum Verkaufen im Lager!</red>"
+crop-sold: "%prefix%<green><yellow>%amount%x %crop%</yellow> verkauft! Verdienst: <gold>%money%$</gold></green>"
+all-crops-sold: "%prefix%<green>Alle Pflanzen (<yellow>%amount% insgesamt</yellow>) wurden verkauft! Verdienst: <gold>%money%$</gold></green>"
+money-collected: "%prefix%<green>Du hast das angesammelte Guthaben von <gold>%amount%$</gold> abgeholt!</green>"
+no-money-to-collect: "%prefix%<yellow>Es gibt kein angesammeltes Geld zum Abholen.</yellow>"
+vault-disabled-warning: "%prefix%<red>Wirtschaftssystem (Vault) ist auf diesem Server nicht aktiv.</red>"
+
+# Einstellungen & Umschalter
+toggle-auto-harvest-on: "%prefix%<green>Automatische Ernte ist jetzt <bold>AKTIVIERT</bold>.</green>"
+toggle-auto-harvest-off: "%prefix%<yellow>Automatische Ernte ist jetzt <bold>DEAKTIVIERT</bold>.</yellow>"
+toggle-auto-sell-on: "%prefix%<green>Automatischer Verkauf ist jetzt <bold>AKTIVIERT</bold>.</green>"
+toggle-auto-sell-off: "%prefix%<yellow>Automatischer Verkauf ist jetzt <bold>DEAKTIVIERT</bold>.</yellow>"
+status-enabled: "<green>AKTIVIERT</green>"
+status-disabled: "<red>DEAKTIVIERT</red>"
+
+# Sprachsystem
+language-changed: "%prefix%<green>Deine bevorzugte Sprache wurde auf <yellow>%language%</yellow> geändert!</green>"
+language-invalid: "%prefix%<red>Ungültiger Sprachcode! Verfügbare Sprachen: <yellow>tr, en, de, fr, es, ru</yellow></red>"
+admin-language-set: "%prefix%<green>Sprache für <yellow>%player%</yellow> wurde auf <yellow>%language%</yellow> gesetzt.</green>"
+
+# Statistiken
+stats-header: "<gold>========== <yellow>%name% Statistiken</yellow> =========="
+stats-level: "<gray>Level: <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+stats-multiplier: "<gray>Ernte-Multiplikator: <gold>x%multiplier%</gold></gray>"
+stats-storage: "<gray>Lager-Status: <yellow>%stored% / %max%</yellow></gray>"
+stats-harvested: "<gray>Insgesamt geerntet: <yellow>%harvested% Pflanzen</yellow></gray>"
+stats-earnings: "<gray>Gesamterlös: <green>%earnings%$</green></gray>"
+stats-footer: "<gold>=================================================="
+
+# Admin-Nachrichten & Verwendungen
+admin-given: "%prefix%<green>Dem Spieler <yellow>%player%</yellow> wurde ein Farmer und NPC zugewiesen.</green>"
+admin-egg-given: "%prefix%<green>✔ Dem Spieler <yellow>%player%</yellow> wurden <yellow>%amount%</yellow> Farmer-Eier gegeben.</green>"
+admin-egg-received: "%prefix%<gold>★ Ein Administrator hat dir <yellow>%amount%</yellow> Farmer-Eier gegeben!</gold>"
+admin-reset: "%prefix%<green>Farmer von Spieler <yellow>%player%</yellow> wurde zurückgesetzt.</green>"
+admin-setlevel: "%prefix%<green>Farmer-Level von <yellow>%player%</yellow> auf <yellow>%level%</yellow> gesetzt.</green>"
+admin-addxp: "%prefix%<green><yellow>%amount% XP</yellow> zum Farmer von <yellow>%player%</yellow> hinzugefügt.</green>"
+admin-removed: "%prefix%<green>Farmer und NPC von <yellow>%player%</yellow> erfolgreich gelöscht.</green>"
+admin-farmer-already-has: "%prefix%<red>Dieser Spieler besitzt bereits einen Farmer!</red>"
+
+admin-usage-give: "%prefix%<yellow>Verwendung: /farmer admin give <spieler></yellow>"
+admin-usage-give-egg: "%prefix%<yellow>Verwendung: /farmer admin give <spieler> [menge]</yellow>"
+admin-usage-language: "%prefix%<yellow>Verwendung: /farmer admin language <spieler> <tr|en|de|fr|es|ru></yellow>"
+admin-usage-reset: "%prefix%<yellow>Verwendung: /farmer admin reset <spieler></yellow>"
+admin-usage-setlevel: "%prefix%<yellow>Verwendung: /farmer admin setlevel <spieler> <level></yellow>"
+admin-usage-addxp: "%prefix%<yellow>Verwendung: /farmer admin addxp <spieler> <menge></yellow>"
+admin-usage-remove: "%prefix%<yellow>Verwendung: /farmer admin remove <spieler></yellow>"
+admin-usage-info: "%prefix%<yellow>Verwendung: /farmer admin info <spieler></yellow>"
+
+admin-help-header: "<gold>========== HukumFarmer Admin-Befehle =========="
+admin-help-give: "<yellow>/farmer admin give <spieler> [menge]</yellow> <gray>- Gibt dem Spieler Farmer-Eier</gray>"
+admin-help-language: "<yellow>/farmer admin language <spieler> <sprache></yellow> <gray>- Setzt Spielersprache</gray>"
+admin-help-reset: "<yellow>/farmer admin reset <spieler></yellow> <gray>- Setzt Farmer zurück</gray>"
+admin-help-setlevel: "<yellow>/farmer admin setlevel <spieler> <level></yellow> <gray>- Setzt Farmer-Level</gray>"
+admin-help-addxp: "<yellow>/farmer admin addxp <spieler> <menge></yellow> <gray>- Fügt Farmer XP hinzu</gray>"
+admin-help-remove: "<yellow>/farmer admin remove <spieler></yellow> <gray>- Löscht Farmer komplett</gray>"
+admin-help-info: "<yellow>/farmer admin info <spieler></yellow> <gray>- Zeigt Farmer-Details</gray>"
+admin-help-footer: "<gold>=================================================="
+
+admin-info-header: "<gold>========== Farmer-Info: <yellow>%player%</yellow> =========="
+admin-info-name: "<gray>Name: <yellow>%name%</yellow></gray>"
+admin-info-level: "<gray>Level: <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+admin-info-storage: "<gray>Insgesamt gelagert: <yellow>%stored%</yellow></gray>"
+admin-info-earnings: "<gray>Angesammelter Ertrag: <green>%earnings%$</green></gray>"
+admin-info-autoharvest: "<gray>Auto-Ernte: %status%</gray>"
+admin-info-autosell: "<gray>Auto-Verkauf: %status%</gray>"
+admin-info-harvested: "<gray>Insgesamt geerntet: <yellow>%harvested%</yellow></gray>"
+admin-info-totalearnings: "<gray>Gesamtverdienst: <green>%earnings%$</green></gray>"
+admin-info-footer: "<gold>=========================================="
+
+# NPC-Nachrichten & Verwendungen
+npc-created: "%prefix%<green>HukumFarmer NPC erfolgreich erstellt! (ID: <yellow>%id%</yellow>)</green>"
+npc-removed: "%prefix%<green>HukumFarmer NPC (<yellow>%id%</yellow>) erfolgreich entfernt.</green>"
+npc-not-found: "%prefix%<red>Kein NPC mit dieser ID oder in der Nähe gefunden!</red>"
+npc-teleported: "%prefix%<green>Zu NPC <yellow>%id%</yellow> teleportiert.</green>"
+npc-not-owner: "%prefix%<red>Dieser Farmer gehört <yellow>%owner%</yellow>! Du kannst nur deinen eigenen Farmer verwalten.</red>"
+npc-list-header: "<gold>========== <yellow>HukumFarmer NPC-Liste</yellow> =========="
+npc-list-item: "<gray>● ID: <yellow>%id%</yellow> | Ort: <aqua>%world%, %x%, %y%, %z%</aqua></gray>"
+npc-list-empty: "%prefix%<yellow>Keine registrierten NPCs gefunden.</yellow>"
+npc-already-exists: "%prefix%<red>Ein NPC mit dieser ID existiert bereits: <yellow>%id%</yellow></red>"
+npc-invalid-world: "%prefix%<red>Fehler: Ungültige oder nicht geladene Welt!</red>"
+npc-create-error: "%prefix%<red>Fehler beim Erstellen des NPCs: <yellow>%error%</yellow></red>"
+npc-usage-remove: "%prefix%<yellow>Verwendung: /farmer npc remove <id></yellow>"
+npc-usage-teleport: "%prefix%<yellow>Verwendung: /farmer npc teleport <id></yellow>"
+
+npc-help-header: "<gold>========== HukumFarmer NPC-Befehle =========="
+npc-help-create: "<yellow>/farmer npc create [id]</yellow> <gray>- Erstellt NPC an deiner Position</gray>"
+npc-help-remove: "<yellow>/farmer npc remove [id]</yellow> <gray>- Löscht angegebenen/nächsten NPC</gray>"
+npc-help-list: "<yellow>/farmer npc list</yellow> <gray>- Listet alle registrierten NPCs auf</gray>"
+npc-help-teleport: "<yellow>/farmer npc teleport <id></yellow> <gray>- Teleportiert zu bestimmtem NPC</gray>"
+npc-help-footer: "<gold>==============================================="
+
+# Backup-Nachrichten
+backup-success: "%prefix%<green>Datenbank-Backup erfolgreich erstellt: <yellow>%file%</yellow></green>"
+backup-failed: "%prefix%<red>Beim Erstellen des Backups ist ein Fehler aufgetreten!</red>"
+
+# Hilfemeldungen & Beschreibungen
+help-header: "<dark_gray>============= <gold><bold>HukumFarmer Hilfe</bold></gold> <dark_gray>============="
+help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
+help-footer: "<dark_gray>=========================================="
+
+help-desc-main: "Öffnet das Farmer-Hauptmenü / Kaufmenü."
+help-desc-create: "Öffnet das Farmer-Kaufmenü."
+help-desc-language: "Öffnet das Sprachauswahlmenü."
+help-desc-storage: "Öffnet das Farmer-Pflanzenlager."
+help-desc-upgrade: "Öffnet das Farmer-Upgrade-Menü."
+help-desc-sell: "Verkauft alle gelagerten Pflanzen."
+help-desc-stats: "Zeigt Statistiken des Farmers an."
+help-desc-settings: "Konfiguriert Farmer-Einstellungen."
+help-desc-npc: "Farmer NPC-Verwaltungsbefehle."
+help-desc-reload: "Lädt alle Konfigurationsdateien neu."
+help-desc-admin: "Listet Administratorbefehle auf."
+
+# Pflanzen & Gegenstände Übersetzungen
+crops:
+  wheat: "<green>Weizen</green>"
+  carrot: "<gold>Karotte</gold>"
+  potato: "<yellow>Kartoffel</yellow>"
+  beetroot: "<red>Rote Bete</red>"
+  sugarcane: "<green>Zuckerrohr</green>"
+  cactus: "<green>Kaktus</green>"
+  melon: "<green>Melone</green>"
+  pumpkin: "<gold>Kürbis</gold>"
+  nether_wart: "<dark_red>Netherwarzen</dark_red>"
+  cocoa_beans: "<gold>Kakaobohnen</gold>"
+  sweet_berries: "<red>Süßbeeren</red>"
+  glow_berries: "<yellow>Leuchtbeeren</yellow>"
+  bamboo: "<green>Bambus</green>"
+  kelp: "<dark_green>Seetang</dark_green>"
+
+# GUI Übersetzungen
+gui:
+  main-menu:
+    title: "<gold><bold>Farmer-Verwaltungsmenü</bold></gold>"
+    farmer-info:
+      name: "<yellow><bold>%farmer_name%</bold></yellow>"
+      lore:
+        - "<gray>Besitzer: <gold>%owner%</gold></gray>"
+        - "<gray>Level: <aqua>%level%</aqua></gray>"
+        - "<gray>Erfahrung: <green>%xp% / %required_xp% XP</green></gray>"
+        - "<gray>Lagerstatus: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Ernte-Multiplikator: <gold>x%multiplier%</gold></gray>"
+        - ""
+        - "<dark_gray>●</dark_gray> <gray>Gesammelte Einnahmen: <green>%earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Nutze die Schaltflächen zur Verwaltung.</yellow>"
+    storage-button:
+      name: "<gold><bold>Pflanzenlager</bold></gold>"
+      lore:
+        - "<gray>Ernteerträge ansehen und"
+        - "<gray>direkt auf dem Markt verkaufen."
+        - ""
+        - "<gray>Belegt: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Lagerwert: <green>%storage_value%$</green></gray>"
+        - ""
+        - "<yellow>▶ Klicken, um Lager zu öffnen!</yellow>"
+    upgrade-button:
+      name: "<aqua><bold>Farmer Upgrades</bold></aqua>"
+      lore:
+        - "<gray>Erhöhe das Farmer-Level für"
+        - "<gray>höhere Kapazität und Geschwindigkeit."
+        - ""
+        - "<gray>Aktuelles Level: <yellow>%level%</yellow></gray>"
+        - "<gray>Nächstes Level: <green>%next_level%</green></gray>"
+        - "<gray>Benötigtes Geld: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>Benötigte XP: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Klicken, um Upgrades zu öffnen!</yellow>"
+    collect-money:
+      name: "<green><bold>Einnahmen Abholen</bold></green>"
+      lore:
+        - "<gray>Übertrage angesammeltes Geld"
+        - "<gray>direkt auf dein Spielerkonto."
+        - ""
+        - "<gray>Angesammelt: <gold>%earnings%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Klicken zum Abholen!</yellow>"
+    auto-harvest-toggle:
+      name: "<yellow><bold>Auto-Ernte</bold></yellow>"
+      lore:
+        - "<gray>Erntet reife Pflanzen im"
+        - "<gray>Umkreis automatisch ab."
+        - ""
+        - "<gray>Status: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Klicken zum Umschalten!</yellow>"
+    auto-sell-toggle:
+      name: "<light_purple><bold>Auto-Verkauf</bold></light_purple>"
+      lore:
+        - "<gray>Verkauft geerntete Pflanzen"
+        - "<gray>automatisch für Geld."
+        - ""
+        - "<gray>Status: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Klicken zum Umschalten!</yellow>"
+    stats-button:
+      name: "<blue><bold>Farmer Statistiken</bold></blue>"
+      lore:
+        - "<gray>Erntemengen und historische"
+        - "<gray>Einnahmen deines Farmers ansehen."
+        - ""
+        - "<gray>Gesamt Geerntet: <yellow>%total_harvested% Stück</yellow></gray>"
+        - "<gray>Gesamte Einnahmen: <green>%total_earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Klicken für Details!</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Spracheinstellungen</bold></aqua>"
+      lore:
+        - "<gray>Ändere deine bevorzugte Sprache."
+        - ""
+        - "<yellow>▶ Klicken für Sprachauswahl!</yellow>"
+    close-button:
+      name: "<red><bold>Menü Schließen</bold></red>"
+      lore:
+        - "<gray>Klicken zum Schließen des Fensters.</gray>"
+
+  purchase-menu:
+    title: "<gold><bold>HukumFarmer - Farmer Kaufen</bold></gold>"
+    info-item:
+      name: "<yellow><bold>🌾 HukumFarmer Farmer</bold></yellow>"
+      lore:
+        - "<gray>Ein professioneller automatischer Helfer"
+        - "<gray>mit Ernte- und Verkaufsfunktionen."
+        - ""
+        - "<gray>Kaufpreis: <gold>%price%$</gold></gray>"
+        - "<gray>Dein Guthaben: <green>%balance%$</green></gray>"
+        - ""
+        - "<yellow>▶ Bestätige, um das Farmer-Ei zu erhalten.</yellow>"
+    confirm-button:
+      name: "<green><bold>✔ FARMER-EI KAUFEN</bold></green>"
+      lore:
+        - "<gray>Preis: <gold>%price%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Klicken zum Bestätigen!</yellow>"
+    cancel-button:
+      name: "<red><bold>✖ ABBRECHEN</bold></red>"
+      lore:
+        - "<gray>Klicken zum Schließen.</gray>"
+    language-button:
+      name: "<aqua><bold>🌐 Sprache Ändern</bold></aqua>"
+      lore:
+        - "<gray>Aktuelle Sprache: <yellow>%language%</yellow></gray>"
+        - ""
+        - "<yellow>▶ Klicken zum Wechseln!</yellow>"
+
+  language-menu:
+    title: "<aqua><bold>🌐 Sprachauswahl / Language Selection</bold></aqua>"
+    back-button:
+      name: "<red><bold>Zurück</bold></red>"
+      lore:
+        - "<gray>Zum vorherigen Menü zurückkehren.</gray>"
+
+  storage-menu:
+    title: "<gold><bold>Farmer-Pflanzenlager</bold></gold>"
+    sell-all-button:
+      name: "<green><bold>Alles Verkaufen</bold></green>"
+      lore:
+        - "<gray>Verkauft alle gelagerten Erträge"
+        - "<gray>auf einmal zum Marktpreis."
+        - ""
+        - "<gray>Gesamtmenge: <yellow>%total_stored_items%</yellow></gray>"
+        - "<gray>Geschätzter Erlös: <gold>%total_sell_value%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Klicken, um alles zu verkaufen!</yellow>"
+    back-button:
+      name: "<red><bold>Zurück</bold></red>"
+      lore:
+        - "<gray>Zum Hauptmenü zurückkehren.</gray>"
+    info-item:
+      name: "<yellow><bold>Lagerinfo</bold></yellow>"
+      lore:
+        - "<gray>Kapazität: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Ernte-Multiplikator: <gold>x%multiplier%</gold></gray>"
+    crop-lore:
+      - "<gray>Gelagerte Menge: <yellow>%amount%</yellow></gray>"
+      - "<gray>Stückpreis: <gold>%price%$</gold></gray>"
+      - "<gray>Gesamtwert: <green>%total_value%$</green></gray>"
+      - ""
+      - "<yellow>▶ [Linksklick] 64 Stück verkaufen</yellow>"
+      - "<gold>▶ [Rechtsklick] ALLES verkaufen</gold>"
+      - "<aqua>▶ [Shift+Linksklick] 64 ins Inventar nehmen</aqua>"
+
+  upgrade-menu:
+    title: "<aqua><bold>Farmer Level-Upgrade</bold></aqua>"
+    current-level-item:
+      name: "<yellow><bold>Aktueller Status (Level %level%)</bold></yellow>"
+      lore:
+        - "<gray>Lagerkapazität: <yellow>%max_storage%</yellow></gray>"
+        - "<gray>Ernte-Multiplikator: <gold>x%multiplier%</gold></gray>"
+        - "<gray>Erntetempo: <aqua>%harvest_speed%s</aqua></gray>"
+        - "<gray>Ernteradius: <green>%harvest_radius% Blöcke</green></gray>"
+    upgrade-action-button:
+      name: "<green><bold>Auf Level %next_level% Upgraden</bold></green>"
+      lore:
+        - "<gray>Neue Kapazität: <yellow>%next_max_storage%</yellow></gray>"
+        - "<gray>Neuer Multiplikator: <gold>x%next_multiplier%</gold></gray>"
+        - "<gray>Neues Tempo: <aqua>%next_harvest_speed%s</aqua></gray>"
+        - "<gray>Neuer Radius: <green>%next_harvest_radius% Blöcke</green></gray>"
+        - ""
+        - "<gray>Benötigtes Geld: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>Benötigte XP: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Klicken zum Upgraden!</yellow>"
+    back-button:
+      name: "<red><bold>Zurück</bold></red>"
+      lore:
+        - "<gray>Zum Hauptmenü zurückkehren.</gray>"
+
+  settings-menu:
+    title: "<dark_purple><bold>Farmer Einstellungen</bold></dark_purple>"
+    rename-button:
+      name: "<yellow><bold>Farmer Umbenennen</bold></yellow>"
+      lore:
+        - "<gray>Gib deinem Farmer einen eigenen Namen.</gray>"
+        - ""
+        - "<gray>Aktueller Name: <white>%farmer_name%</white></gray>"
+        - ""
+        - "<yellow>▶ Klicken, um Namen im Chat einzugeben!</yellow>"
+    toggle-harvest:
+      name: "<green><bold>Auto-Ernte</bold></green>"
+      lore:
+        - "<gray>Status: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Klicken zum Umschalten!</yellow>"
+    toggle-sell:
+      name: "<light_purple><bold>Auto-Verkauf</bold></light_purple>"
+      lore:
+        - "<gray>Status: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Klicken zum Umschalten!</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Sprache Ändern</bold></aqua>"
+      lore:
+        - "<gray>Spracheinstellung aktualisieren.</gray>"
+        - ""
+        - "<yellow>▶ Klicken zum Auswählen!</yellow>"
+    back-button:
+      name: "<red><bold>Zurück</bold></red>"
+      lore:
+        - "<gray>Zum Hauptmenü zurückkehren.</gray>"
+

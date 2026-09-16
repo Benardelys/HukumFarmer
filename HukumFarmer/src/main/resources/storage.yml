@@ -1,0 +1,25 @@
+# ==============================================================================
+#                      HukumFarmer - Storage Configuration
+# ==============================================================================
+
+# General Storage Rules
+storage:
+  # Enable individual crop withdrawal or only selling
+  allow-withdraw: true
+  # Drop items on ground if inventory is full during withdrawal
+  drop-excess-on-ground: true
+  # Format big numbers (e.g. 10.5K, 1.2M) in GUI displays
+  format-numbers: true
+  # Prevent auto-harvest from functioning if storage is 100% full
+  stop-harvest-when-full: true
+
+# Custom Display Items for Storage GUI
+crop-item-format:
+  lore:
+    - "<gray>Depolanan Miktar: <yellow>%amount%</yellow></gray>"
+    - "<gray>Birim Fiyatı: <gold>%price%$</gold></gray>"
+    - "<gray>Toplam Değer: <green>%total_value%$</green></gray>"
+    - ""
+    - "<yellow>▶ [Sol Tık] Bu üründen 64 adet sat</yellow>"
+    - "<gold>▶ [Sağ Tık] Bu ürünün HEPSİNİ sat</gold>"
+    - "<aqua>▶ [Shift+Sol Tık] 64 adet envantere al</aqua>"

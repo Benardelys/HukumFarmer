@@ -1,0 +1,126 @@
+# ==============================================================================
+#                      HukumFarmer - Supported Crops
+#   Configure supported crops, materials, icons, sell prices, and XP rewards
+# ==============================================================================
+
+crops:
+  WHEAT:
+    enabled: true
+    material: "WHEAT"
+    block-material: "WHEAT"
+    display-name: "<yellow>Buğday</yellow>"
+    sell-price: 2.5
+    xp-reward: 1
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 10
+
+  CARROTS:
+    enabled: true
+    material: "CARROT"
+    block-material: "CARROTS"
+    display-name: "<gold>Havuç</gold>"
+    sell-price: 3.0
+    xp-reward: 1
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 11
+
+  POTATOES:
+    enabled: true
+    material: "POTATO"
+    block-material: "POTATOES"
+    display-name: "<yellow>Patates</yellow>"
+    sell-price: 3.0
+    xp-reward: 1
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 12
+
+  BEETROOTS:
+    enabled: true
+    material: "BEETROOT"
+    block-material: "BEETROOTS"
+    display-name: "<red>Pancar</red>"
+    sell-price: 4.0
+    xp-reward: 2
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 13
+
+  MELON:
+    enabled: true
+    material: "MELON_SLICE"
+    block-material: "MELON"
+    display-name: "<green>Karpuz Dilimi</green>"
+    sell-price: 1.5
+    xp-reward: 1
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 14
+
+  PUMPKIN:
+    enabled: true
+    material: "PUMPKIN"
+    block-material: "PUMPKIN"
+    display-name: "<gold>Balkabağı</gold>"
+    sell-price: 6.0
+    xp-reward: 3
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 15
+
+  SUGAR_CANE:
+    enabled: true
+    material: "SUGAR_CANE"
+    block-material: "SUGAR_CANE"
+    display-name: "<green>Şeker Kamışı</green>"
+    sell-price: 3.5
+    xp-reward: 2
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 16
+
+  CACTUS:
+    enabled: true
+    material: "CACTUS"
+    block-material: "CACTUS"
+    display-name: "<dark_green>Kaktüs</dark_green>"
+    sell-price: 4.0
+    xp-reward: 2
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 19
+
+  COCOA:
+    enabled: true
+    material: "COCOA_BEANS"
+    block-material: "COCOA"
+    display-name: "<gold>Kakao Çekirdeği</gold>"
+    sell-price: 5.0
+    xp-reward: 3
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 20
+
+  NETHER_WART:
+    enabled: true
+    material: "NETHER_WART"
+    block-material: "NETHER_WART"
+    display-name: "<dark_red>Nether Yumrusu</dark_red>"
+    sell-price: 7.5
+    xp-reward: 4
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 21
+
+  SWEET_BERRIES:
+    enabled: true
+    material: "SWEET_BERRIES"
+    block-material: "SWEET_BERRY_BUSH"
+    display-name: "<red>Tatlı Böğürtlen</red>"
+    sell-price: 2.0
+    xp-reward: 1
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 22

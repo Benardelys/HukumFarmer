@@ -1,0 +1,386 @@
+# ==============================================================================
+#                      HukumFarmer - Türkçe Dil Dosyası (tr.yml)
+# ==============================================================================
+
+prefix: "<gold><bold>HukumFarmer</bold></gold> <dark_gray>»</dark_gray> "
+
+# Genel & Sistem Mesajları
+no-permission: "%prefix%<red>Bu işlemi yapmak için yetkiniz bulunmuyor!</red>"
+player-only: "%prefix%<red>Bu komutu sadece oyuncular kullanabilir!</red>"
+player-not-found: "%prefix%<red>Belirtilen oyuncu bulunamadı veya çevrimdışı.</red>"
+invalid-amount: "%prefix%<red>Geçersiz bir miktar belirttiniz!</red>"
+invalid-level: "%prefix%<red>Geçersiz bir seviye belirttiniz!</red>"
+reloaded: "%prefix%<green>Tüm yapılandırma ve dil dosyaları başarıyla yenilendi.</green>"
+
+# Satın Alma & Çiftçi Durumu
+farmer-already-exists: "%prefix%<red>Zaten maksimum çiftçi limitine ulaştınız! <yellow>/farmer</yellow> yazarak menüyü açabilirsiniz.</red>"
+farmer-not-found: "%prefix%<red>Henüz bir çiftçiniz bulunmuyor! <yellow>/farmer</yellow> yazarak çiftçi satın alabilirsiniz.</red>"
+farmer-purchase-success: "%prefix%<green>Tebrikler! Çiftçiniz <gold>%price%$</gold> karşılığında başarıyla satın alındı ve oluşturuldu.</green>"
+purchase-success-egg: "%prefix%<green>✔ Çiftçi Yumurtası başarıyla satın alındı! (<gold>%price%$</gold>) Envanterinize eklendi.</green>"
+farmer-placed: "%prefix%<green>✔ Çiftçi başarıyla yerleştirildi ve oluşturuldu!</green>"
+farmer-creation-failed: "%prefix%<red>✖ Çiftçi oluşturulurken bir hata meydana geldi. Yumurtanız harcanmadı.</red>"
+inventory-full: "%prefix%<red>✖ Envanteriniz dolu olduğu için işlem gerçekleştirilemedi!</red>"
+farmer-item-cannot-place-region: "%prefix%<red>✖ Bu bölgeye çiftçi yerleştirme yetkiniz bulunmuyor!</red>"
+farmer-purchase-failed-money: "%prefix%<red>Çiftçi satın almak için yeterli bakiyeniz yok! Gerekli: <yellow>%price%$</yellow>, Mevcut: <gold>%balance%$</gold></red>"
+farmer-purchase-in-progress: "%prefix%<yellow>Satın alma işleminiz zaten devam ediyor, lütfen bekleyin...</yellow>"
+farmer-purchase-error: "%prefix%<red>Çiftçi oluşturulurken bir sorun oluştu. Bakiyeniz kesilmedi/iade edildi.</red>"
+farmer-purchase-disabled: "%prefix%<red>Çiftçi satın alma sistemi şu anda devre dışı.</red>"
+farmer-limit-reached: "%prefix%<red>Sahip olabileceğiniz maksimum çiftçi limitine (<yellow>%max%</yellow>) ulaştınız!</red>"
+farmer-location-invalid: "%prefix%<red>Bulunduğunuz konumda çiftçi oluşturulamaz! Lütfen geçerli bir blok üzerinde durun.</red>"
+farmer-invalid-location: "%prefix%<red>Bu konuma çiftçi yerleştirilemez! Lütfen geçerli bir zemin seçin.</red>"
+farmer-renamed: "%prefix%<green>Çiftçinizin adı başarıyla <yellow>%name%</yellow> olarak değiştirildi.</green>"
+farmer-name-too-long: "%prefix%<red>Çiftçi adı en fazla %max% karakter olabilir!</red>"
+rename-prompt: "%prefix%<yellow>Lütfen çiftçinizin yeni adını sohbete yazın. (İptal etmek için <red>iptal</red> yazın)</yellow>"
+rename-cancelled: "%prefix%<yellow>Yeniden adlandırma işlemi iptal edildi.</yellow>"
+
+# Seviye & Yükseltmeler
+farmer-upgraded: "%prefix%<green>Çiftçiniz <yellow>Seviye %level%</yellow> seviyesine yükseltildi!</green>"
+farmer-max-level: "%prefix%<yellow>Çiftçiniz zaten maksimum seviyede!</yellow>"
+not-enough-money-upgrade: "%prefix%<red>Yükseltme için yeterli paranız yok! Gerekli: <yellow>%cost%$</yellow></red>"
+not-enough-xp-upgrade: "%prefix%<red>Yükseltme için yeterli deneyiminiz yok! Gerekli: <yellow>%xp% XP</yellow></red>"
+
+# Depolama & Hasat
+storage-full: "%prefix%<red>Çiftçinizin deposu tamamen dolu! Ürünleri satmalı veya kapasiteyi yükseltmelisiniz.</red>"
+crops-harvested: "%prefix%<green>Çiftçiniz <yellow>%amount% adet</yellow> ürün hasat etti!</green>"
+
+# Satış & Ekonomi
+not-enough-crops: "%prefix%<red>Deponuzda satılacak ürün bulunmuyor!</red>"
+crop-sold: "%prefix%<green>Depodaki <yellow>%amount% adet %crop%</yellow> satıldı! Kazanılan: <gold>%money%$</gold></green>"
+all-crops-sold: "%prefix%<green>Depodaki tüm ürünler (<yellow>%amount% adet</yellow>) satıldı! Kazanılan: <gold>%money%$</gold></green>"
+money-collected: "%prefix%<green>Çiftçinizdeki birikmiş <gold>%amount%$</gold> bakiyenize aktarıldı!</green>"
+no-money-to-collect: "%prefix%<yellow>Çiftçinizde toplanacak birikmiş para yok.</yellow>"
+vault-disabled-warning: "%prefix%<red>Sunucuda ekonomi eklentisi (Vault) aktif olmadığı için bu işlem yapılamaz.</red>"
+
+# Ayarlar & Geçişler
+toggle-auto-harvest-on: "%prefix%<green>Otomatik Hasat sistemi <bold>AÇIK</bold> konumuna getirildi.</green>"
+toggle-auto-harvest-off: "%prefix%<yellow>Otomatik Hasat sistemi <bold>KAPALI</bold> konumuna getirildi.</yellow>"
+toggle-auto-sell-on: "%prefix%<green>Otomatik Satış sistemi <bold>AÇIK</bold> konumuna getirildi.</green>"
+toggle-auto-sell-off: "%prefix%<yellow>Otomatik Satış sistemi <bold>KAPALI</bold> konumuna getirildi.</yellow>"
+status-enabled: "<green>AÇIK</green>"
+status-disabled: "<red>KAPALI</red>"
+
+# Dil Sistemi Mesajları
+language-changed: "%prefix%<green>Tercih ettiğiniz dil <yellow>%language%</yellow> olarak güncellendi!</green>"
+language-invalid: "%prefix%<red>Geçersiz dil kodu! Kullanılabilir diller: <yellow>tr, en, de, fr, es, ru</yellow></red>"
+admin-language-set: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun dili <yellow>%language%</yellow> olarak ayarlandı.</green>"
+
+# İstatistikler
+stats-header: "<gold>========== <yellow>%name% İstatistikleri</yellow> =========="
+stats-level: "<gray>Seviye: <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+stats-multiplier: "<gray>Hasat Çarpanı: <gold>x%multiplier%</gold></gray>"
+stats-storage: "<gray>Depo Durumu: <yellow>%stored% / %max%</yellow></gray>"
+stats-harvested: "<gray>Toplam Hasat Edilen: <yellow>%harvested% adet</yellow></gray>"
+stats-earnings: "<gray>Toplam Kazanılan Para: <green>%earnings%$</green></gray>"
+stats-footer: "<gold>=================================================="
+
+# Yönetici Mesajları & Kullanımları
+admin-given: "%prefix%<green><yellow>%player%</yellow> adlı oyuncuya bir çiftçi ve NPC tanımlandı.</green>"
+admin-egg-given: "%prefix%<green>✔ <yellow>%player%</yellow> adlı oyuncuya <yellow>%amount%</yellow> adet Çiftçi Yumurtası verildi.</green>"
+admin-egg-received: "%prefix%<gold>★ Bir yetkili size <yellow>%amount%</yellow> adet Çiftçi Yumurtası verdi!</gold>"
+admin-reset: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun çiftçisi başarıyla sıfırlandı.</green>"
+admin-setlevel: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun çiftçi seviyesi <yellow>%level%</yellow> olarak ayarlandı.</green>"
+admin-addxp: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun çiftçisine <yellow>%amount% XP</yellow> eklendi.</green>"
+admin-removed: "%prefix%<green><yellow>%player%</yellow> adlı oyuncunun çiftçisi ve NPC'si tamamen silindi.</green>"
+admin-farmer-already-has: "%prefix%<red>Bu oyuncunun zaten bir çiftçisi var!</red>"
+
+admin-usage-give: "%prefix%<yellow>Kullanım: /farmer admin give <oyuncu></yellow>"
+admin-usage-give-egg: "%prefix%<yellow>Kullanım: /farmer admin give <oyuncu> [adet]</yellow>"
+admin-usage-language: "%prefix%<yellow>Kullanım: /farmer admin language <oyuncu> <tr|en|de|fr|es|ru></yellow>"
+admin-usage-reset: "%prefix%<yellow>Kullanım: /farmer admin reset <oyuncu></yellow>"
+admin-usage-setlevel: "%prefix%<yellow>Kullanım: /farmer admin setlevel <oyuncu> <seviye></yellow>"
+admin-usage-addxp: "%prefix%<yellow>Kullanım: /farmer admin addxp <oyuncu> <miktar></yellow>"
+admin-usage-remove: "%prefix%<yellow>Kullanım: /farmer admin remove <oyuncu></yellow>"
+admin-usage-info: "%prefix%<yellow>Kullanım: /farmer admin info <oyuncu></yellow>"
+
+admin-help-header: "<gold>========== HukumFarmer Yönetici Komutları =========="
+admin-help-give: "<yellow>/farmer admin give <oyuncu> [adet]</yellow> <gray>- Oyuncuya çiftçi yumurtası verir</gray>"
+admin-help-language: "<yellow>/farmer admin language <oyuncu> <dil></yellow> <gray>- Oyuncu dilini ayarlar</gray>"
+admin-help-reset: "<yellow>/farmer admin reset <oyuncu></yellow> <gray>- Çiftçiyi sıfırlar</gray>"
+admin-help-setlevel: "<yellow>/farmer admin setlevel <oyuncu> <seviye></yellow> <gray>- Çiftçi seviyesini ayarlar</gray>"
+admin-help-addxp: "<yellow>/farmer admin addxp <oyuncu> <miktar></yellow> <gray>- Çiftçiye XP ekler</gray>"
+admin-help-remove: "<yellow>/farmer admin remove <oyuncu></yellow> <gray>- Çiftçiyi tamamen siler</gray>"
+admin-help-info: "<yellow>/farmer admin info <oyuncu></yellow> <gray>- Çiftçi detaylarını görüntüler</gray>"
+admin-help-footer: "<gold>=================================================="
+
+admin-info-header: "<gold>========== Çiftçi Bilgisi: <yellow>%player%</yellow> =========="
+admin-info-name: "<gray>İsim: <yellow>%name%</yellow></gray>"
+admin-info-level: "<gray>Seviye: <yellow>%level%</yellow> (<aqua>%xp% XP</aqua>)</gray>"
+admin-info-storage: "<gray>Toplam Depolanan: <yellow>%stored%</yellow></gray>"
+admin-info-earnings: "<gray>Biriken Kazanç: <green>%earnings%$</green></gray>"
+admin-info-autoharvest: "<gray>Otomatik Hasat: %status%</gray>"
+admin-info-autosell: "<gray>Otomatik Satış: %status%</gray>"
+admin-info-harvested: "<gray>Toplam Hasat: <yellow>%harvested%</yellow></gray>"
+admin-info-totalearnings: "<gray>Toplam Kazanç: <green>%earnings%$</green></gray>"
+admin-info-footer: "<gold>=========================================="
+
+# NPC Mesajları & Kullanımları
+npc-created: "%prefix%<green>HukumFarmer NPC başarıyla oluşturuldu! (ID: <yellow>%id%</yellow>)</green>"
+npc-removed: "%prefix%<green>HukumFarmer NPC (<yellow>%id%</yellow>) başarıyla kaldırıldı.</green>"
+npc-not-found: "%prefix%<red>Belirtilen ID ile veya yakında bir NPC bulunamadı!</red>"
+npc-teleported: "%prefix%<green>NPC <yellow>%id%</yellow> konumuna ışınlandınız.</green>"
+npc-not-owner: "%prefix%<red>Bu çiftçi <yellow>%owner%</yellow> adlı oyuncuya ait! Sadece kendi çiftçinizi yönetebilirsiniz.</red>"
+npc-list-header: "<gold>========== <yellow>HukumFarmer NPC Listesi</yellow> =========="
+npc-list-item: "<gray>● ID: <yellow>%id%</yellow> | Konum: <aqua>%world%, %x%, %y%, %z%</aqua></gray>"
+npc-list-empty: "%prefix%<yellow>Kayıtlı herhangi bir NPC bulunamadı.</yellow>"
+npc-already-exists: "%prefix%<red>Bu ID ile zaten bir NPC mevcut: <yellow>%id%</yellow></red>"
+npc-invalid-world: "%prefix%<red>Hata: Geçersiz veya yüklenmemiş dünya!</red>"
+npc-create-error: "%prefix%<red>NPC oluşturulurken bir hata meydana geldi: <yellow>%error%</yellow></red>"
+npc-usage-remove: "%prefix%<yellow>Kullanım: /farmer npc remove <id></yellow>"
+npc-usage-teleport: "%prefix%<yellow>Kullanım: /farmer npc teleport <id></yellow>"
+
+npc-help-header: "<gold>========== HukumFarmer NPC Komutları =========="
+npc-help-create: "<yellow>/farmer npc create [id]</yellow> <gray>- Bulunduğunuz konuma NPC oluşturur</gray>"
+npc-help-remove: "<yellow>/farmer npc remove [id]</yellow> <gray>- Belirtilen veya en yakın NPC'yi siler</gray>"
+npc-help-list: "<yellow>/farmer npc list</yellow> <gray>- Tüm kayıtlı NPC'leri listeler</gray>"
+npc-help-teleport: "<yellow>/farmer npc teleport <id></yellow> <gray>- Belirtilen NPC'ye ışınlar</gray>"
+npc-help-footer: "<gold>==============================================="
+
+# Yedekleme Mesajları
+backup-success: "%prefix%<green>Veritabanı yedeği başarıyla oluşturuldu: <yellow>%file%</yellow></green>"
+backup-failed: "%prefix%<red>Veritabanı yedeği oluşturulurken bir hata oluştu!</red>"
+
+# Yardım Mesajları & Açıklamaları
+help-header: "<dark_gray>============= <gold><bold>HukumFarmer Yardım</bold></gold> <dark_gray>============="
+help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
+help-footer: "<dark_gray>=========================================="
+
+help-desc-main: "Çiftçi ana menüsünü / satın almayı açar."
+help-desc-create: "Çiftçi satın alma menüsünü açar."
+help-desc-language: "Dil seçim menüsünü açar."
+help-desc-storage: "Çiftçi ürün deposunu açar."
+help-desc-upgrade: "Çiftçi yükseltme menüsünü açar."
+help-desc-sell: "Depodaki tüm ürünleri satar."
+help-desc-stats: "Çiftçi istatistiklerini görüntüler."
+help-desc-settings: "Çiftçi ayarlarını yapılandırır."
+help-desc-npc: "Çiftçi NPC yönetim komutları."
+help-desc-reload: "Yapılandırma dosyalarını yeniler."
+help-desc-admin: "Yönetici komutlarını listeler."
+
+# Bitki / Ürün Çevirileri
+crops:
+  wheat: "<green>Buğday</green>"
+  carrot: "<gold>Havuç</gold>"
+  potato: "<yellow>Patates</yellow>"
+  beetroot: "<red>Pancar</red>"
+  sugarcane: "<green>Şeker Kamışı</green>"
+  cactus: "<green>Kaktüs</green>"
+  melon: "<green>Karpuz</green>"
+  pumpkin: "<gold>Balkabağı</gold>"
+  nether_wart: "<dark_red>Nether Yumrusu</dark_red>"
+  cocoa_beans: "<gold>Kakao Çekirdeği</gold>"
+  sweet_berries: "<red>Tatlı Böğürtlen</red>"
+  glow_berries: "<yellow>Parlama Meyvesi</yellow>"
+  bamboo: "<green>Bambu</green>"
+  kelp: "<dark_green>Kelp</dark_green>"
+
+# Menü & GUI Yerelleştirmeleri
+gui:
+  main-menu:
+    title: "<gold><bold>Çiftçi Yönetim Paneli</bold></gold>"
+    farmer-info:
+      name: "<yellow><bold>%farmer_name%</bold></yellow>"
+      lore:
+        - "<gray>Sahip: <gold>%owner%</gold></gray>"
+        - "<gray>Seviye: <aqua>%level%</aqua></gray>"
+        - "<gray>Deneyim: <green>%xp% / %required_xp% XP</green></gray>"
+        - "<gray>Depo Durumu: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Hasat Çarpanı: <gold>x%multiplier%</gold></gray>"
+        - ""
+        - "<dark_gray>●</dark_gray> <gray>Birikmiş Kazanç: <green>%earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Menü butonlarını kullanarak çiftçinizi yönetin.</yellow>"
+    storage-button:
+      name: "<gold><bold>Ürün Deposu</bold></gold>"
+      lore:
+        - "<gray>Çiftçinizin topladığı ürünleri"
+        - "<gray>görüntüleyin ve satın."
+        - ""
+        - "<gray>Dolu Alan: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Depo Değeri: <green>%storage_value%$</green></gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve depoyu aç!</yellow>"
+    upgrade-button:
+      name: "<aqua><bold>Çiftçi Yükseltmeleri</bold></aqua>"
+      lore:
+        - "<gray>Çiftçinizin seviyesini yükselterek"
+        - "<gray>kapasite ve hızını artırın."
+        - ""
+        - "<gray>Mevcut Seviye: <yellow>%level%</yellow></gray>"
+        - "<gray>Sonraki Seviye: <green>%next_level%</green></gray>"
+        - "<gray>Gerekli Para: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>Gerekli XP: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve yükseltme menüsünü aç!</yellow>"
+    collect-money:
+      name: "<green><bold>Kazancı Topla</bold></green>"
+      lore:
+        - "<gray>Otomatik satıştan biriken parayı"
+        - "<gray>cüzdanınıza aktarın."
+        - ""
+        - "<gray>Biriken Tutar: <gold>%earnings%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve parayı topla!</yellow>"
+    auto-harvest-toggle:
+      name: "<yellow><bold>Otomatik Hasat</bold></yellow>"
+      lore:
+        - "<gray>Çiftçinin etraftaki olgunlaşmış"
+        - "<gray>ürünleri otomatik hasat etmesini sağlar."
+        - ""
+        - "<gray>Durum: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Durumu değiştirmek için tıkla!</yellow>"
+    auto-sell-toggle:
+      name: "<light_purple><bold>Otomatik Satış</bold></light_purple>"
+      lore:
+        - "<gray>Hasat edilen ürünlerin otomatik"
+        - "<gray>olarak paraya çevrilmesini sağlar."
+        - ""
+        - "<gray>Durum: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Durumu değiştirmek için tıkla!</yellow>"
+    stats-button:
+      name: "<blue><bold>Çiftçi İstatistikleri</bold></blue>"
+      lore:
+        - "<gray>Çiftçinizin geçmiş performansını"
+        - "<gray>ve toplam hasat verilerini inceleyin."
+        - ""
+        - "<gray>Toplam Hasat: <yellow>%total_harvested% adet</yellow></gray>"
+        - "<gray>Toplam Kazanç: <green>%total_earnings%$</green></gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve detayları gör!</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Dil Ayarları</bold></aqua>"
+      lore:
+        - "<gray>Dil tercihinizi değiştirin."
+        - ""
+        - "<yellow>▶ Dil menüsünü açmak için tıkla!</yellow>"
+    close-button:
+      name: "<red><bold>Menüyü Kapat</bold></red>"
+      lore:
+        - "<gray>Pencereyi kapatmak için tıklayın.</gray>"
+
+  purchase-menu:
+    title: "<gold><bold>HukumFarmer - Çiftçi Satın Al</bold></gold>"
+    info-item:
+      name: "<yellow><bold>🌾 HukumFarmer Çiftçisi</bold></yellow>"
+      lore:
+        - "<gray>Otomatik hasat ve satış yeteneğine"
+        - "<gray>sahip profesyonel bir çiftçi yardımcısı."
+        - ""
+        - "<gray>Satın Alma Ücreti: <gold>%price%$</gold></gray>"
+        - "<gray>Mevcut Bakiyeniz: <green>%balance%$</green></gray>"
+        - ""
+        - "<yellow>▶ Çiftçinizi oluşturmak için onaylayın.</yellow>"
+    confirm-button:
+      name: "<green><bold>✔ SATIN AL VE OLUŞTUR</bold></green>"
+      lore:
+        - "<gray>Ücret: <gold>%price%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Satın almayı onaylamak için tıkla!</yellow>"
+    cancel-button:
+      name: "<red><bold>✖ İPTAL ET</bold></red>"
+      lore:
+        - "<gray>Pencereyi kapatmak için tıkla.</gray>"
+    language-button:
+      name: "<aqua><bold>🌐 Dil Değiştir / Change Language</bold></aqua>"
+      lore:
+        - "<gray>Mevcut Dil: <yellow>%language%</yellow></gray>"
+        - ""
+        - "<yellow>▶ Dil seçim menüsünü açmak için tıkla!</yellow>"
+
+  language-menu:
+    title: "<aqua><bold>🌐 Dil Seçimi / Language Selection</bold></aqua>"
+    back-button:
+      name: "<red><bold>Geri Dön / Back</bold></red>"
+      lore:
+        - "<gray>Önceki menüye geri döner.</gray>"
+
+  storage-menu:
+    title: "<gold><bold>Çiftçi Ürün Deposu</bold></gold>"
+    sell-all-button:
+      name: "<green><bold>Tüm Ürünleri Sat</bold></green>"
+      lore:
+        - "<gray>Depoda bulunan tüm ürünleri tek"
+        - "<gray>tıkla pazar fiyatından satın."
+        - ""
+        - "<gray>Toplam Ürün: <yellow>%total_stored_items%</yellow></gray>"
+        - "<gray>Tahmini Kazanç: <gold>%total_sell_value%$</gold></gray>"
+        - ""
+        - "<yellow>▶ Hepsini satmak için tıkla!</yellow>"
+    back-button:
+      name: "<red><bold>Geri Dön</bold></red>"
+      lore:
+        - "<gray>Ana menüye geri dönmek için tıklayın.</gray>"
+    info-item:
+      name: "<yellow><bold>Depo Bilgisi</bold></yellow>"
+      lore:
+        - "<gray>Kapasite: <yellow>%current_storage% / %max_storage%</yellow></gray>"
+        - "<gray>Hasat Çarpanı: <gold>x%multiplier%</gold></gray>"
+    crop-lore:
+      - "<gray>Depolanan Miktar: <yellow>%amount%</yellow></gray>"
+      - "<gray>Birim Fiyatı: <gold>%price%$</gold></gray>"
+      - "<gray>Toplam Değer: <green>%total_value%$</green></gray>"
+      - ""
+      - "<yellow>▶ [Sol Tık] Bu üründen 64 adet sat</yellow>"
+      - "<gold>▶ [Sağ Tık] Bu ürünün HEPSİNİ sat</gold>"
+      - "<aqua>▶ [Shift+Sol Tık] 64 adet envantere al</aqua>"
+
+  upgrade-menu:
+    title: "<aqua><bold>Çiftçi Seviye Yükseltme</bold></aqua>"
+    current-level-item:
+      name: "<yellow><bold>Mevcut Durum (Seviye %level%)</bold></yellow>"
+      lore:
+        - "<gray>Depo Kapasitesi: <yellow>%max_storage%</yellow></gray>"
+        - "<gray>Hasat Çarpanı: <gold>x%multiplier%</gold></gray>"
+        - "<gray>Hasat Hızı: <aqua>%harvest_speed% sn</aqua></gray>"
+        - "<gray>Hasat Alanı: <green>%harvest_radius% blok</green></gray>"
+    upgrade-action-button:
+      name: "<green><bold>Seviye %next_level% Yükselt</bold></green>"
+      lore:
+        - "<gray>Yeni Kapasite: <yellow>%next_max_storage%</yellow></gray>"
+        - "<gray>Yeni Çarpan: <gold>x%next_multiplier%</gold></gray>"
+        - "<gray>Yeni Hız: <aqua>%next_harvest_speed% sn</aqua></gray>"
+        - "<gray>Yeni Alan: <green>%next_harvest_radius% blok</green></gray>"
+        - ""
+        - "<gray>Gerekli Para: <gold>%upgrade_cost%$</gold></gray>"
+        - "<gray>Gerekli XP: <aqua>%upgrade_xp% XP</aqua></gray>"
+        - ""
+        - "<yellow>▶ Yükseltmek için tıkla!</yellow>"
+    back-button:
+      name: "<red><bold>Geri Dön</bold></red>"
+      lore:
+        - "<gray>Ana menüye dönmek için tıklayın.</gray>"
+
+  settings-menu:
+    title: "<dark_purple><bold>Çiftçi Ayarları</bold></dark_purple>"
+    rename-button:
+      name: "<yellow><bold>Çiftçiyi Yeniden Adlandır</bold></yellow>"
+      lore:
+        - "<gray>Çiftçinize özel bir isim verin.</gray>"
+        - ""
+        - "<gray>Mevcut İsim: <white>%farmer_name%</white></gray>"
+        - ""
+        - "<yellow>▶ Sohbete yeni ismi yazmak için tıkla!</yellow>"
+    toggle-harvest:
+      name: "<green><bold>Otomatik Hasat</bold></green>"
+      lore:
+        - "<gray>Durum: %auto_harvest_status%"
+        - ""
+        - "<yellow>▶ Değiştirmek için tıkla!</yellow>"
+    toggle-sell:
+      name: "<light_purple><bold>Otomatik Satış</bold></light_purple>"
+      lore:
+        - "<gray>Durum: %auto_sell_status%"
+        - ""
+        - "<yellow>▶ Değiştirmek için tıkla!</yellow>"
+    language-button:
+      name: "<aqua><bold>🌐 Dil Değiştir</bold></aqua>"
+      lore:
+        - "<gray>Dil tercihinizi güncelleyin.</gray>"
+        - ""
+        - "<yellow>▶ Tıkla ve dili seç!</yellow>"
+    back-button:
+      name: "<red><bold>Geri Dön</bold></red>"
+      lore:
+        - "<gray>Ana menüye dönmek için tıklayın.</gray>"
+
