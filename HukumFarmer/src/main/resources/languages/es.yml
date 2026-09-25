@@ -139,6 +139,13 @@ npc-help-footer: "<gold>==============================================="
 backup-success: "%prefix%<green>Copia de seguridad creada con éxito: <yellow>%file%</yellow></green>"
 backup-failed: "%prefix%<red>¡Ocurrió un error al crear la copia de seguridad!</red>"
 
+# Mensajes de Integración con SmartSpawner
+smartspawner-hooked: "%prefix%<green>¡Integración con SmartSpawner activada correctamente!</green>"
+smartspawner-unavailable: "%prefix%<yellow>Plugin SmartSpawner no encontrado. Integración desactivada.</yellow>"
+smartspawner-incompatible: "%prefix%<red>La versión instalada de SmartSpawner no es compatible.</red>"
+smartspawner-disabled: "%prefix%<gray>La integración con SmartSpawner está desactivada en la configuración.</gray>"
+smartspawner-spawner-detected: "%prefix%<aqua>Se detectaron <yellow>%amount%</yellow> SmartSpawner(s) en el radio del granjero.</aqua>"
+
 # Ayuda & Descripciones
 help-header: "<dark_gray>============= <gold><bold>Ayuda de HukumFarmer</bold></gold> <dark_gray>============="
 help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
@@ -159,19 +166,26 @@ help-desc-admin: "Lista todos los comandos de administrador."
 # Cultivos & Traducciones de ítems
 crops:
   wheat: "<green>Trigo</green>"
-  carrot: "<gold>Zanahoria</gold>"
-  potato: "<yellow>Patata</yellow>"
-  beetroot: "<red>Remolacha</red>"
+  carrot: "<gold>Zanahorias</gold>"
+  carrots: "<gold>Zanahorias</gold>"
+  potato: "<yellow>Patatas</yellow>"
+  potatoes: "<yellow>Patatas</yellow>"
+  beetroot: "<red>Remolachas</red>"
+  beetroots: "<red>Remolachas</red>"
   sugarcane: "<green>Caña de Azúcar</green>"
+  sugar_cane: "<green>Caña de Azúcar</green>"
   cactus: "<green>Cactus</green>"
-  melon: "<green>Sandía</green>"
+  melon: "<green>Rodajas de Sandía</green>"
   pumpkin: "<gold>Calabaza</gold>"
   nether_wart: "<dark_red>Verruga del Nether</dark_red>"
+  cocoa: "<gold>Granos de Cacao</gold>"
   cocoa_beans: "<gold>Granos de Cacao</gold>"
   sweet_berries: "<red>Bayas Dulces</red>"
   glow_berries: "<yellow>Bayas Resplandecientes</yellow>"
   bamboo: "<green>Bambú</green>"
   kelp: "<dark_green>Kelp</dark_green>"
+  torchflower: "<gold>Flor de Antorcha</gold>"
+  pitcher_plant: "<light_purple>Planta de Jarra</light_purple>"
 
 # Traducciones de GUI
 gui:

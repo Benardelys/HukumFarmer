@@ -139,6 +139,13 @@ npc-help-footer: "<gold>==============================================="
 backup-success: "%prefix%<green>Veritabanı yedeği başarıyla oluşturuldu: <yellow>%file%</yellow></green>"
 backup-failed: "%prefix%<red>Veritabanı yedeği oluşturulurken bir hata oluştu!</red>"
 
+# SmartSpawner Entegrasyon Mesajları
+smartspawner-hooked: "%prefix%<green>SmartSpawner entegrasyonu başarıyla etkinleştirildi!</green>"
+smartspawner-unavailable: "%prefix%<yellow>SmartSpawner eklentisi bulunamadı. Entegrasyon devre dışı.</yellow>"
+smartspawner-incompatible: "%prefix%<red>Yüklü SmartSpawner sürümü desteklenmiyor veya API uyumsuz.</red>"
+smartspawner-disabled: "%prefix%<gray>SmartSpawner entegrasyonu yapılandırmadan devre dışı bırakıldı.</gray>"
+smartspawner-spawner-detected: "%prefix%<aqua>Çiftçi alanında <yellow>%amount%</yellow> adet SmartSpawner tespit edildi.</aqua>"
+
 # Yardım Mesajları & Açıklamaları
 help-header: "<dark_gray>============= <gold><bold>HukumFarmer Yardım</bold></gold> <dark_gray>============="
 help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
@@ -160,18 +167,25 @@ help-desc-admin: "Yönetici komutlarını listeler."
 crops:
   wheat: "<green>Buğday</green>"
   carrot: "<gold>Havuç</gold>"
+  carrots: "<gold>Havuç</gold>"
   potato: "<yellow>Patates</yellow>"
+  potatoes: "<yellow>Patates</yellow>"
   beetroot: "<red>Pancar</red>"
+  beetroots: "<red>Pancar</red>"
   sugarcane: "<green>Şeker Kamışı</green>"
+  sugar_cane: "<green>Şeker Kamışı</green>"
   cactus: "<green>Kaktüs</green>"
   melon: "<green>Karpuz</green>"
   pumpkin: "<gold>Balkabağı</gold>"
   nether_wart: "<dark_red>Nether Yumrusu</dark_red>"
+  cocoa: "<gold>Kakao Çekirdeği</gold>"
   cocoa_beans: "<gold>Kakao Çekirdeği</gold>"
   sweet_berries: "<red>Tatlı Böğürtlen</red>"
   glow_berries: "<yellow>Parlama Meyvesi</yellow>"
   bamboo: "<green>Bambu</green>"
   kelp: "<dark_green>Kelp</dark_green>"
+  torchflower: "<gold>Meşale Çiçeği</gold>"
+  pitcher_plant: "<light_purple>Sürahi Bitkisi</light_purple>"
 
 # Menü & GUI Yerelleştirmeleri
 gui:

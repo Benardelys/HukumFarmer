@@ -128,6 +128,14 @@ public class FarmerEggListener implements Listener {
             SoundEffectUtil.playEffect(player, plugin.getConfigManager().getMainConfig().getConfigurationSection("effects.farmer-created"));
             player.sendMessage(plugin.getLanguageManager().getMessage(player, "farmer-placed"));
 
+            // SmartSpawner integration check on placement
+            if (plugin.getSmartSpawnerManager() != null && plugin.getSmartSpawnerManager().isIntegrationActive()) {
+                int nearbySpawners = plugin.getSmartSpawnerManager().countSpawnersInRadius(farmer);
+                if (nearbySpawners > 0) {
+                    player.sendMessage(plugin.getLanguageManager().getMessage(player, "smartspawner-spawner-detected", "%amount%", String.valueOf(nearbySpawners)));
+                }
+            }
+
             // Open main GUI for the newly placed farmer
             plugin.getMainMenuGui().open(player, farmer);
 

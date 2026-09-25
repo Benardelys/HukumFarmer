@@ -139,6 +139,13 @@ npc-help-footer: "<gold>==============================================="
 backup-success: "%prefix%<green>Datenbank-Backup erfolgreich erstellt: <yellow>%file%</yellow></green>"
 backup-failed: "%prefix%<red>Beim Erstellen des Backups ist ein Fehler aufgetreten!</red>"
 
+# SmartSpawner Integration Nachrichten
+smartspawner-hooked: "%prefix%<green>SmartSpawner-Integration erfolgreich aktiviert!</green>"
+smartspawner-unavailable: "%prefix%<yellow>SmartSpawner-Plugin nicht gefunden. Integration deaktiviert.</yellow>"
+smartspawner-incompatible: "%prefix%<red>Installierte SmartSpawner-Version ist inkompatibel.</red>"
+smartspawner-disabled: "%prefix%<gray>SmartSpawner-Integration ist in der Konfiguration deaktiviert.</gray>"
+smartspawner-spawner-detected: "%prefix%<aqua><yellow>%amount%</yellow> SmartSpawner im Farmer-Bereich erkannt.</aqua>"
+
 # Hilfemeldungen & Beschreibungen
 help-header: "<dark_gray>============= <gold><bold>HukumFarmer Hilfe</bold></gold> <dark_gray>============="
 help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
@@ -159,19 +166,26 @@ help-desc-admin: "Listet Administratorbefehle auf."
 # Pflanzen & Gegenstände Übersetzungen
 crops:
   wheat: "<green>Weizen</green>"
-  carrot: "<gold>Karotte</gold>"
-  potato: "<yellow>Kartoffel</yellow>"
+  carrot: "<gold>Karotten</gold>"
+  carrots: "<gold>Karotten</gold>"
+  potato: "<yellow>Kartoffeln</yellow>"
+  potatoes: "<yellow>Kartoffeln</yellow>"
   beetroot: "<red>Rote Bete</red>"
+  beetroots: "<red>Rote Bete</red>"
   sugarcane: "<green>Zuckerrohr</green>"
+  sugar_cane: "<green>Zuckerrohr</green>"
   cactus: "<green>Kaktus</green>"
-  melon: "<green>Melone</green>"
+  melon: "<green>Melonenscheiben</green>"
   pumpkin: "<gold>Kürbis</gold>"
   nether_wart: "<dark_red>Netherwarzen</dark_red>"
+  cocoa: "<gold>Kakaobohnen</gold>"
   cocoa_beans: "<gold>Kakaobohnen</gold>"
   sweet_berries: "<red>Süßbeeren</red>"
   glow_berries: "<yellow>Leuchtbeeren</yellow>"
   bamboo: "<green>Bambus</green>"
   kelp: "<dark_green>Seetang</dark_green>"
+  torchflower: "<gold>Fackellilie</gold>"
+  pitcher_plant: "<light_purple>Kannenpflanze</light_purple>"
 
 # GUI Übersetzungen
 gui:

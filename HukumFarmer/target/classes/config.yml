@@ -145,6 +145,37 @@ integrations:
     # Apply farmer level crop multipliers to AxMinions harvests
     apply-level-multiplier: true
 
+  smartspawner:
+    # Enable or disable SmartSpawner integration
+    enabled: true
+    # Automatically collect mob drops produced by SmartSpawners in farmer radius
+    collect-spawner-drops: true
+    # Apply farmer level multiplier to SmartSpawner collected drops
+    apply-level-multiplier: true
+    # Grant farmer XP when collecting SmartSpawner drops
+    grant-xp: true
+    # Search radius for SmartSpawners (0 = use farmer harvest radius)
+    search-radius: 0
+    # List of allowed mob drop materials to collect
+    allowed-drops:
+      - "ROTTEN_FLESH"
+      - "BONE"
+      - "GUNPOWDER"
+      - "STRING"
+      - "SPIDER_EYE"
+      - "SLIME_BALL"
+      - "ENDER_PEARL"
+      - "BLAZE_ROD"
+      - "GHAST_TEAR"
+      - "MAGMA_CREAM"
+      - "LEATHER"
+      - "FEATHER"
+      - "EGG"
+      - "PORKCHOP"
+      - "BEEF"
+      - "CHICKEN"
+      - "MUTTON"
+
 # Sound Effects & Particles Configuration
 effects:
   farmer-created:

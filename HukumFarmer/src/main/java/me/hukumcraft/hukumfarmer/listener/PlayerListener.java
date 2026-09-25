@@ -26,18 +26,11 @@ public class PlayerListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
-        // Load and cache language preference
-        plugin.getFarmerRepository().loadAllPlayerLanguagesAsync().thenAccept(langMap -> {
-            String savedLang = langMap.get(player.getUniqueId());
-            if (savedLang != null) {
-                plugin.getLanguageManager().setPlayerLanguage(player.getUniqueId(), savedLang);
-            }
-        });
-
-        // Update owner name if player has changed their name
+        // Update owner name if player has changed their name while offline
         plugin.getFarmerManager().getFarmer(player.getUniqueId()).ifPresent(farmer -> {
             if (!player.getName().equals(farmer.getOwnerName())) {
                 farmer.setOwnerName(player.getName());
+                farmer.markDirty();
             }
         });
     }

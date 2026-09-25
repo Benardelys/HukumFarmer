@@ -59,6 +59,8 @@ public class HukumFarmer extends JavaPlugin {
     private AxMinionsHook axMinionsHook;
     private AxMinionsManager axMinionsManager;
     private me.hukumcraft.hukumfarmer.hook.itemsadder.ItemsAdderHook itemsAdderHook;
+    private me.hukumcraft.hukumfarmer.hook.smartspawner.SmartSpawnerHook smartSpawnerHook;
+    private me.hukumcraft.hukumfarmer.hook.smartspawner.SmartSpawnerManager smartSpawnerManager;
     private FarmerItemManager farmerItemManager;
     private CropManager cropManager;
     private LevelManager levelManager;
@@ -96,7 +98,7 @@ public class HukumFarmer extends JavaPlugin {
         this.backupManager = new BackupManager(this);
         this.backupManager.init();
 
-        // 3. Initialize Hooks (Vault, WorldGuard, AxMinions & ItemsAdder)
+        // 3. Initialize Hooks (Vault, WorldGuard, AxMinions, ItemsAdder & SmartSpawner)
         this.vaultHook = new VaultHook(this);
         this.vaultHook.init();
 
@@ -109,6 +111,11 @@ public class HukumFarmer extends JavaPlugin {
 
         this.itemsAdderHook = new me.hukumcraft.hukumfarmer.hook.itemsadder.ItemsAdderHook(this);
         this.itemsAdderHook.init();
+
+        this.smartSpawnerHook = new me.hukumcraft.hukumfarmer.hook.smartspawner.SmartSpawnerHook(this);
+        this.smartSpawnerHook.init();
+        this.smartSpawnerManager = new me.hukumcraft.hukumfarmer.hook.smartspawner.SmartSpawnerManager(this, smartSpawnerHook);
+        this.smartSpawnerManager.init();
 
         // 4. Initialize Database
         if (!initDatabase()) {
@@ -194,6 +201,18 @@ public class HukumFarmer extends JavaPlugin {
         cropManager.loadCrops();
         levelManager.loadLevels();
 
+        if (itemsAdderHook != null) {
+            itemsAdderHook.init();
+        }
+
+        if (smartSpawnerHook != null) {
+            smartSpawnerHook.init();
+        }
+
+        if (smartSpawnerManager != null) {
+            smartSpawnerManager.reloadConfig();
+        }
+
         if (npcManager != null) {
             npcManager.loadAll();
         }
@@ -208,7 +227,7 @@ public class HukumFarmer extends JavaPlugin {
         if (backupTask != null) backupTask.cancel();
         startTasks();
 
-        getLogger().info("HukumFarmer configurations, languages, and NPCs reloaded successfully.");
+        getLogger().info("HukumFarmer configurations, languages, integrations, and NPCs reloaded successfully.");
     }
 
     private boolean initDatabase() {
@@ -236,6 +255,7 @@ public class HukumFarmer extends JavaPlugin {
         pm.registerEvents(new FarmerBlockListener(this, mainMenuGui), this);
         pm.registerEvents(new NpcListener(this, mainMenuGui, purchaseGui), this);
         pm.registerEvents(new FarmerEggListener(this), this);
+        pm.registerEvents(new me.hukumcraft.hukumfarmer.hook.smartspawner.SmartSpawnerListener(this, smartSpawnerManager), this);
     }
 
     private void registerCommands() {
@@ -332,6 +352,14 @@ public class HukumFarmer extends JavaPlugin {
 
     public me.hukumcraft.hukumfarmer.hook.itemsadder.ItemsAdderHook getItemsAdderHook() {
         return itemsAdderHook;
+    }
+
+    public me.hukumcraft.hukumfarmer.hook.smartspawner.SmartSpawnerHook getSmartSpawnerHook() {
+        return smartSpawnerHook;
+    }
+
+    public me.hukumcraft.hukumfarmer.hook.smartspawner.SmartSpawnerManager getSmartSpawnerManager() {
+        return smartSpawnerManager;
     }
 
     public FarmerItemManager getFarmerItemManager() {

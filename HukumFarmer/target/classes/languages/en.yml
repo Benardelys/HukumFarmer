@@ -139,6 +139,13 @@ npc-help-footer: "<gold>==============================================="
 backup-success: "%prefix%<green>Database backup successfully created: <yellow>%file%</yellow></green>"
 backup-failed: "%prefix%<red>An error occurred while creating database backup!</red>"
 
+# SmartSpawner Integration Messages
+smartspawner-hooked: "%prefix%<green>SmartSpawner integration enabled successfully!</green>"
+smartspawner-unavailable: "%prefix%<yellow>SmartSpawner plugin not found. Integration disabled.</yellow>"
+smartspawner-incompatible: "%prefix%<red>Installed SmartSpawner version is incompatible.</red>"
+smartspawner-disabled: "%prefix%<gray>SmartSpawner integration is disabled in configuration.</gray>"
+smartspawner-spawner-detected: "%prefix%<aqua>Detected <yellow>%amount%</yellow> SmartSpawner(s) within your farmer's harvest radius.</aqua>"
+
 # Help Messages & Descriptions
 help-header: "<dark_gray>============= <gold><bold>HukumFarmer Help</bold></gold> <dark_gray>============="
 help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
@@ -159,19 +166,26 @@ help-desc-admin: "Lists all administrator commands."
 # Crops & Item Localizations
 crops:
   wheat: "<green>Wheat</green>"
-  carrot: "<gold>Carrot</gold>"
-  potato: "<yellow>Potato</yellow>"
-  beetroot: "<red>Beetroot</red>"
+  carrot: "<gold>Carrots</gold>"
+  carrots: "<gold>Carrots</gold>"
+  potato: "<yellow>Potatoes</yellow>"
+  potatoes: "<yellow>Potatoes</yellow>"
+  beetroot: "<red>Beetroots</red>"
+  beetroots: "<red>Beetroots</red>"
   sugarcane: "<green>Sugar Cane</green>"
+  sugar_cane: "<green>Sugar Cane</green>"
   cactus: "<green>Cactus</green>"
-  melon: "<green>Melon</green>"
+  melon: "<green>Melon Slices</green>"
   pumpkin: "<gold>Pumpkin</gold>"
   nether_wart: "<dark_red>Nether Wart</dark_red>"
+  cocoa: "<gold>Cocoa Beans</gold>"
   cocoa_beans: "<gold>Cocoa Beans</gold>"
   sweet_berries: "<red>Sweet Berries</red>"
   glow_berries: "<yellow>Glow Berries</yellow>"
   bamboo: "<green>Bamboo</green>"
   kelp: "<dark_green>Kelp</dark_green>"
+  torchflower: "<gold>Torchflower</gold>"
+  pitcher_plant: "<light_purple>Pitcher Plant</light_purple>"
 
 # GUI Localizations
 gui:

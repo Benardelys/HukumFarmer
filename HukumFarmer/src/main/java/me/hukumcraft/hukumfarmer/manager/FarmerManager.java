@@ -24,6 +24,7 @@ public class FarmerManager {
 
     private final Map<UUID, Farmer> farmersByOwner = new ConcurrentHashMap<>();
     private final Map<String, UUID> farmerLocations = new ConcurrentHashMap<>();
+    private final Map<String, UUID> farmersByNpcId = new ConcurrentHashMap<>();
     private final Map<UUID, Long> renamePrompts = new ConcurrentHashMap<>();
     private final Map<UUID, Long> activeTransactions = new ConcurrentHashMap<>();
 
@@ -38,10 +39,14 @@ public class FarmerManager {
     public void loadAll() {
         farmersByOwner.clear();
         farmerLocations.clear();
+        farmersByNpcId.clear();
         repository.loadAllFarmersAsync().thenAccept(loadedFarmers -> {
             for (Farmer farmer : loadedFarmers) {
                 farmersByOwner.put(farmer.getOwnerUUID(), farmer);
                 indexLocation(farmer);
+                if (farmer.getNpcId() != null) {
+                    farmersByNpcId.put(farmer.getNpcId().toLowerCase(), farmer.getOwnerUUID());
+                }
 
                 // Ensure NPC is spawned for each farmer if location is valid
                 if (farmer.getLocation() != null && farmer.getLocation().getWorld() != null) {
@@ -68,6 +73,7 @@ public class FarmerManager {
     public void auditNpcReconciliation() {
         for (Farmer farmer : farmersByOwner.values()) {
             if (farmer.getNpcId() != null) {
+                farmersByNpcId.put(farmer.getNpcId().toLowerCase(), farmer.getOwnerUUID());
                 Optional<FarmerNPC> optNpc = plugin.getNpcManager().getNpc(farmer.getNpcId());
                 if (optNpc.isEmpty() && farmer.getLocation() != null && farmer.getLocation().getWorld() != null) {
                     plugin.getLogger().info("Restoring missing NPC for farmer owner: " + farmer.getOwnerName() + " (ID: " + farmer.getNpcId() + ")");
@@ -88,10 +94,9 @@ public class FarmerManager {
 
     public Optional<Farmer> getFarmerByNpcId(String npcId) {
         if (npcId == null) return Optional.empty();
-        for (Farmer farmer : farmersByOwner.values()) {
-            if (npcId.equalsIgnoreCase(farmer.getNpcId())) {
-                return Optional.of(farmer);
-            }
+        UUID owner = farmersByNpcId.get(npcId.toLowerCase());
+        if (owner != null) {
+            return getFarmer(owner);
         }
         return Optional.empty();
     }
@@ -213,6 +218,9 @@ public class FarmerManager {
         Farmer farmer = Farmer.createNew(player.getUniqueId(), player.getName(), location, defaultName);
         farmersByOwner.put(player.getUniqueId(), farmer);
         indexLocation(farmer);
+        if (farmer.getNpcId() != null) {
+            farmersByNpcId.put(farmer.getNpcId().toLowerCase(), farmer.getOwnerUUID());
+        }
 
         // Automatically create and spawn the farmer's dedicated NPC
         try {
@@ -232,8 +240,9 @@ public class FarmerManager {
             if (farmer.getLocation() != null) {
                 farmerLocations.remove(toLocationKey(farmer.getLocation()));
             }
-            // Automatically remove the associated NPC
             if (farmer.getNpcId() != null) {
+                farmersByNpcId.remove(farmer.getNpcId().toLowerCase());
+                // Automatically remove the associated NPC
                 plugin.getNpcManager().removeNpc(farmer.getNpcId());
             }
         }

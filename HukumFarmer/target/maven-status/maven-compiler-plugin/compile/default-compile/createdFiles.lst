@@ -1,3 +1,4 @@
+me\hukumcraft\hukumfarmer\hook\smartspawner\SmartSpawnerHook.class
 me\hukumcraft\hukumfarmer\hook\axminions\AxMinionsHook.class
 me\hukumcraft\hukumfarmer\listener\PlayerListener.class
 me\hukumcraft\hukumfarmer\model\FarmerNPC.class
@@ -17,6 +18,7 @@ me\hukumcraft\hukumfarmer\database\DatabaseManager.class
 me\hukumcraft\hukumfarmer\message\MessageParser.class
 me\hukumcraft\hukumfarmer\compatibility\CompatibilityUtil.class
 me\hukumcraft\hukumfarmer\message\MessageManager.class
+me\hukumcraft\hukumfarmer\hook\smartspawner\SmartSpawnerManager.class
 me\hukumcraft\hukumfarmer\HukumFarmer.class
 me\hukumcraft\hukumfarmer\model\CropConfig.class
 me\hukumcraft\hukumfarmer\listener\InventoryListener.class
@@ -50,4 +52,6 @@ me\hukumcraft\hukumfarmer\hook\VaultHook.class
 me\hukumcraft\hukumfarmer\model\CropType.class
 me\hukumcraft\hukumfarmer\database\MySQLDatabase.class
 me\hukumcraft\hukumfarmer\gui\StorageGui.class
+me\hukumcraft\hukumfarmer\message\MessageParser$1.class
+me\hukumcraft\hukumfarmer\hook\smartspawner\SmartSpawnerListener.class
 me\hukumcraft\hukumfarmer\language\LanguageManager.class

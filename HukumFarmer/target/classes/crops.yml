@@ -118,9 +118,54 @@ crops:
     enabled: true
     material: "SWEET_BERRIES"
     block-material: "SWEET_BERRY_BUSH"
-    display-name: "<red>Tatlı Böğürtlen</red>"
+    display-name: "<red>Sweet Berries</red>"
     sell-price: 2.0
     xp-reward: 1
     auto-harvest: true
     auto-sell: true
     gui-slot: 22
+
+  BAMBOO:
+    enabled: true
+    material: "BAMBOO"
+    block-material: "BAMBOO"
+    display-name: "<green>Bamboo</green>"
+    sell-price: 1.5
+    xp-reward: 1
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 23
+
+  KELP:
+    enabled: true
+    material: "KELP"
+    block-material: "KELP_PLANT"
+    display-name: "<dark_green>Kelp</dark_green>"
+    sell-price: 1.2
+    xp-reward: 1
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 24
+
+  TORCHFLOWER:
+    enabled: true
+    material: "TORCHFLOWER"
+    block-material: "TORCHFLOWER_CROP"
+    display-name: "<gold>Torchflower</gold>"
+    sell-price: 8.0
+    xp-reward: 5
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 25
+
+  PITCHER_PLANT:
+    enabled: true
+    material: "PITCHER_PLANT"
+    block-material: "PITCHER_CROP"
+    display-name: "<light_purple>Pitcher Plant</light_purple>"
+    sell-price: 10.0
+    xp-reward: 6
+    auto-harvest: true
+    auto-sell: true
+    gui-slot: 28
+

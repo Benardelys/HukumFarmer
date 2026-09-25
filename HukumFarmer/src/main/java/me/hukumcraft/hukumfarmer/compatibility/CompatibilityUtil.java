@@ -45,10 +45,15 @@ public final class CompatibilityUtil {
         }
 
         Material type = block.getType();
-        // Sugar Cane & Cactus grow vertically: if the block below is also sugar cane/cactus, this upper block is harvestable
-        if (type == Material.SUGAR_CANE || type == Material.CACTUS) {
+        // Sugar Cane, Cactus, Bamboo & Kelp grow vertically: if the block below is also the base stem, this upper block is harvestable
+        if (type == Material.SUGAR_CANE || type == Material.CACTUS || type == Material.BAMBOO) {
             Block below = block.getRelative(0, -1, 0);
             return below.getType() == type;
+        }
+
+        if (type == Material.KELP || type == Material.KELP_PLANT) {
+            Block below = block.getRelative(0, -1, 0);
+            return below.getType() == Material.KELP || below.getType() == Material.KELP_PLANT;
         }
 
         // Melon & Pumpkin blocks themselves are harvestable
@@ -80,6 +85,10 @@ public final class CompatibilityUtil {
         }
 
         if (blockData instanceof Ageable ageable) {
+            Block above = block.getRelative(0, 1, 0);
+            if (above.getType() == block.getType()) {
+                above.setType(Material.AIR, false);
+            }
             if (replant) {
                 ageable.setAge(0);
                 block.setBlockData(ageable, true);
@@ -90,7 +99,7 @@ public final class CompatibilityUtil {
         }
 
         Material type = block.getType();
-        if (type == Material.SUGAR_CANE || type == Material.CACTUS) {
+        if (type == Material.SUGAR_CANE || type == Material.CACTUS || type == Material.BAMBOO || type == Material.KELP || type == Material.KELP_PLANT) {
             // Break only the upper blocks, leave base block intact
             block.setType(Material.AIR, true);
             return;

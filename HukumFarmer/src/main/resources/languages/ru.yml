@@ -139,6 +139,13 @@ npc-help-footer: "<gold>==============================================="
 backup-success: "%prefix%<green>Резервная копия базы данных успешно создана: <yellow>%file%</yellow></green>"
 backup-failed: "%prefix%<red>Произошла ошибка при создании резервной копии базы данных!</red>"
 
+# Сообщения интеграции SmartSpawner
+smartspawner-hooked: "%prefix%<green>Интеграция со SmartSpawner успешно включена!</green>"
+smartspawner-unavailable: "%prefix%<yellow>Плагин SmartSpawner не найден. Интеграция отключена.</yellow>"
+smartspawner-incompatible: "%prefix%<red>Установленная версия SmartSpawner не поддерживается.</red>"
+smartspawner-disabled: "%prefix%<gray>Интеграция со SmartSpawner отключена в конфигурации.</gray>"
+smartspawner-spawner-detected: "%prefix%<aqua>В радиусе фермера обнаружено <yellow>%amount%</yellow> спавнер(ов) SmartSpawner.</aqua>"
+
 # Помощь и описания
 help-header: "<dark_gray>============= <gold><bold>Помощь HukumFarmer</bold></gold> <dark_gray>============="
 help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
@@ -160,18 +167,25 @@ help-desc-admin: "Список команд администратора."
 crops:
   wheat: "<green>Пшеница</green>"
   carrot: "<gold>Морковь</gold>"
+  carrots: "<gold>Морковь</gold>"
   potato: "<yellow>Картофель</yellow>"
+  potatoes: "<yellow>Картофель</yellow>"
   beetroot: "<red>Свекла</red>"
+  beetroots: "<red>Свекла</red>"
   sugarcane: "<green>Сахарный Тростник</green>"
+  sugar_cane: "<green>Сахарный Тростник</green>"
   cactus: "<green>Кактус</green>"
-  melon: "<green>Арбуз</green>"
+  melon: "<green>Ломтики Арбуза</green>"
   pumpkin: "<gold>Тыква</gold>"
   nether_wart: "<dark_red>Нарост Незера</dark_red>"
+  cocoa: "<gold>Какао-бобы</gold>"
   cocoa_beans: "<gold>Какао-бобы</gold>"
   sweet_berries: "<red>Сладкие Ягоды</red>"
   glow_berries: "<yellow>Светящиеся Ягоды</yellow>"
   bamboo: "<green>Бамбук</green>"
   kelp: "<dark_green>Ламинария</dark_green>"
+  torchflower: "<gold>Факельник</gold>"
+  pitcher_plant: "<light_purple>Кувшиночник</light_purple>"
 
 # Перевод меню и GUI
 gui:

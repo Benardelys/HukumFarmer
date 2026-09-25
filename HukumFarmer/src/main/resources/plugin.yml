@@ -9,6 +9,7 @@ softdepend:
   - WorldGuard
   - AxMinions
   - ItemsAdder
+  - SmartSpawner
 
 commands:
   farmer:

@@ -139,6 +139,13 @@ npc-help-footer: "<gold>==============================================="
 backup-success: "%prefix%<green>Sauvegarde de la base de données créée : <yellow>%file%</yellow></green>"
 backup-failed: "%prefix%<red>Une erreur est survenue lors de la sauvegarde de la base de données !</red>"
 
+# Messages d'intégration SmartSpawner
+smartspawner-hooked: "%prefix%<green>Intégration SmartSpawner activée avec succès !</green>"
+smartspawner-unavailable: "%prefix%<yellow>Plugin SmartSpawner non trouvé. Intégration désactivée.</yellow>"
+smartspawner-incompatible: "%prefix%<red>La version installée de SmartSpawner n'est pas compatible.</red>"
+smartspawner-disabled: "%prefix%<gray>L'intégration SmartSpawner est désactivée dans la configuration.</gray>"
+smartspawner-spawner-detected: "%prefix%<aqua><yellow>%amount%</yellow> SmartSpawner(s) détecté(s) dans le rayon du fermier.</aqua>"
+
 # Aide & Descriptions
 help-header: "<dark_gray>============= <gold><bold>Aide HukumFarmer</bold></gold> <dark_gray>============="
 help-command: "<yellow>/farmer %cmd%</yellow> <dark_gray>-</dark_gray> <gray>%desc%</gray>"
@@ -159,19 +166,26 @@ help-desc-admin: "Liste les commandes administrateur."
 # Récoltes & Traductions d'objets
 crops:
   wheat: "<green>Blé</green>"
-  carrot: "<gold>Carotte</gold>"
-  potato: "<yellow>Pomme de Terre</yellow>"
-  beetroot: "<red>Betterave</red>"
+  carrot: "<gold>Carottes</gold>"
+  carrots: "<gold>Carottes</gold>"
+  potato: "<yellow>Pommes de Terre</yellow>"
+  potatoes: "<yellow>Pommes de Terre</yellow>"
+  beetroot: "<red>Betteraves</red>"
+  beetroots: "<red>Betteraves</red>"
   sugarcane: "<green>Canne à Sucre</green>"
+  sugar_cane: "<green>Canne à Sucre</green>"
   cactus: "<green>Cactus</green>"
-  melon: "<green>Pastèque</green>"
+  melon: "<green>Tranches de Pastèque</green>"
   pumpkin: "<gold>Citrouille</gold>"
   nether_wart: "<dark_red>Verrue du Nether</dark_red>"
+  cocoa: "<gold>Fèves de Cacao</gold>"
   cocoa_beans: "<gold>Fèves de Cacao</gold>"
   sweet_berries: "<red>Baies Sucrées</red>"
   glow_berries: "<yellow>Baies Lumineuses</yellow>"
   bamboo: "<green>Bambou</green>"
   kelp: "<dark_green>Varech</dark_green>"
+  torchflower: "<gold>Fleur Torche</gold>"
+  pitcher_plant: "<light_purple>Plante à Cruche</light_purple>"
 
 # Traductions de GUI
 gui:

@@ -1,5 +1,5 @@
 name: HukumFarmer
-version: '1.0.0'
+version: '1.0.2'
 main: me.hukumcraft.hukumfarmer.HukumFarmer
 api-version: '1.21'
 author: Ardelys
@@ -9,6 +9,7 @@ softdepend:
   - WorldGuard
   - AxMinions
   - ItemsAdder
+  - SmartSpawner
 
 commands:
   farmer:

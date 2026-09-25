@@ -16,7 +16,11 @@ public enum CropType {
     CACTUS(Material.CACTUS, Material.CACTUS, Material.CACTUS),
     COCOA(Material.COCOA_BEANS, Material.COCOA, Material.COCOA_BEANS),
     NETHER_WART(Material.NETHER_WART, Material.NETHER_WART, Material.NETHER_WART),
-    SWEET_BERRIES(Material.SWEET_BERRIES, Material.SWEET_BERRY_BUSH, Material.SWEET_BERRIES);
+    SWEET_BERRIES(Material.SWEET_BERRIES, Material.SWEET_BERRY_BUSH, Material.SWEET_BERRIES),
+    BAMBOO(Material.BAMBOO, Material.BAMBOO, Material.BAMBOO),
+    KELP(Material.KELP, Material.KELP, Material.KELP),
+    TORCHFLOWER(Material.TORCHFLOWER, Material.TORCHFLOWER_CROP, Material.TORCHFLOWER_SEEDS),
+    PITCHER_PLANT(Material.PITCHER_PLANT, Material.PITCHER_CROP, Material.PITCHER_POD);
 
     private final Material itemMaterial;
     private final Material blockMaterial;

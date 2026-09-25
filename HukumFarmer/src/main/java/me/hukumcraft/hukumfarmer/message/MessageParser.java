@@ -8,6 +8,8 @@ import org.bukkit.command.CommandSender;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -28,6 +30,16 @@ public final class MessageParser {
     private static final DecimalFormat INTEGER_FORMAT = new DecimalFormat("#,###");
     private static final Pattern HEX_PATTERN = Pattern.compile("&#([A-Fa-f0-9]{6})");
 
+    // High-performance bounded LRU cache for parsed components (up to 512 static strings)
+    private static final Map<String, Component> COMPONENT_CACHE = Collections.synchronizedMap(
+            new LinkedHashMap<String, Component>(128, 0.75f, true) {
+                @Override
+                protected boolean removeEldestEntry(Map.Entry<String, Component> eldest) {
+                    return size() > 512;
+                }
+            }
+    );
+
     private MessageParser() {}
 
     /**
@@ -38,6 +50,13 @@ public final class MessageParser {
         if (text == null || text.isEmpty()) {
             return Component.empty();
         }
+
+        Component cached = COMPONENT_CACHE.get(text);
+        if (cached != null) {
+            return cached;
+        }
+
+        String original = text;
 
         // 1. Convert &#RRGGBB hex formats to <#RRGGBB>
         text = translateHexColorCodes(text);
@@ -53,11 +72,15 @@ public final class MessageParser {
         }
 
         // 4. Parse with MiniMessage
+        Component parsed;
         try {
-            return MINI_MESSAGE.deserialize(text);
+            parsed = MINI_MESSAGE.deserialize(text);
         } catch (Exception e) {
-            return SECTION_SERIALIZER.deserialize(ChatColor.translateAlternateColorCodes('&', text));
+            parsed = SECTION_SERIALIZER.deserialize(ChatColor.translateAlternateColorCodes('&', text));
         }
+
+        COMPONENT_CACHE.put(original, parsed);
+        return parsed;
     }
 
     /**

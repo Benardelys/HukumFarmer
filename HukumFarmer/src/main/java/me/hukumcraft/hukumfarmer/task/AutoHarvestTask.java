@@ -6,45 +6,66 @@ import me.hukumcraft.hukumfarmer.model.CropConfig;
 import me.hukumcraft.hukumfarmer.model.Farmer;
 import me.hukumcraft.hukumfarmer.model.FarmerLevel;
 import me.hukumcraft.hukumfarmer.util.SoundEffectUtil;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Collection;
 import java.util.Optional;
 
 /**
- * Highly optimized, time-sliced Auto-Harvest task.
+ * Highly optimized, chunk-aware, player-proximity aware Auto-Harvest task.
+ * Designed to minimize MSPT, CPU cycles, and block queries under high server loads.
  */
 public class AutoHarvestTask extends BukkitRunnable {
 
     private final HukumFarmer plugin;
 
+    // Pre-cached configuration fields to eliminate YAML lookups inside execution loops
+    private boolean enabled = true;
+    private int maxCropsPerCycle = 16;
+    private boolean replant = true;
+    private boolean playParticles = true;
+    private String particleName = "VILLAGER_HAPPY";
+    private boolean playSound = true;
+    private String soundName = "BLOCK_CROP_BREAK";
+    private float soundVol = 0.5f;
+    private float soundPitch = 1.2f;
+    private boolean stopHarvestWhenFull = true;
+    private boolean playerProximityCheck = true;
+    private double proximityRadiusSq = 64.0 * 64.0; // 64 blocks squared
+
     public AutoHarvestTask(HukumFarmer plugin) {
         this.plugin = plugin;
+        reloadConfig();
+    }
+
+    public void reloadConfig() {
+        FileConfiguration config = plugin.getConfigManager().getMainConfig();
+        this.enabled = config.getBoolean("auto-harvest.enabled", true);
+        this.maxCropsPerCycle = config.getInt("auto-harvest.max-crops-per-cycle", 16);
+        this.replant = config.getBoolean("auto-harvest.replant", true);
+        this.playParticles = config.getBoolean("auto-harvest.particles", true);
+        this.particleName = config.getString("auto-harvest.particle-type", "VILLAGER_HAPPY");
+        this.playSound = config.getBoolean("auto-harvest.sound", true);
+        this.soundName = config.getString("auto-harvest.sound-type", "BLOCK_CROP_BREAK");
+        this.soundVol = (float) config.getDouble("auto-harvest.sound-volume", 0.5);
+        this.soundPitch = (float) config.getDouble("auto-harvest.sound-pitch", 1.2);
+        this.stopHarvestWhenFull = plugin.getConfigManager().getStorageConfig().getBoolean("storage.stop-harvest-when-full", true);
+        this.playerProximityCheck = config.getBoolean("auto-harvest.player-proximity-check", true);
+        double proxDist = config.getDouble("auto-harvest.player-proximity-distance", 64.0);
+        this.proximityRadiusSq = proxDist * proxDist;
     }
 
     @Override
     public void run() {
-        FileConfiguration config = plugin.getConfigManager().getMainConfig();
-        if (!config.getBoolean("auto-harvest.enabled", true)) {
-            return;
-        }
+        if (!enabled) return;
 
         Collection<Farmer> activeFarmers = plugin.getFarmerManager().getActiveFarmers();
         if (activeFarmers.isEmpty()) return;
-
-        int maxCropsPerCycle = config.getInt("auto-harvest.max-crops-per-cycle", 16);
-        boolean replant = config.getBoolean("auto-harvest.replant", true);
-        boolean playParticles = config.getBoolean("auto-harvest.particles", true);
-        String particleName = config.getString("auto-harvest.particle-type", "VILLAGER_HAPPY");
-        boolean playSound = config.getBoolean("auto-harvest.sound", true);
-        String soundName = config.getString("auto-harvest.sound-type", "BLOCK_CROP_BREAK");
-        float soundVol = (float) config.getDouble("auto-harvest.sound-volume", 0.5);
-        float soundPitch = (float) config.getDouble("auto-harvest.sound-pitch", 1.2);
 
         long now = System.currentTimeMillis();
 
@@ -52,14 +73,26 @@ public class AutoHarvestTask extends BukkitRunnable {
             if (!farmer.isAutoHarvest()) continue;
 
             Location center = farmer.getLocation();
-            if (center == null || center.getWorld() == null) continue;
+            if (center == null) continue;
 
             World world = center.getWorld();
-            int chunkX = center.getBlockX() >> 4;
-            int chunkZ = center.getBlockZ() >> 4;
+            if (world == null) continue;
 
-            // Performance: Do not process unloaded chunks
-            if (!world.isChunkLoaded(chunkX, chunkZ)) {
+            // 1. Skip if world has zero players online
+            if (world.getPlayers().isEmpty()) {
+                continue;
+            }
+
+            int centerChunkX = center.getBlockX() >> 4;
+            int centerChunkZ = center.getBlockZ() >> 4;
+
+            // 2. Performance: Check if farmer's main chunk is loaded
+            if (!world.isChunkLoaded(centerChunkX, centerChunkZ)) {
+                continue;
+            }
+
+            // 3. Player Proximity Optimization: Only process if at least one player is nearby
+            if (playerProximityCheck && !isAnyPlayerNearby(world, center)) {
                 continue;
             }
 
@@ -72,7 +105,7 @@ public class AutoHarvestTask extends BukkitRunnable {
 
             long currentStorage = farmer.getTotalStoredItems();
             long maxStorage = level.getMaxStorage();
-            if (currentStorage >= maxStorage && plugin.getConfigManager().getStorageConfig().getBoolean("storage.stop-harvest-when-full", true)) {
+            if (currentStorage >= maxStorage && stopHarvestWhenFull) {
                 continue;
             }
 
@@ -90,7 +123,15 @@ public class AutoHarvestTask extends BukkitRunnable {
 
             scanLoop:
             for (int x = centerX - radius; x <= centerX + radius; x++) {
+                int blockChunkX = x >> 4;
                 for (int z = centerZ - radius; z <= centerZ + radius; z++) {
+                    int blockChunkZ = z >> 4;
+
+                    // Do NOT force-load adjacent chunks
+                    if (!world.isChunkLoaded(blockChunkX, blockChunkZ)) {
+                        continue;
+                    }
+
                     for (int y = minY; y <= maxY; y++) {
                         Block block = world.getBlockAt(x, y, z);
                         Optional<CropConfig> cropOpt = plugin.getCropManager().getCropByBlock(block);
@@ -132,5 +173,23 @@ public class AutoHarvestTask extends BukkitRunnable {
                 farmer.markDirty();
             }
         }
+    }
+
+    private boolean isAnyPlayerNearby(World world, Location center) {
+        double cx = center.getX();
+        double cy = center.getY();
+        double cz = center.getZ();
+
+        for (Player p : world.getPlayers()) {
+            Location pLoc = p.getLocation();
+            double dx = pLoc.getX() - cx;
+            double dy = pLoc.getY() - cy;
+            double dz = pLoc.getZ() - cz;
+            double distSq = (dx * dx) + (dy * dy) + (dz * dz);
+            if (distSq <= proximityRadiusSq) {
+                return true;
+            }
+        }
+        return false;
     }
 }
